@@ -19,7 +19,7 @@ useEffect(()=>{
         easing: 'easeInOutSine'
     })
     animation.add({
-        targets: '#textok',
+        targets: '#stars',
         top:'0px',
         duration: 1000,
         easing: 'easeInOutSine'
