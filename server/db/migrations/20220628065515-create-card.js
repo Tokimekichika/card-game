@@ -1,34 +1,40 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Posts', {
+    await queryInterface.createTable('Cards', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      content: {
+      name: {
         type: Sequelize.TEXT,
-        allowNull: true,
+        allowNull: false,
       },
-      image_url:{
+      photo_url: {
         type: Sequelize.TEXT,
       },
-      likes: {
+      description: {
+        type: Sequelize.TEXT,
+        allowNull: false,
+      },
+      damage: {
         type: Sequelize.BIGINT,
-        allowNull: true,
+        allowNull: false,
       },
-      dislikes: {
+      health: {
         type: Sequelize.BIGINT,
-        allowNull: true,
+        allowNull: false,
       },
-      user_name: {
+      manaCost: {
+        type: Sequelize.BIGINT,
+      },
+      ability_id: {
         type: Sequelize.TEXT,
-        allowNull: true,
-        references: {
-          model: 'Users',
-          key: 'login'
-        },
+        // references: {
+        //   model: 'Abilities',
+        //   key: 'id',
+        // },
       },
       createdAt: {
         allowNull: false,
@@ -41,6 +47,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Posts');
+    await queryInterface.dropTable('Cards');
   },
 };

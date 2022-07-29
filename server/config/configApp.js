@@ -9,7 +9,7 @@ const session = require('express-session');
 // Подключаем(рекваирим) модуль на создание хранилища(папка session) для хранения сессий
 const FileStore = require('session-file-store')(session);
 // Подключаем(рекваирим) мидлварку для проверки входа пользователя
-const isAuth = require('../../../../project P2W2/assessment-2d-tigers-2022-spb/middlewares/isAuth');
+const isAuth = require('/server/middlewares/isAuth');
 
 // Подключаем ручки
 // const indexRouter = require('../routers/views/indexRouter');
