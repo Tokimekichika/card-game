@@ -9,14 +9,14 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ Post, Like }) {
-      User.hasMany(Post, { foreignKey: 'user_name' });
-      User.belongsToMany(Post, { through: Like, foreignKey: 'user_name', otherKey: 'post_id' });
-      User.hasMany(Like, { foreignKey: 'user_name' });
+    static associate({ Deck, Shop }) {
+      User.hasOne(Deck, { foreignKey: 'user_id' });
+      // User.belongsToMany(Card, {  foreignKey: 'user_id' });
+      User.hasOne(Shop, { foreignKey: 'user_id' });
     }
   }
   User.init({
-    login: {
+    name: {
       type: DataTypes.TEXT,
       unique: true,
       allowNull: false,
@@ -28,6 +28,14 @@ module.exports = (sequelize, DataTypes) => {
     },
     password: {
       type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    photo: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    coins: {
+      type: DataTypes.BIGINT,
       allowNull: false,
     },
   }, {
