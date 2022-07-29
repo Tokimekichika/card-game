@@ -9,13 +9,13 @@ const session = require('express-session');
 // Подключаем(рекваирим) модуль на создание хранилища(папка session) для хранения сессий
 const FileStore = require('session-file-store')(session);
 // Подключаем(рекваирим) мидлварку для проверки входа пользователя
-const isAuth = require('/server/middlewares/isAuth');
+const isAuth = require('../middlewares/isAuth');
 
 // Подключаем ручки
 // const indexRouter = require('../routers/views/indexRouter');
-const viewsRouter = require('../../../../project P2W2/assessment-2d-tigers-2022-spb/routes/viewsRoutes');
-const authRouter = require('../../../../project P2W2/assessment-2d-tigers-2022-spb/routes/authRouter');
-const Router = require('../../../../project P2W2/assessment-2d-tigers-2022-spb/routes/Router');
+// const viewsRouter = require('../../../../project P2W2/assessment-2d-tigers-2022-spb/routes/viewsRoutes');
+// const authRouter = require('../../../../project P2W2/assessment-2d-tigers-2022-spb/routes/authRouter');
+// const Router = require('../../../../project P2W2/assessment-2d-tigers-2022-spb/routes/Router');
 
 // экспортим конфиг с включенными мидлварками
 module.exports = function configApp(app) {
@@ -45,7 +45,7 @@ module.exports = function configApp(app) {
   //   res.redirect(`/stars`);
   // });
 
-  app.use('/posts', Router);
-  app.use('/', viewsRouter); // отдельно выделили роуты для вьюшек регистрации и логина
-  app.use('/auth', authRouter); // летают фетчи
+  // app.use('/posts', Router);
+  // app.use('/', viewsRouter); // отдельно выделили роуты для вьюшек регистрации и логина
+  // app.use('/auth', authRouter); // летают фетчи
 };

@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const express = require('express');
 const { sequelize } = require('./db/models');
-const configApp = require('/server/config/configApp');
+const configApp = require('./config/configApp');
 
 const app = express();
 configApp(app);
