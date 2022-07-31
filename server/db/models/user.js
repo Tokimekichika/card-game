@@ -33,10 +33,12 @@ module.exports = (sequelize, DataTypes) => {
     photo: {
       type: DataTypes.TEXT,
       allowNull: false,
+      defaultValue: 'photo',
     },
     coins: {
       type: DataTypes.BIGINT,
       allowNull: false,
+      defaultValue: 0,
     },
   }, {
     sequelize,

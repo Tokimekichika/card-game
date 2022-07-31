@@ -17,7 +17,7 @@ function Register() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          login: event.target.login.value.trim(),
+          name: event.target.name.value.trim(),
           email: event.target.email.value.trim(),
           password: event.target.password.value,
         }),
@@ -27,7 +27,7 @@ function Register() {
             alert('Такой пользователь уже существует');
           } else {
             dispatch(authReg(responce));
-            navigate('/');
+            navigate('/home');
           }
         });
     } else {
@@ -39,18 +39,18 @@ function Register() {
     
     <div className="card">
       <div className="card-image">
-        <h2 className="card-heading">Регистрация</h2>
+        <h2 className="card-heading">Sign up</h2>
       </div>
       <form className="card-form" onSubmit={regHandler}>
         <div className="input">
           <input
             type="text"
             className="input-field"
-            name="login"
+            name="name"
             autoComplete="off"
             required
           />
-          <label className="input-label">Логин</label>
+          <label className="input-label">Name</label>
         </div>
         <div className="input">
           <input
@@ -60,7 +60,7 @@ function Register() {
             autoComplete="off"
             required
           />
-          <label className="input-label">Почта</label>
+          <label className="input-label">Email</label>
         </div>
         <div className="input">
           <input
@@ -70,11 +70,11 @@ function Register() {
             autoComplete="off"
             required
           />
-          <label className="input-label">Пароль</label>
+          <label className="input-label">Password</label>
         </div>
         <div className="action">
           <button type="submit" className="action-button">
-            Зарегестрироваться
+            Registrations
           </button>
         </div>
       </form>

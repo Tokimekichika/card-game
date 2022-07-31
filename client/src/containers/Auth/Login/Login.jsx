@@ -17,7 +17,7 @@ function Login() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        login: event.target.login.value.trim(),
+        email: event.target.email.value.trim(),
         password: event.target.password.value,
       }),
     }).then((responce) => responce.json())
@@ -26,7 +26,7 @@ function Login() {
           alert('Логин или пароль не совпадает')
         } else {
           dispatch(authLogin(response));
-          navigate('/')
+          navigate('/home')
         }
       })
   }
@@ -34,18 +34,18 @@ function Login() {
   return (
     <div className="card">
       <div className="card-image">
-        <h2 className="card-heading">Вход</h2>
+        <h2 className="card-heading">Sign in</h2>
       </div>
       <form className="card-form" onSubmit={logHandler}>
         <div className="input">
           <input
             type="text"
             className="input-field"
-            name="login"
+            name="email"
             autoComplete="off"
             required
           />
-          <label className="input-label">Логин</label>
+          <label className="input-label">Email</label>
         </div>
         <div className="input">
           <input
@@ -55,11 +55,11 @@ function Login() {
             autoComplete="off"
             required
           />
-          <label className="input-label">Пароль</label>
+          <label className="input-label">Password</label>
         </div>
         <div className="action">
           <button type="submit" className="action-button">
-            Войти
+            Login
           </button>
         </div>
       </form>
