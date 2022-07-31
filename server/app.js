@@ -5,15 +5,21 @@ const express = require('express');
 const { sequelize } = require('./db/models');
 const configApp = require('./config/configApp');
 
+// импортируем роутеры
+const deckRouter = require('./routes/deck.routes')
+
 const app = express();
 configApp(app);
 app.locals.count = 0;
 
-const PORT = process.env.PORT ?? 3000;
+const PORT = process.env.PORT ?? 4000;
 
 // app.get('/stars.txt', (req, res) => {
 //   res.sendFile(path.resolve('public', 'stars.txt')); // /public/stars.txt
 // })
+
+// подключаем роутеры
+app.use('/', deckRouter);
 
 app.listen(PORT, async () => {
   console.log(`Сервер шуршит на порту ${PORT}`);
