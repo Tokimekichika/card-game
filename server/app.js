@@ -10,6 +10,7 @@ const regRouter = require('./routes/reg.routes');
 const authRouter = require('./routes/auth.routes');
 const deckRouter = require('./routes/deck.routes');
 const mainRouter = require('./routes/main.routes')
+const buyCards = require('./routes/buycards.routes')
 
 const app = express();
 configApp(app);
@@ -26,6 +27,8 @@ app.use('/registration', regRouter);
 app.use('/auth', authRouter);
 app.use('/', deckRouter);
 app.use('/main',mainRouter)
+app.use('/buycards',buyCards)
+
 
 app.listen(PORT, async () => {
   console.log(`Сервер шуршит на порту ${PORT}`);
