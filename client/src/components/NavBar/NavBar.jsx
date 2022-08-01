@@ -46,7 +46,7 @@ const NavBar = () => {
                 <li><NavLink to="/home">Home</NavLink></li>
                 {user.id ?   
                   <>
-                  <li><NavLink to='/pc'>{`ПРИВЕТ,${user.name}!`}</NavLink></li>
+                  <li><NavLink to='/pc'>{`ПРИВЕТ, ${user.name}!`}</NavLink></li>
                   <li><NavLink to="/" onClick={logoutHandler}>Logout</NavLink></li>
                   </>
                 :
