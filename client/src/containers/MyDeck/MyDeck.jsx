@@ -33,7 +33,7 @@ function MyDeck() {
 
   return (
     <>
-    <div className="cont">
+    <div className="myDeck-container">
       <h4>Мои колоды</h4>
       <div>
         <form onSubmit={deckCreateHandle}>

@@ -41,12 +41,12 @@ function App() {
              <Route path='/registration' element={<Register/>} />
              <Route path='/login' element={<Login/>} />
              <Route path='/' element={<StartPage />} />
+             <Route path='/main' element={<MainPage />} />
              {user.id && 
              <>
-             <Route path='/main' element={<MainPage />} />
+             <Route path='/mydeck' element={<MyDeck/>} />
              <Route path='/home' element={<HomePage />} />
              <Route path='/card' element={<Card/>} />
-             <Route path='/mydeck' element={<MyDeck/>} />
              </>
              }
          </Routes>
