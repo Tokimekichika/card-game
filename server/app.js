@@ -11,7 +11,7 @@ const authRouter = require('./routes/auth.routes');
 const deckRouter = require('./routes/deck.routes');
 const mainRouter = require('./routes/main.routes')
 const buyCards = require('./routes/buycards.routes')
-
+const initCards = require('./routes/initcards.routes')
 const app = express();
 configApp(app);
 app.locals.count = 0;
@@ -28,6 +28,7 @@ app.use('/auth', authRouter);
 app.use('/', deckRouter);
 app.use('/main',mainRouter)
 app.use('/buycards',buyCards)
+app.use('/getcards',initCards)
 
 
 app.listen(PORT, async () => {

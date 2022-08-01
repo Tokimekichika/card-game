@@ -7,6 +7,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
+      name:Sequelize.TEXT,
       user_id: {
         type: Sequelize.INTEGER,
         references: {
@@ -14,13 +15,13 @@ module.exports = {
           key: 'id',
         },
       },
-      card_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Cards',
-          key: 'id',
-        },
-      },
+      // card_id: {
+      //   type: Sequelize.INTEGER,
+      //   references: {
+      //     model: 'Cards',
+      //     key: 'id',
+      //   },
+      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
