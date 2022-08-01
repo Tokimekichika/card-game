@@ -1,26 +1,21 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Likes', {
+    await queryInterface.createTable('Packs', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      user_name: {
-        type: Sequelize.TEXT,
-        references: {
-          model: 'Users',
-          key: 'login',
-        },
-      },
-      post_id: {
+      card_id: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Posts',
+          model: 'Cards',
           key: 'id',
         },
-        onDelete: 'cascade',
+      },
+      cost: {
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
@@ -33,6 +28,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Likes');
+    await queryInterface.dropTable('Packs');
   },
 };
