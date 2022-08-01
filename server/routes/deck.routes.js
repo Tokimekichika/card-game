@@ -4,15 +4,16 @@ const { Deck } = require('../db/models');
 // Получение колод пользователя
 deckRouter.get('/mydeck', async (req, res) => {
   try {
-    const userId = req.session.user.id;
-    const userDeck = await Deck.findAll({
+    const { id } = req.session.user;
+    const userdeck = await Deck.findAll({
+      raw: true,
       where: {
-        user_id: userId,
+        user_id: id,
       },
     });
-    console.log('🚀 ~ file: deck.routes.js ~ line 12 ~ deckRouter.get ~ userDeck', userDeck);
-    res.json(userDeck);
+    res.json(userdeck);
   } catch (error) {
+    console.log(error.message);
     res.json({
       message: 'Произошла ошибка получения колод пользователя',
       error,

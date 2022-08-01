@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({ Deck }) {
       // define association here
-      UserDeck.hasOne(Deck, { foreignKey: 'deck_id' });
+      // UserDeck.hasOne(Deck, { foreignKey: 'deck_id' });
     }
   }
   UserDeck.init({

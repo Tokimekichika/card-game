@@ -14,6 +14,7 @@ module.exports = {
       active: {
         allowNull: false,
         type: Sequelize.BOOLEAN,
+        defaultValue: false,
       },
       user_id: {
         type: Sequelize.INTEGER,
