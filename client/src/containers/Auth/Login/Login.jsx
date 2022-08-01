@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { authLogin } from '../../../store/auth/actionCreator';
-import '../Registration/register.css'
+import './Login.css'
 
 function Login() {
 
