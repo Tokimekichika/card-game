@@ -50,16 +50,17 @@ const NavBar = () => {
             {/*<img className={styles.logo} src={icon} alt="Star Wars"/>*/}
             <div>
             <ul className={styles.list__container}>
-                <li><NavLink to="/home">Домой</NavLink></li>
                 {user.id ?   
                   <>
+                   <li><NavLink to="/main">На главную</NavLink></li>
                   <li><NavLink to='/pc'>{`ПРИВЕТ, ${user.name}!`}</NavLink></li>
-                  <li><NavLink to="/" onClick={logoutHandler}>Выйти</NavLink></li>
+                  <li><NavLink to="/" onClick={logoutHandler}>Logout</NavLink></li>
                   </>
                 :
-                  <>
-                  <li><NavLink to='/registration'>Зарегистрироваться</NavLink></li>
-                  <li><NavLink to='/login'>Авторизоваться</NavLink></li>
+                <>
+                <li><NavLink to="/main" className={styles.logotip}/></li>
+                  {/* <li><NavLink to='/registration'>Reg</NavLink></li>
+                  <li><NavLink to='/login'>Log</NavLink></li> */}
                   </>
                 }
             </ul>
