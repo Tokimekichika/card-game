@@ -1,38 +1,36 @@
-import React from 'react';
-
+import React, {useEffect} from 'react'
 import StartPage from "../StartPage";
 import {BrowserRouter, Routes,Route} from "react-router-dom";
 import MainPage from "../MainPage/MainPage";
 import NavBar from "../../components/NavBar";
-import HomePage from '../HomePage/HomePage';
-
 import Card from "../../components/Card/Card";
 import MyDeck from "../MyDeck/MyDeck";
 import Register from "../Auth/Registration/Register";
 import Login from "../Auth/Login/Login";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { authReg } from "../../store/auth/actionCreator";
-import { deckLoad } from "../../store/deck/actionsCreator";
+import Shop from "../Shop/Shop";
+import {useDispatch} from "react-redux";
+import {initUser} from "../../store/auth/actionCreator";
+import EditDeck from "../EditDeck/EditDeck";
+import {initDeck} from "../../store/deck/actionCreators";
 
 function App() {
-  const dispatch = useDispatch()
-  const user = useSelector(state => state.auth.user)
+    const dispatch = useDispatch()
 
-  // проверка авторизации у пользователя после перезагрузки страницы
-  useEffect(() => {
-    fetch('/registration/session')
-    .then(data => data.json())
-    .then(responce => dispatch(authReg(responce)))
-  }, [dispatch])
+    const checkUser = async () => {
+        const responce = await fetch('/main')
+        const res = await responce.json()
+            dispatch(initUser(res))
+    }
+    const getCards = async () => {
+        const responce = await fetch('/getcards')
+        const res = await responce.json()
+        dispatch(initDeck(res))
+    }
 
-  // получение всех колод пользователя
-  useEffect(() => {
-    fetch('/mydeck')
-    .then(data => data.json())
-    .then(responce => dispatch(deckLoad(responce)))
-  }, [dispatch])
-
+    useEffect(()=>{
+        checkUser()
+        getCards()
+    },[])
   return (
  <div>
      <BrowserRouter>
@@ -42,13 +40,10 @@ function App() {
              <Route path='/login' element={<Login/>} />
              <Route path='/' element={<StartPage />} />
              <Route path='/main' element={<MainPage />} />
-             {user.id && 
-             <>
-             <Route path='/mydeck' element={<MyDeck/>} />
-             <Route path='/home' element={<HomePage />} />
              <Route path='/card' element={<Card/>} />
-             </>
-             }
+             <Route path='/mydeck' element={<MyDeck/>} />
+             <Route path='/buy' element={<Shop/>} />
+             <Route path='/editdeck' element={<EditDeck/>} />
          </Routes>
      </BrowserRouter>
  </div>

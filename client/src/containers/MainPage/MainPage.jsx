@@ -1,21 +1,9 @@
-import React from 'react';
-// import NavBar from '../../components/NavBar';
-import './MainPage.css';
+import React from 'react'
+
 
 const MainPage = () => {
     return (
-        <div className='container'>
-            <form className='form-container'>
-                <div className='buttons-container'>
-              <button className='auth-btn'>
-                Авиторизация
-              </button>
-              <button className='rega-btn'>
-              Регистрация
-              </button>
-                </div>
-            </form>
-        </div>
+        <>123123123</>
     )
 }
 

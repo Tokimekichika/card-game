@@ -2,7 +2,7 @@ import React from 'react';
 
 import './StartPage.css';
 import anime from 'animejs/lib/anime.es.js';
-import {useEffect} from "react";
+import React,{useEffect} from "react";
 import stars from "./img/stars.png";
 import moon from "./img/moon.png";
 import mountains_behind from "./img/mountains_behind.png";
