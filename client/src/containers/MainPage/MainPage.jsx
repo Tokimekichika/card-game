@@ -6,7 +6,7 @@ const MainPage = () => {
     return (
         <div className='container'>
             <form className='form-container'>
-                <div className='button-container'>
+                <div className='buttons-container'>
               <button className='auth-btn'>
                 Авиторизация
               </button>

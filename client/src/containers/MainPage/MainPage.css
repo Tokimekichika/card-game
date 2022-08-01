@@ -4,7 +4,7 @@
     background-size: cover;
     height: 1420px;
     background-position: center;
-    height: 787px;
+    height: 828px;
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -39,7 +39,7 @@
     border-radius: 10px;
 }
 
-.button-container {
+.buttons-container {
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -92,8 +92,8 @@ button{
     background: rgb(41, 38, 185);
     transform: translate(0, 0.25em);
   }
-  .aoth-btn:hover::before {
-    box-shadow: 0 0 0 2px rgb(28, 26, 122), 0 0.5em 0 0 rgb(28, 26, 122) ;
+  .auth-btn:hover::before {
+    /* box-shadow: 0 0 0 2px rgb(28, 26, 122), 0 0.5em 0 0 rgb(28, 26, 122) ; */
     transform: translate3d(0, 0.5em, -1em);
   }
   .auth-btn:active {
@@ -137,7 +137,10 @@ button{
     background: rgb(41, 38, 185);
     transform: translate(0, 0.25em);
   }
-
+  /* .rega-btn:hover::before {
+    box-shadow: 0 0 0 2px rgb(28, 26, 122), 0 0.5em 0 0 rgb(28, 26, 122) ;
+    transform: translate3d(0, 0.5em, -1em);
+  } */
   .rega-btn:active {
     background: rgb(28, 26, 122);
     transform: translate(0em, 0.75em);

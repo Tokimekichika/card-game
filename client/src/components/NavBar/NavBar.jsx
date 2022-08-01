@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 import { NavLink, useNavigate } from "react-router-dom";
 // import { useState, useEffect} from "react";
 
@@ -10,7 +12,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 // import imgLightsaber from './img/lightsaber.svg';
 import styles from './NavBar.module.css';
 import Money from "../Money";
-import MainPage from '../../containers/MainPage/MainPage';
+// import MainPage from '../../containers/MainPage/MainPage';
 import { useDispatch, useSelector } from 'react-redux'
 import { authLogout } from "../../store/auth/actionCreator";
 
@@ -43,8 +45,10 @@ const NavBar = () => {
 
     return (
         // ДОБАВИТЬ УСЛОВНЫЙ РЕНДЕРИНГ
+        <div>
         <div className={styles.container}>
             {/*<img className={styles.logo} src={icon} alt="Star Wars"/>*/}
+            <div>
             <ul className={styles.list__container}>
                 <li><NavLink to="/home">Home</NavLink></li>
                 {user.id ?   
@@ -59,7 +63,9 @@ const NavBar = () => {
                   </>
                 }
             </ul>
+            </div>
             <Money />
+        </div>
         </div>
     )
 }
