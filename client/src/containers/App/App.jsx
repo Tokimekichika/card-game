@@ -10,6 +10,8 @@ import Login from "../Auth/Login/Login";
 import Shop from "../Shop/Shop";
 import {useDispatch} from "react-redux";
 import {initUser} from "../../store/auth/actionCreator";
+import EditDeck from "../EditDeck/EditDeck";
+import {initDeck} from "../../store/deck/actionCreators";
 
 function App() {
     const dispatch = useDispatch()
@@ -19,9 +21,15 @@ function App() {
         const res = await responce.json()
             dispatch(initUser(res))
     }
+    const getCards = async () => {
+        const responce = await fetch('/getcards')
+        const res = await responce.json()
+        dispatch(initDeck(res))
+    }
 
     useEffect(()=>{
         checkUser()
+        getCards()
     },[])
   return (
  <div>
@@ -35,6 +43,7 @@ function App() {
              <Route path='/card' element={<Card/>} />
              <Route path='/mydeck' element={<MyDeck/>} />
              <Route path='/buy' element={<Shop/>} />
+             <Route path='/editdeck' element={<EditDeck/>} />
          </Routes>
      </BrowserRouter>
  </div>
