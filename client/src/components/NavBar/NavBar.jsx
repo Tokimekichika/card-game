@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { NavLink } from "react-router-dom";
 // import { useState, useEffect} from "react";
 
@@ -8,6 +10,7 @@ import { NavLink } from "react-router-dom";
 // import imgLightsaber from './img/lightsaber.svg';
 import styles from './NavBar.module.css';
 import Money from "../Money";
+import MainPage from '../../containers/MainPage/MainPage';
 
 const NavBar = () => {
     // const isTheme = useTheme()

@@ -1,0 +1,12 @@
+.home-container {
+    background-image: url(../HomePage/img/homePage.jpg) !important;
+    background: no-repeat;
+    background-size: cover;
+    height: 1420px;
+    background-position: center;
+    height: 787px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-attachment: fixed;
+}
