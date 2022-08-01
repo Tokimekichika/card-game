@@ -6,8 +6,8 @@
     background-position: center;
     height: 828px;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     background-attachment: fixed;
 }
 .form-container {
@@ -33,8 +33,8 @@
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0; 
-    box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.192); 
+    bottom: 0;
+    box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.192);
     filter: blur(10px);
     border-radius: 10px;
 }
@@ -100,7 +100,7 @@ button{
     background: rgb(28, 26, 122);
     transform: translate(0em, 0.75em);
   }
-  
+
 
   .rega-btn{
     padding: 30px;
