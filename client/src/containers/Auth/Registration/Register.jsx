@@ -36,7 +36,7 @@ function Register() {
   };
 
   return (
-    
+    <div>
     <div className="card">
       <div className="card-image">
         <h2 className="card-heading">Sign up</h2>
@@ -79,7 +79,8 @@ function Register() {
         </div>
       </form>
     </div>
+    </div>
+    
   );
 }
-
 export default Register;
