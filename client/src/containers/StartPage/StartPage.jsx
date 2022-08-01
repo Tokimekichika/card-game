@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 import './StartPage.css';
 import anime from 'animejs/lib/anime.es.js';
