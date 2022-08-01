@@ -21,4 +21,18 @@ deckRouter.get('/mydeck', async (req, res) => {
   }
 });
 
+deckRouter.post('/create', async (req, res) => {
+  try {
+    const { title, id } = req.body;
+    const createdDeck = await Deck.create({
+      title,
+      user_id: id,
+    });
+    res.json(createdDeck);
+  } catch (error) {
+    console.log(error);
+    res.json({ message: 'Произошла ошибка создания деки' });
+  }
+});
+
 module.exports = deckRouter;
