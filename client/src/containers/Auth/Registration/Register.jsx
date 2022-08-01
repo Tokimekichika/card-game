@@ -74,7 +74,7 @@ function Register() {
         </div>
         <div className="action">
           <button type="submit" className="action-button">
-            Registrations
+            Registration
           </button>
         </div>
       </form>
