@@ -7,10 +7,11 @@ const configApp = require('./config/configApp');
 
 // импортируем роутеры
 const regRouter = require('./routes/reg.routes');
-const deckRouter = require('./routes/deck.routes');
 const authRouter = require('./routes/auth.routes');
-const deckActiveRouter = require('./routes/active.routes');
-
+const deckRouter = require('./routes/deck.routes');
+const mainRouter = require('./routes/main.routes')
+const buyCards = require('./routes/buycards.routes')
+const initCards = require('./routes/initcards.routes')
 const app = express();
 configApp(app);
 app.locals.count = 0;
@@ -23,9 +24,12 @@ const PORT = process.env.PORT ?? 4000;
 
 // подключаем роутеры
 app.use('/registration', regRouter);
-app.use('/', deckRouter);
 app.use('/auth', authRouter);
-app.use('/active', deckActiveRouter);
+app.use('/', deckRouter);
+app.use('/main',mainRouter)
+app.use('/buycards',buyCards)
+app.use('/getcards',initCards)
+
 
 app.listen(PORT, async () => {
   console.log(`Сервер шуршит на порту ${PORT}`);

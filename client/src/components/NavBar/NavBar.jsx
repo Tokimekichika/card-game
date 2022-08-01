@@ -1,9 +1,5 @@
-import React from 'react';
-
-
-
 import { NavLink, useNavigate } from "react-router-dom";
-// import { useState, useEffect} from "react";
+import React from "react";
 
 // import { useTheme, THEME_LIGHT, THEME_DARK, THEME_NEUTRAL } from '@context/ThemeProvider';
 //
@@ -12,13 +8,13 @@ import { NavLink, useNavigate } from "react-router-dom";
 // import imgLightsaber from './img/lightsaber.svg';
 import styles from './NavBar.module.css';
 import Money from "../Money";
-// import MainPage from '../../containers/MainPage/MainPage';
 import { useDispatch, useSelector } from 'react-redux'
 import { authLogout } from "../../store/auth/actionCreator";
 
 const NavBar = () => {
   const dispatch = useDispatch()
   const user = useSelector((state) => state.auth.user)
+    // console.log(user)
   const navigate = useNavigate()
     // const isTheme = useTheme()
     // const [icon, setIcon] = useState(imgSpaceStation);
@@ -45,10 +41,8 @@ const NavBar = () => {
 
     return (
         // ДОБАВИТЬ УСЛОВНЫЙ РЕНДЕРИНГ
-        <div>
         <div className={styles.container}>
             {/*<img className={styles.logo} src={icon} alt="Star Wars"/>*/}
-            <div>
             <ul className={styles.list__container}>
                 {user.id ?   
                   <>
@@ -61,12 +55,21 @@ const NavBar = () => {
                 <li><NavLink to="/main" className={styles.logotip}/></li>
                   {/* <li><NavLink to='/registration'>Reg</NavLink></li>
                   <li><NavLink to='/login'>Log</NavLink></li> */}
+                <li><NavLink to="/home">Home</NavLink></li>
+                {user?.id ?
+                  <>
+                  <li><NavLink to='/pc'>{`ПРИВЕТ,${user.name}!`}</NavLink></li>
+                  <li><NavLink to="/" onClick={logoutHandler}>Logout</NavLink></li>
+                      <li><NavLink to="/editdeck">DECKS</NavLink></li>
+                  </>
+                :
+                  <>
+                  <li><NavLink to='/registration'>Reg</NavLink></li>
+                  <li><NavLink to='/login'>Log</NavLink></li>
                   </>
                 }
             </ul>
-            </div>
             <Money />
-        </div>
         </div>
     )
 }
