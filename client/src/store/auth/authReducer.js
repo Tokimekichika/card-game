@@ -2,7 +2,7 @@ import {AUTH_LOGIN, AUTH_LOGOUT, AUTH_REG, INIT_USER} from "./actionType";
 import {BUY_DECK} from "../shop/actionType";
 
 
-const initialState = {user:{}};
+const initialState = { user: {} };
 
 export default function authReducer(state = initialState, action) {
   switch (action.type) {

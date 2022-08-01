@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './StartPage.css';
 import anime from 'animejs/lib/anime.es.js';
 import React,{useEffect} from "react";
