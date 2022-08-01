@@ -11,6 +11,8 @@ const Shop = () => {
     const buy = async() => {
         const responce = await fetch('/buycards')
         // dispatch(buyDeck())
+        const res = await responce.json()
+        console.log(res)
         setState(true)
     }
 
