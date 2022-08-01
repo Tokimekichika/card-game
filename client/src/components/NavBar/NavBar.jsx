@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-// import { useState, useEffect} from "react";
+import React from "react";
 
 // import { useTheme, THEME_LIGHT, THEME_DARK, THEME_NEUTRAL } from '@context/ThemeProvider';
 //
@@ -14,6 +14,7 @@ import { authLogout } from "../../store/auth/actionCreator";
 const NavBar = () => {
   const dispatch = useDispatch()
   const user = useSelector((state) => state.auth.user)
+    // console.log(user)
   const navigate = useNavigate()
     // const isTheme = useTheme()
     // const [icon, setIcon] = useState(imgSpaceStation);
@@ -44,7 +45,7 @@ const NavBar = () => {
             {/*<img className={styles.logo} src={icon} alt="Star Wars"/>*/}
             <ul className={styles.list__container}>
                 <li><NavLink to="/home">Home</NavLink></li>
-                {user.id ?   
+                {user.id ?
                   <>
                   <li><NavLink to='/pc'>{`ПРИВЕТ,${user.name}!`}</NavLink></li>
                   <li><NavLink to="/" onClick={logoutHandler}>Logout</NavLink></li>
