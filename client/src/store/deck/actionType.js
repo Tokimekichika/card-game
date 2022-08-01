@@ -1,0 +1,1 @@
+export const ADD_TO_DECK_FROM_SHOP = 'ADD_TO_DECK_FROM_SHOP'

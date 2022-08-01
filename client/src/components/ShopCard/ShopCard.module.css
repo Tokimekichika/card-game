@@ -2,10 +2,11 @@
     background: #776557;
     transition: transform 0.15s;
     position: relative;
-    width: 35vh;
-    height: 47vh;
+    width: 40vh;
+    height: 55vh;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
     border-radius: 8px;
+    /*right: 3000px;*/
 }
 
 
@@ -35,13 +36,16 @@
 }
 .CardDescription {
     position: absolute;
-    top: -5px;
-    left: 15%;
-    width: 70%;
-    height: 70%;
-    border: 4px solid #968E86;
+    width: 100%;
+    top: 63%;
+    background: gold;
+    text-align: center;
+    font-size: 3vh;
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
-
 
 
 .CardMana {

@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({ Card, Shop }) {
       // define association here
-      Pack.hasMany(Card, { foreignKey: 'card_id' });
+      // Pack.hasMany(Card, { foreignKey: 'card_id' });
       Pack.belongsTo(Shop, { foreignKey: 'pack_id' });
     }
   }

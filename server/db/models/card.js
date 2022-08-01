@@ -12,10 +12,10 @@ module.exports = (sequelize, DataTypes) => {
     static associate({
       Deck, User, Pack,
     }) {
-      Card.hasMany(Deck, { foreignKey: 'card_id' });
-      Card.belongsToMany(User, { through: Deck, foreignKey: 'deck_id', otherKey: 'user_id' });
-      // Card.hasMany(Ability, { foreignKey: 'ability_id' });
-      Card.belongsTo(Pack, { foreignKey: 'card_id' });
+      // Card.hasMany(Deck, { foreignKey: 'card_id' });
+      // Card.belongsToMany(User, { through: Deck, foreignKey: 'deck_id', otherKey: 'user_id' });
+      // // Card.hasMany(Ability, { foreignKey: 'ability_id' });
+      // Card.belongsTo(Pack, { foreignKey: 'card_id' });
     }
   }
   Card.init({
