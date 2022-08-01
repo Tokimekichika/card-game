@@ -3,7 +3,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 0;
-    background: linear-gradient(#2b1055, #7597de);
+    background: rgba(57, 56, 56, 0.3)
+    
+
 }
 /*.logo {*/
 /*    width: 60px;*/

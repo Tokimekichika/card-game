@@ -1,3 +1,6 @@
+import React from 'react';
+
+import { NavLink } from "react-router-dom";
 import { NavLink, useNavigate } from "react-router-dom";
 // import { useState, useEffect} from "react";
 
@@ -8,6 +11,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 // import imgLightsaber from './img/lightsaber.svg';
 import styles from './NavBar.module.css';
 import Money from "../Money";
+import MainPage from '../../containers/MainPage/MainPage';
 import { useDispatch, useSelector } from 'react-redux'
 import { authLogout } from "../../store/auth/actionCreator";
 

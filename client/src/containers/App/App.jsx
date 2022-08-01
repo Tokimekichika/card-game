@@ -1,8 +1,11 @@
+import React from 'react';
 
 import StartPage from "../StartPage";
 import {BrowserRouter, Routes,Route} from "react-router-dom";
 import MainPage from "../MainPage/MainPage";
 import NavBar from "../../components/NavBar";
+import HomePage from '../HomePage/HomePage';
+
 import Card from "../../components/Card/Card";
 import MyDeck from "../MyDeck/MyDeck";
 import Register from "../Auth/Registration/Register";
@@ -18,6 +21,7 @@ function App() {
              <Route path='/login' element={<Login/>} />
              <Route path='/' element={<StartPage />} />
              <Route path='/main' element={<MainPage />} />
+             <Route path='/home' element={<HomePage />} />
              <Route path='/card' element={<Card/>} />
              <Route path='/mydeck' element={<MyDeck/>} />
          </Routes>
