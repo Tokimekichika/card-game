@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { NavLink } from "react-router-dom";
+
 import { NavLink, useNavigate } from "react-router-dom";
 // import { useState, useEffect} from "react";
 
@@ -48,7 +48,7 @@ const NavBar = () => {
             {/*<img className={styles.logo} src={icon} alt="Star Wars"/>*/}
             <ul className={styles.list__container}>
                 <li><NavLink to="/home">Home</NavLink></li>
-                {user.id ?   
+                {user.id ?
                   <>
                   <li><NavLink to='/pc'>{`ПРИВЕТ,${user.name}!`}</NavLink></li>
                   <li><NavLink to="/" onClick={logoutHandler}>Logout</NavLink></li>
