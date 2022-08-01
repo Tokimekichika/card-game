@@ -6,6 +6,10 @@ import MainPage from "../MainPage/MainPage";
 import NavBar from "../../components/NavBar";
 import HomePage from '../HomePage/HomePage';
 
+import Card from "../../components/Card/Card";
+import MyDeck from "../MyDeck/MyDeck";
+import Register from "../Auth/Registration/Register";
+import Login from "../Auth/Login/Login";
 
 function App() {
   return (
@@ -13,9 +17,13 @@ function App() {
      <BrowserRouter>
          <NavBar/>
          <Routes>
+             <Route path='/registration' element={<Register/>} />
+             <Route path='/login' element={<Login/>} />
              <Route path='/' element={<StartPage />} />
              <Route path='/main' element={<MainPage />} />
              <Route path='/home' element={<HomePage />} />
+             <Route path='/card' element={<Card/>} />
+             <Route path='/mydeck' element={<MyDeck/>} />
          </Routes>
      </BrowserRouter>
  </div>
