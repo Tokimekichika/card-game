@@ -10,9 +10,12 @@ const configApp = require('./config/configApp');
 const regRouter = require('./routes/reg.routes');
 const authRouter = require('./routes/auth.routes');
 const deckRouter = require('./routes/deck.routes');
-const mainRouter = require('./routes/main.routes');
-const buyCards = require('./routes/buycards.routes');
-const initCards = require('./routes/initcards.routes');
+const mainRouter = require('./routes/main.routes')
+const buyCards = require('./routes/buycards.routes')
+const initCards = require('./routes/initcards.routes')
+const cardsRouter = require('./routes/cards.routes')
+const collectionsRouter = require('./routes/collections.routes')
+
 const activeDeck = require('./routes/active.routes');
 
 const app = express();
@@ -29,9 +32,11 @@ const PORT = process.env.PORT ?? 4000;
 app.use('/registration', regRouter);
 app.use('/auth', authRouter);
 app.use('/', deckRouter);
-app.use('/main', mainRouter);
-app.use('/buycards', buyCards);
-app.use('/getcards', initCards);
+app.use('/main',mainRouter)
+app.use('/buycards',buyCards)
+app.use('/getcards',initCards)
+app.use('/',cardsRouter)
+app.use('/collections',collectionsRouter)
 app.use('/active', activeDeck);
 
 app.listen(PORT, async () => {
