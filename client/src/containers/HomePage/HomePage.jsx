@@ -12,7 +12,9 @@ function HomePage() {
               <div className='button-container'>
                 <div className='start-game-button-container'>
 
+
                 <button onClick={() => navigate('/room')} className = 'start-game-btn'>
+
 
                     Играть
                 </button>

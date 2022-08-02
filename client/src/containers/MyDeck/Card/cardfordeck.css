@@ -1,0 +1,37 @@
+.cards-container {
+    display: flex;
+    height: 300px;
+    width: 200px;
+    border: solid;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.footer-card {
+    width: 200px;
+    border: solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-card{
+    background-image: url(./img/card.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid;
+    width: 195px;
+    border: solid;
+    height: 220px;
+    background-position: center;
+
+}
+
+.btn-container{
+    border: solid;
+    display: flex;
+    justify-content: space-around;
+
+}
