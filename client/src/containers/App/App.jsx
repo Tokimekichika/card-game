@@ -13,6 +13,7 @@ import {initUser} from "../../store/auth/actionCreator";
 import EditDeck from "../EditDeck/EditDeck";
 import {initDeck} from "../../store/deck/actionCreators";
 import HomePage from '../HomePage/HomePage';
+import WebSock from "../Game/WebSock";
 import { deckLoad } from '../../store/deck/actionsCreator';
 import WireFRame from '../../components/WireFrame/WireFRame';
 
@@ -53,7 +54,7 @@ function App() {
              <Route path='/registration' element={<Register/>} />
              <Route path='/login' element={<Login/>} />
              <Route path='/main' element={<MainPage />} />
-             {user.id && 
+             {user.id &&
              <>
              <Route path='/card' element={<Card/>} />
              <Route path='/buy' element={<Shop/>} />
@@ -61,6 +62,9 @@ function App() {
              <Route path='/editdeck' element={<EditDeck/>} />
              </>
              }
+             <Route path='room' element={<WebSock/>}>
+                 <Route path=':roomID' element={<WebSock/>}/>
+                 </Route>
              <Route path='/home' element={<HomePage />} />
              </Route>
          </Routes>
