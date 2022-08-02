@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }) {
       Card.belongsToMany(User, { through: 'user_card_join_table' });
       Card.belongsTo(Pack, { foreignKey: 'pack_id' });
-      Card.belongsToMany(Deck,{through:card_deck})
+      Card.belongsToMany(Deck,{through:card_deck, foreignKey:'card_id', otherKey:'deck_id'})
     }
   }
   Card.init({

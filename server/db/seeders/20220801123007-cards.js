@@ -255,7 +255,7 @@ module.exports = {
     }], {});
     await queryInterface.bulkInsert('Cards', [{
       name: 'Igoryan',
-      photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03PG7T3VSA-12d76352dda5-512',
+      photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03HUN523PG-de7d73fa0581-512',
       description: '123',
       damage: 10,
       health: 9,
