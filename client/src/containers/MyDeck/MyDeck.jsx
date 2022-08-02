@@ -37,13 +37,13 @@ function MyDeck() {
       <div><h4>Мои колоды</h4></div>
       <form onSubmit={deckCreateHandle} className="button--form">
           <Button auto onClick={handler}>Добавить колоду</Button>
-          <Modal visible={state} onClose={closeHandler}>
-            <Modal.Title>Добавление колоды</Modal.Title>
+          <Modal className='modal-container' visible={state} onClose={closeHandler}>
+            <Modal.Title className='modal-title'>Добавление колоды</Modal.Title>
             <Modal.Content>
-              <Input ref={ref} name="idc" placeholder="Имя колоды" />
+              <Input className='modal-input' ref={ref} name="idc" placeholder="Имя колоды" />
             </Modal.Content>
-            <Modal.Action passive onClick={() => setState(false)}>Cancel</Modal.Action>
-            <Modal.Action onClick={deckCreateHandle}>Create</Modal.Action>
+            <Modal.Action className='modal-btn' passive onClick={() => setState(false)}>Cancel</Modal.Action>
+            <Modal.Action className='modal-btn' onClick={deckCreateHandle}>Create</Modal.Action>
           </Modal>
         </form>
         <div className='cardss-container'>

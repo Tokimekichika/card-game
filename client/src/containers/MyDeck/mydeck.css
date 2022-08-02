@@ -65,9 +65,7 @@ h4{
 }
 
 h4{
-
     margin-top: 90px;
-
 	color: white;
 	font-size: 30px;
     /* margin-bottom: 190px; */
@@ -75,19 +73,44 @@ h4{
 }
 
 .cardss-container{
-    /* border: solid; */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
     margin-right: 40px;
     margin-left: 40px;
-    align-content: space-around;
     flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: flex-start;
 }
 
 .button--form {
 position: absolute;
 top: 89px;
 left: 60px;
+}
+
+.modal-title{
+    color: #2e48a1 !important;
+    text-shadow:  0 0 10px rgb(18, 62, 175),
+    0 0 27px #000000; 
+}
+
+.modal-btn {
+    color: #2e48a1 !important;
+    text-shadow:  0 0 10px rgb(18, 62, 175),
+    0 0 27px #000000; 
+}
+
+.modal-input{
+    /* border: 0; */
+/* z-index: 1; */
+background-color: transparent;
+border-bottom: 2px solid #eee;
+font: inherit;
+font-size: 1.125rem;
+padding: 0.25rem 0;
+}
+
+.modal-container{
+    box-shadow: 3px 4px 60px 90px rgba(34, 60, 80, 0.29) !important;
 }
