@@ -12,10 +12,14 @@ body{
     background: inherit;
     position: absolute;
     /* border: 1px solid black; */
-    width: -webkit-fill-available;
+    /*width: -webkit-fill-available;*/
     backdrop-filter: blur(10px);
     position: fixed;
 
+}
+
+.logotip{
+ 
 }
 /* .container:before {
     position: absolute;

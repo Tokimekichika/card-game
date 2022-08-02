@@ -1,7 +1,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Decks', [{
-      title: 'пират-вар',
+      // title: 'пират-вар',
       active: false,
       user_id: 1,
       card_id: 1,
