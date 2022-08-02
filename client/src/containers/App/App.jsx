@@ -8,13 +8,15 @@ import MyDeck from "../MyDeck/MyDeck";
 import Register from "../Auth/Registration/Register";
 import Login from "../Auth/Login/Login";
 import Shop from "../Shop/Shop";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {initUser} from "../../store/auth/actionCreator";
 import EditDeck from "../EditDeck/EditDeck";
 import {initDeck} from "../../store/deck/actionCreators";
+import HomePage from '../HomePage/HomePage';
 
 function App() {
     const dispatch = useDispatch()
+    const user = useSelector(state => state.auth.user)
 
     const checkUser = async () => {
         const responce = await fetch('/main')
