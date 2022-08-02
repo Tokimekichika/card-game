@@ -57,7 +57,7 @@ function App() {
              <>
              <Route path='/card' element={<Card/>} />
              <Route path='/buy' element={<Shop/>} />
-             <Route path='/mydeck' element={<MyDeck/>} />
+             <Route exact path='/mydeck' element={<MyDeck/>} />
              <Route path='/editdeck' element={<EditDeck/>} />
              </>
              }
