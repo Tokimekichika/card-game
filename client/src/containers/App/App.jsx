@@ -39,7 +39,6 @@ function App() {
              <Route path='/registration' element={<Register/>} />
              <Route path='/login' element={<Login/>} />
              <Route path='/' element={<StartPage />} />
-             <Route path='/home' element={<HomePage />} />
              <Route path='/main' element={<MainPage />} />
              {user.id && 
              <>
@@ -47,10 +46,10 @@ function App() {
              <Route path='/mydeck' element={<MyDeck/>} />
              </>
              }
-             <Route path='/card' element={<Card/>} />
-             <Route path='/mydeck' element={<MyDeck/>} />
+             <Route path='/home' element={<HomePage />} />
              <Route path='/buy' element={<Shop/>} />
              <Route path='/editdeck' element={<EditDeck/>} />
+
          </Routes>
      </BrowserRouter>
  </div>
