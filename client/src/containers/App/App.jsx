@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import StartPage from "../StartPage";
 import {BrowserRouter, Routes,Route} from "react-router-dom";
 import MainPage from "../MainPage/MainPage";
-import NavBar from "../../components/NavBar";
+// import NavBar from "../../components/NavBar";
 import Card from "../../components/Card/Card";
 import MyDeck from "../MyDeck/MyDeck";
 import Register from "../Auth/Registration/Register";
@@ -14,6 +14,7 @@ import EditDeck from "../EditDeck/EditDeck";
 import {initDeck} from "../../store/deck/actionCreators";
 import HomePage from '../HomePage/HomePage';
 import { deckLoad } from '../../store/deck/actionsCreator';
+import WireFRame from '../../components/WireFrame/WireFRame';
 
 
 function App() {
@@ -45,11 +46,12 @@ function App() {
   return (
  <div>
      <BrowserRouter>
-         <NavBar/>
+         {/* <NavBar/> */}
          <Routes>
+             <Route path='/' element={<StartPage />} />
+            <Route element={<WireFRame />}>
              <Route path='/registration' element={<Register/>} />
              <Route path='/login' element={<Login/>} />
-             <Route path='/' element={<StartPage />} />
              <Route path='/main' element={<MainPage />} />
              {user.id && 
              <>
@@ -60,7 +62,7 @@ function App() {
              </>
              }
              <Route path='/home' element={<HomePage />} />
-
+             </Route>
          </Routes>
      </BrowserRouter>
  </div>
