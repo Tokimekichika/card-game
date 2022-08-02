@@ -17,11 +17,7 @@ import HomePage from '../HomePage/HomePage';
 
 function App() {
     const dispatch = useDispatch()
-    const user= useSelector(state => state.auth.user)
-
-    useEffect(() => {
-      fetch('/')
-    }
+    const user = useSelector(state => state.auth.user)
 
     const checkUser = async () => {
         const responce = await fetch('/main')
@@ -50,12 +46,13 @@ function App() {
              {user.id && 
              <>
              <Route path='/card' element={<Card/>} />
+             <Route path='/buy' element={<Shop/>} />
              <Route path='/mydeck' element={<MyDeck/>} />
+             <Route path='/editdeck' element={<EditDeck/>} />
              </>
              }
              <Route path='/home' element={<HomePage />} />
-             <Route path='/buy' element={<Shop/>} />
-             <Route path='/editdeck' element={<EditDeck/>} />
+
          </Routes>
      </BrowserRouter>
  </div>

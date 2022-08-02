@@ -6,7 +6,7 @@ import icon from './img/icons8-доллар-сша-в-круге.gif'
 import styles from './Money.module.css';
 
 const Money = () => {
-    const [count, setCount] = useState(0);
+    // const [count, setCount] = useState(0);
 
     const user = useSelector((state) => state.auth.user)
 

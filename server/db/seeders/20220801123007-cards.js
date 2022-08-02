@@ -334,11 +334,11 @@ module.exports = {
       updatedAt: new Date(),
     }], {});
     await queryInterface.bulkInsert('Cards', [{
-      name: 'Lubov',
-      photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03M66SL76H-a3e7653c400e-512',
+      name: 'Aleksandra',
+      photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03M0G8NXF0-6b719a60b187-512',
       description: '123',
-      damage: 5,
-      health: 7,
+      damage: 4,
+      health: 8,
       manaCost:6,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -404,11 +404,11 @@ module.exports = {
       updatedAt: new Date(),
     }], {});
     await queryInterface.bulkInsert('Cards', [{
-      name: 'Pasha S',
-      photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03JUHU5BQQ-1e288bef279a-512',
+      name: 'Andrei N',
+      photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03NZ583R7H-fb6eec9927bd-512',
       description: '123',
-      damage: 2,
-      health:4,
+      damage: 3,
+      health:3,
       manaCost:3,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -494,7 +494,7 @@ module.exports = {
       updatedAt: new Date(),
     }], {});
     await queryInterface.bulkInsert('Cards', [{
-      name: 'Aleksand S',
+      name: 'Aleksandr S',
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03MJJC79S4-aab0d7298315-512',
       description: '123',
       damage: 10,
@@ -554,8 +554,8 @@ module.exports = {
       updatedAt: new Date(),
     }], {});
     await queryInterface.bulkInsert('Cards', [{
-      name: 'Anton M',
-      photo_url: 'https://avatars.githubusercontent.com/u/37448691?v=4',
+      name: 'Aleksandr D',
+      photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03LUTF4MNJ-9a2ed2081b6e-512',
       description: '123',
       damage: 7,
       health:9,
