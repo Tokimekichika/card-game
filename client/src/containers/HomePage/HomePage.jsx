@@ -18,7 +18,6 @@ function HomePage() {
               <div className='icons-container'>
                 <div className='link-container-store'><Link to='/buy' className='store-icon'/></div>
                 <div className='link-container-library'><Link to='/mydeck' className='library-icon'/></div>
-                    
                 </div>
             </div>
         </>
