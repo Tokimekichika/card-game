@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Deck.init({
-    name:DataTypes.TEXT,
+    name: DataTypes.TEXT,
+    active: DataTypes.BOOLEAN,
     user_id: {
       type: DataTypes.INTEGER,
       references: {

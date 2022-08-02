@@ -7,7 +7,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      name:Sequelize.TEXT,
+      name: Sequelize.TEXT,
+      active: Sequelize.BOOLEAN,
       user_id: {
         type: Sequelize.INTEGER,
         references: {

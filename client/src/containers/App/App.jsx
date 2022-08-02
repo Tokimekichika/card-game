@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import StartPage from "../StartPage";
 import {BrowserRouter, Routes,Route} from "react-router-dom";
 import MainPage from "../MainPage/MainPage";
-import NavBar from "../../components/NavBar";
+// import NavBar from "../../components/NavBar";
 import Card from "../../components/Card/Card";
 import MyDeck from "../MyDeck/MyDeck";
 import Register from "../Auth/Registration/Register";
@@ -13,6 +13,10 @@ import {initUser} from "../../store/auth/actionCreator";
 import EditDeck from "../EditDeck/EditDeck";
 import {initDeck} from "../../store/deck/actionCreators";
 import HomePage from '../HomePage/HomePage';
+import WebSock from "../Game/WebSock";
+import { deckLoad } from '../../store/deck/actionsCreator';
+import WireFRame from '../../components/WireFrame/WireFRame';
+
 
 function App() {
     const dispatch = useDispatch()
@@ -29,6 +33,13 @@ function App() {
         dispatch(initDeck(res))
     }
 
+    // получение всех колод пользователя
+   useEffect(() => {
+    fetch('/mydeck')
+    .then(data => data.json())
+    .then(responce => dispatch(deckLoad(responce)))
+  }, [dispatch])
+
     useEffect(()=>{
         checkUser()
         getCards()
@@ -36,22 +47,26 @@ function App() {
   return (
  <div>
      <BrowserRouter>
-         <NavBar/>
+         {/* <NavBar/> */}
          <Routes>
+             <Route path='/' element={<StartPage />} />
+            <Route element={<WireFRame />}>
              <Route path='/registration' element={<Register/>} />
              <Route path='/login' element={<Login/>} />
-             <Route path='/' element={<StartPage />} />
              <Route path='/main' element={<MainPage />} />
-             {user.id && 
+             {user.id &&
              <>
              <Route path='/card' element={<Card/>} />
-             <Route path='/mydeck' element={<MyDeck/>} />
+             <Route path='/buy' element={<Shop/>} />
+             <Route exact path='/mydeck' element={<MyDeck/>} />
+             <Route path='/editdeck' element={<EditDeck/>} />
              </>
              }
+             <Route path='room' element={<WebSock/>}>
+                 <Route path=':roomID' element={<WebSock/>}/>
+                 </Route>
              <Route path='/home' element={<HomePage />} />
-             <Route path='/buy' element={<Shop/>} />
-             <Route path='/editdeck' element={<EditDeck/>} />
-
+             </Route>
          </Routes>
      </BrowserRouter>
  </div>

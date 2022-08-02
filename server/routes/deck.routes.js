@@ -5,6 +5,7 @@ const { Deck } = require('../db/models');
 deckRouter.get('/mydeck', async (req, res) => {
   try {
     const { id } = req.session.user;
+    console.log("🚀 ~ file: deck.routes.js ~ line 8 ~ deckRouter.get ~ id", id)
     const userdeck = await Deck.findAll({
       raw: true,
       where: {
@@ -23,9 +24,10 @@ deckRouter.get('/mydeck', async (req, res) => {
 
 deckRouter.post('/create', async (req, res) => {
   try {
-    const { title, id } = req.body;
+    const { name, id } = req.body;
+    console.log(req.body)
     const createdDeck = await Deck.create({
-      title,
+      name,
       user_id: id,
     });
     res.json(createdDeck);
