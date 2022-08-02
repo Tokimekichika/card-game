@@ -16,13 +16,6 @@ module.exports = {
           key: 'id',
         },
       },
-      // card_id: {
-      //   type: Sequelize.INTEGER,
-      //   references: {
-      //     model: 'Cards',
-      //     key: 'id',
-      //   },
-      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
