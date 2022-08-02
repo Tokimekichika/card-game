@@ -1,13 +1,15 @@
 import React from 'react';
 import './HomePage.css'
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+    const navigate = useNavigate()
     return (
         <>
             <div className='home-container'>
               <div className='button-container'>
                 <div className='start-game-button-container'>
-                <button className = 'start-game-btn'>
+                <button onClick={() => navigate('/room')} className = 'start-game-btn'>
                     Играть
                 </button>
                 </div>
@@ -17,7 +19,7 @@ function HomePage() {
                     </link></div>
                     <div className='link-container-library'><link className='library-icon'>
                     </link></div>
-                    
+
                 </div>
             </div>
         </>

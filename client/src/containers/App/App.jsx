@@ -13,6 +13,7 @@ import {initUser} from "../../store/auth/actionCreator";
 import EditDeck from "../EditDeck/EditDeck";
 import {initDeck} from "../../store/deck/actionCreators";
 import HomePage from '../HomePage/HomePage';
+import WebSock from "../Game/WebSock";
 
 function App() {
     const dispatch = useDispatch()
@@ -42,12 +43,15 @@ function App() {
              <Route path='/login' element={<Login/>} />
              <Route path='/' element={<StartPage />} />
              <Route path='/main' element={<MainPage />} />
-             {user.id && 
+             {user.id &&
              <>
              <Route path='/card' element={<Card/>} />
              <Route path='/mydeck' element={<MyDeck/>} />
              </>
              }
+             <Route path='room' element={<WebSock/>}>
+                 <Route path=':roomID' element={<WebSock/>}/>
+                 </Route>
              <Route path='/home' element={<HomePage />} />
              <Route path='/buy' element={<Shop/>} />
              <Route path='/editdeck' element={<EditDeck/>} />
