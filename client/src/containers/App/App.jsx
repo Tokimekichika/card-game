@@ -13,6 +13,7 @@ import {initUser} from "../../store/auth/actionCreator";
 import EditDeck from "../EditDeck/EditDeck";
 import {initDeck} from "../../store/deck/actionCreators";
 import HomePage from '../HomePage/HomePage';
+import { deckLoad } from '../../store/deck/actionsCreator';
 import WireFRame from '../../components/WireFrame/WireFRame';
 
 
@@ -30,6 +31,13 @@ function App() {
         const res = await responce.json()
         dispatch(initDeck(res))
     }
+
+    // получение всех колод пользователя
+   useEffect(() => {
+    fetch('/mydeck')
+    .then(data => data.json())
+    .then(responce => dispatch(deckLoad(responce)))
+  }, [dispatch])
 
     useEffect(()=>{
         checkUser()

@@ -17,11 +17,11 @@ function MyDeck() {
   }
 
   const deckCreateHandle = async (event) => {
-    const title = ref.current.value
+    const name = ref.current.value
     setState(false)
     const data = await fetch('/create', {
       method: 'POST',
-      body: JSON.stringify({title, id: user.id}),
+      body: JSON.stringify({name, id: user.id}),
       headers: {
         "Content-Type": "application/json",
       },
