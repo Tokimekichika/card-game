@@ -1,24 +1,42 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { useNavigate } from 'react-router-dom';
+// import { authLogout } from '../../store/auth/actionCreator';
 // import NavBar from '../../components/NavBar';
 import './MainPage.css';
 
 
 const MainPage = () => {
-  const navigate = useNavigate()
+  // const dispatch = useDispatch()
+  // const navigate = useNavigate()
+   
+
+    // const logoutHandler = (event) => {
+    //   event.preventDefault()
+    //   fetch('/auth/logout')
+    //     .then(data => data.json())
+    //     .then(responce => {
+    //       if (responce.islogin === false) {
+    //         dispatch(authLogout());
+    //         navigate('/')
+    //       }
+    //     })
+    // }
 
 
 
     return (
         <div className='container'>
-            <form className='form-container'>
+            <form className='form-container' action='/login' >
                 <div className='buttons-container'>
-              <button onClick='' className='auth-btn'>
+              <button type='submit' className='auth-btn'>
                 Авиторизация
               </button>
-              <button  onClick='' className='rega-btn'>
+              <form  action='/registration'>
+              <button  type='submit' className='rega-btn'>
               Регистрация
               </button>
+              </form>
                 </div>
             </form>
         </div>

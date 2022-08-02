@@ -12,7 +12,7 @@ body{
     background: inherit;
     position: absolute;
     /* border: 1px solid black; */
-    /*width: -webkit-fill-available;*/
+    width: -webkit-fill-available;
     backdrop-filter: blur(10px);
     position: fixed;
 
@@ -59,12 +59,16 @@ body{
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     font-weight: 800;
-    /* text-shadow:  0 0 5px #fff,
-    0 0 40px #ffff00; */
+    text-shadow:  0 0 10px rgb(18, 62, 175),
+    0 0 27px #000000; 
     transition: .4s;
 }
 .list__container :global(a.active) {
-    border: 2px solid #5647d1;
-    color: #72c2bb;
+    /* background-color: #443997; */
+    border: 2px solid #6858e3;
+    color: #6858e3;
     text-shadow: none;
+    -webkit-box-shadow: 3px 1px 76px 35px rgba(34, 60, 80, 0.33);
+     -moz-box-shadow: 3px 1px 76px 35px rgba(34, 60, 80, 0.33);
+     box-shadow: 3px 1px 76px 35px rgba(34, 60, 80, 0.33);
 }
