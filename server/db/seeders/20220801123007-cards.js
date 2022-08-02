@@ -1,35 +1,33 @@
-'use strict';
-
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Cards', [
-        {
-      name: 'Polyasha',
-      photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03HZ9YKYQM-f48939db467d-512',
+      {
+        name: 'Polyasha',
+        photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03HZ9YKYQM-f48939db467d-512',
+        description: '123',
+        damage: 3,
+        health: 2,
+        manaCost: 2,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      }], {});
+    await queryInterface.bulkInsert('Cards', [{
+      name: 'Polina',
+      photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03HVD5B086-cf4ff759fef7-512',
       description: '123',
-      damage: 3,
-      health: 2,
-      manaCost:2,
+      damage: 2,
+      health: 3,
+      manaCost: 2,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
-  await queryInterface.bulkInsert('Cards', [{
-    name: 'Polina',
-    photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03HVD5B086-cf4ff759fef7-512',
-    description: '123',
-    damage: 2,
-    health: 3,
-    manaCost:2,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  }], {});
     await queryInterface.bulkInsert('Cards', [{
       name: 'Adam',
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03LY2XGBGE-56b80e6a8e74-512',
       description: '123',
       damage: 4,
       health: 5,
-      manaCost:4,
+      manaCost: 4,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -39,7 +37,7 @@ module.exports = {
       description: '123',
       damage: 6,
       health: 7,
-      manaCost:6,
+      manaCost: 6,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -49,7 +47,7 @@ module.exports = {
       description: '123',
       damage: 2,
       health: 2,
-      manaCost:2,
+      manaCost: 2,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -59,7 +57,7 @@ module.exports = {
       description: '123',
       damage: 5,
       health: 5,
-      manaCost:5,
+      manaCost: 5,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -69,7 +67,7 @@ module.exports = {
       description: '123',
       damage: 9,
       health: 5,
-      manaCost:7,
+      manaCost: 7,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -79,7 +77,7 @@ module.exports = {
       description: '123',
       damage: 3,
       health: 3,
-      manaCost:3,
+      manaCost: 3,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -89,7 +87,7 @@ module.exports = {
       description: '123',
       damage: 2,
       health: 4,
-      manaCost:3,
+      manaCost: 3,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -99,7 +97,7 @@ module.exports = {
       description: '123',
       damage: 2,
       health: 1,
-      manaCost:1,
+      manaCost: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -109,7 +107,7 @@ module.exports = {
       description: '123',
       damage: 1,
       health: 2,
-      manaCost:1,
+      manaCost: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -119,7 +117,7 @@ module.exports = {
       description: '123',
       damage: 6,
       health: 5,
-      manaCost:6,
+      manaCost: 6,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -129,7 +127,7 @@ module.exports = {
       description: '123',
       damage: 5,
       health: 1,
-      manaCost:3,
+      manaCost: 3,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -139,7 +137,7 @@ module.exports = {
       description: '123',
       damage: 1,
       health: 2,
-      manaCost:1,
+      manaCost: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -149,7 +147,7 @@ module.exports = {
       description: '123',
       damage: 2,
       health: 7,
-      manaCost:4,
+      manaCost: 4,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -159,7 +157,7 @@ module.exports = {
       description: '123',
       damage: 6,
       health: 2,
-      manaCost:6,
+      manaCost: 6,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -169,7 +167,7 @@ module.exports = {
       description: '123',
       damage: 3,
       health: 5,
-      manaCost:4,
+      manaCost: 4,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -179,7 +177,7 @@ module.exports = {
       description: '123',
       damage: 1,
       health: 1,
-      manaCost:1,
+      manaCost: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -189,7 +187,7 @@ module.exports = {
       description: '123',
       damage: 1,
       health: 4,
-      manaCost:3,
+      manaCost: 3,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -199,7 +197,7 @@ module.exports = {
       description: '123',
       damage: 3,
       health: 5,
-      manaCost:4,
+      manaCost: 4,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -209,7 +207,7 @@ module.exports = {
       description: '123',
       damage: 7,
       health: 7,
-      manaCost:7,
+      manaCost: 7,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -219,7 +217,7 @@ module.exports = {
       description: '123',
       damage: 4,
       health: 1,
-      manaCost:3,
+      manaCost: 3,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -229,7 +227,7 @@ module.exports = {
       description: '123',
       damage: 5,
       health: 5,
-      manaCost:5,
+      manaCost: 5,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -239,7 +237,7 @@ module.exports = {
       description: '123',
       damage: 4,
       health: 5,
-      manaCost:4,
+      manaCost: 4,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -249,7 +247,7 @@ module.exports = {
       description: '123',
       damage: 4,
       health: 3,
-      manaCost:4,
+      manaCost: 4,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -259,7 +257,7 @@ module.exports = {
       description: '123',
       damage: 10,
       health: 9,
-      manaCost:10,
+      manaCost: 10,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -269,7 +267,7 @@ module.exports = {
       description: '123',
       damage: 3,
       health: 6,
-      manaCost:5,
+      manaCost: 5,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -279,7 +277,7 @@ module.exports = {
       description: '123',
       damage: 4,
       health: 12,
-      manaCost:9,
+      manaCost: 9,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -289,7 +287,7 @@ module.exports = {
       description: '123',
       damage: 6,
       health: 7,
-      manaCost:6,
+      manaCost: 6,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -299,7 +297,7 @@ module.exports = {
       description: '123',
       damage: 8,
       health: 6,
-      manaCost:8,
+      manaCost: 8,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -309,7 +307,7 @@ module.exports = {
       description: '123',
       damage: 6,
       health: 8,
-      manaCost:8,
+      manaCost: 8,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -319,7 +317,7 @@ module.exports = {
       description: '123',
       damage: 7,
       health: 7,
-      manaCost:7,
+      manaCost: 7,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -329,7 +327,7 @@ module.exports = {
       description: '123',
       damage: 5,
       health: 7,
-      manaCost:6,
+      manaCost: 6,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -339,7 +337,7 @@ module.exports = {
       description: '123',
       damage: 4,
       health: 8,
-      manaCost:6,
+      manaCost: 6,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -349,7 +347,7 @@ module.exports = {
       description: '123',
       damage: 2,
       health: 3,
-      manaCost:2,
+      manaCost: 2,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -359,7 +357,7 @@ module.exports = {
       description: '123',
       damage: 4,
       health: 1,
-      manaCost:2,
+      manaCost: 2,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -369,7 +367,7 @@ module.exports = {
       description: '123',
       damage: 7,
       health: 1,
-      manaCost:5,
+      manaCost: 5,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -378,8 +376,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03HV4XL32A-36d7d5744884-512',
       description: '123',
       damage: 2,
-      health:7,
-      manaCost:5,
+      health: 7,
+      manaCost: 5,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -388,8 +386,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03MZMU469E-b7a300507cc7-512',
       description: '123',
       damage: 4,
-      health:6,
-      manaCost:5,
+      health: 6,
+      manaCost: 5,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -398,8 +396,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03JUHU5BQQ-1e288bef279a-512',
       description: '123',
       damage: 2,
-      health:4,
-      manaCost:3,
+      health: 4,
+      manaCost: 3,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -408,8 +406,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03NZ583R7H-fb6eec9927bd-512',
       description: '123',
       damage: 3,
-      health:3,
-      manaCost:3,
+      health: 3,
+      manaCost: 3,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -418,8 +416,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03ML7EGEDN-8583b8e46402-512',
       description: '123',
       damage: 2,
-      health:1,
-      manaCost:1,
+      health: 1,
+      manaCost: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -428,8 +426,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03P9014J23-a4222300ef1b-512',
       description: '123',
       damage: 1,
-      health:2,
-      manaCost:1,
+      health: 2,
+      manaCost: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -438,8 +436,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03JBK7R170-374842e32469-512',
       description: '123',
       damage: 8,
-      health:9,
-      manaCost:9,
+      health: 9,
+      manaCost: 9,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -448,8 +446,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03JDR6GG3C-448dd2fd84bf-512',
       description: '123',
       damage: 9,
-      health:8,
-      manaCost:9,
+      health: 8,
+      manaCost: 9,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -458,8 +456,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03HY26V0MR-aba6ecbfa6b0-512',
       description: '123',
       damage: 10,
-      health:6,
-      manaCost:9,
+      health: 6,
+      manaCost: 9,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -468,8 +466,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03LS11RHH7-b0ef5f527768-512',
       description: '123',
       damage: 6,
-      health:8,
-      manaCost:8,
+      health: 8,
+      manaCost: 8,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -478,8 +476,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03PFN3GJK0-f49919eb18ca-512',
       description: '123',
       damage: 8,
-      health:5,
-      manaCost:8,
+      health: 5,
+      manaCost: 8,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -488,8 +486,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03PPAN3QDU-6948d24e8c67-512',
       description: '123',
       damage: 9,
-      health:10,
-      manaCost:10,
+      health: 10,
+      manaCost: 10,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -498,8 +496,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03MJJC79S4-aab0d7298315-512',
       description: '123',
       damage: 10,
-      health:7,
-      manaCost:10,
+      health: 7,
+      manaCost: 10,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -508,8 +506,8 @@ module.exports = {
       photo_url: 'https://drive.google.com/file/d/1Kh3VCJQ6g2M6z1DBFSMu52ljfLO271TT/view?usp=sharing',
       description: '123',
       damage: 10,
-      health:10,
-      manaCost:10,
+      health: 10,
+      manaCost: 10,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -518,8 +516,8 @@ module.exports = {
       photo_url: 'https://drive.google.com/file/d/1W9Zve-9lqqr_nf0IZ-mYKm7BQigOOm8q/view?usp=sharing',
       description: '123',
       damage: 9,
-      health:9,
-      manaCost:10,
+      health: 9,
+      manaCost: 10,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -528,8 +526,8 @@ module.exports = {
       photo_url: 'https://drive.google.com/file/d/1cUNWmWJI9eXRQHTGs-yFxpj-ImuJYJ-d/view?usp=sharing',
       description: '123',
       damage: 8,
-      health:7,
-      manaCost:8,
+      health: 7,
+      manaCost: 8,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -538,8 +536,8 @@ module.exports = {
       photo_url: 'https://avatars.githubusercontent.com/u/71690649?v=4',
       description: '123',
       damage: 7,
-      health:8,
-      manaCost:8,
+      health: 8,
+      manaCost: 8,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -548,8 +546,8 @@ module.exports = {
       photo_url: 'https://avatars.githubusercontent.com/u/20651552?v=4',
       description: '123',
       damage: 10,
-      health:11,
-      manaCost:10,
+      health: 11,
+      manaCost: 10,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -558,8 +556,8 @@ module.exports = {
       photo_url: 'https://ca.slack-edge.com/T03JMRMKG9W-U03LUTF4MNJ-9a2ed2081b6e-512',
       description: '123',
       damage: 7,
-      health:9,
-      manaCost:8,
+      health: 9,
+      manaCost: 8,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -568,8 +566,8 @@ module.exports = {
       photo_url: 'https://avatars.githubusercontent.com/u/37448691?v=4',
       description: '123',
       damage: 7,
-      health:7,
-      manaCost:8,
+      health: 7,
+      manaCost: 8,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -578,8 +576,8 @@ module.exports = {
       photo_url: 'blob:https://web.telegram.org/fd85960f-64bd-4832-aabb-8901d19d2e0e',
       description: '123',
       damage: 6,
-      health:10,
-      manaCost:9,
+      health: 10,
+      manaCost: 9,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -588,8 +586,8 @@ module.exports = {
       photo_url: 'blob:https://web.telegram.org/245d468c-8594-4ed4-b821-b9517430b633',
       description: '123',
       damage: 8,
-      health:8,
-      manaCost:9,
+      health: 8,
+      manaCost: 9,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -598,19 +596,19 @@ module.exports = {
       photo_url: 'blob:https://web.telegram.org/d0c3b553-ad3a-4181-ad11-663b3d1f54fa',
       description: '123',
       damage: 9,
-      health:7,
-      manaCost:9,
+      health: 7,
+      manaCost: 9,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
-},
+  },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     /**
      * Add commands to revert seed here.
      *
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-  }
+  },
 };
