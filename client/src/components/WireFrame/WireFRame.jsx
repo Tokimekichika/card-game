@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import NavBar from '../NavBar';
 
-function WireFRame(props) {
+function WireFRame() {
     return (
         <div>
             <NavBar />
