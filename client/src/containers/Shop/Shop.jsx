@@ -11,14 +11,14 @@ const Shop = () => {
     const shop = useSelector((state) => state.shop.shop)
     const deck = useSelector((state) => state.deck.deck)
     const buy = async() => {
-        const responce = await fetch('/buycards')
+        const responce = await fetch('/buycards/new')
         const res = await responce.json()
         dispatch(buyDeck(res))
-        // res.forEach(el=>dispatch(addToDeckFromShop(el)))
         setState(true)
     }
 
     const addToDeck = async () => {
+        setState(true)
         const responce = await fetch('/buycards')
         const res = await responce.json()
         console.log(res)
