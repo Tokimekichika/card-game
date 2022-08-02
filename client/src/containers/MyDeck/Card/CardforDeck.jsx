@@ -12,7 +12,7 @@ function CardforDeck({deck}) {
     console.log({ active: true })
     const data = await fetch('/active', {
       method: 'PUT',
-      body: JSON.stringify({id: deck.id, active: true }),
+      body: JSON.stringify({id: deck.id, active: !deck.active }),
       headers: {
         "Content-Type": "application/json",
       },
