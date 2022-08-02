@@ -9,7 +9,7 @@ function HomePage() {
               <div className='button-container'>
                 <div className='start-game-button-container'>
                 <form action='/' >
-                <button className = 'start-game-btn'>
+                <button className = 'start-game-btn' >
                     Играть
                 </button>
               </form>

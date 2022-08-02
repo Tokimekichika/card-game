@@ -34,9 +34,8 @@ function MyDeck() {
   return (
     <>
     <div className="myDeck-container">
-      <h4>Мои колоды</h4>
-      <div>
-        <form onSubmit={deckCreateHandle}>
+      <div><h4>Мои колоды</h4></div>
+      <form onSubmit={deckCreateHandle} className="button--form">
           <Button auto onClick={handler}>Добавить колоду</Button>
           <Modal visible={state} onClose={closeHandler}>
             <Modal.Title>Добавление колоды</Modal.Title>
@@ -47,12 +46,15 @@ function MyDeck() {
             <Modal.Action onClick={deckCreateHandle}>Create</Modal.Action>
           </Modal>
         </form>
-    </div>
+        <div className='cardss-container'>
       {myDeck && (
         myDeck.map((deck) => (
           <CardforDeck key={deck.id} deck={deck} />
-        ))
-      )}
+          ))
+          )}
+          </div>
+       
+    {/* </div> */}
     </div>
     </>
   )
