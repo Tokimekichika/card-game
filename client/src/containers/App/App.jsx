@@ -8,13 +8,20 @@ import MyDeck from "../MyDeck/MyDeck";
 import Register from "../Auth/Registration/Register";
 import Login from "../Auth/Login/Login";
 import Shop from "../Shop/Shop";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {initUser} from "../../store/auth/actionCreator";
 import EditDeck from "../EditDeck/EditDeck";
 import {initDeck} from "../../store/deck/actionCreators";
+import HomePage from '../HomePage/HomePage';
+
 
 function App() {
     const dispatch = useDispatch()
+    const user= useSelector(state => state.auth.user)
+
+    useEffect(() => {
+      fetch('/')
+    }
 
     const checkUser = async () => {
         const responce = await fetch('/main')
@@ -39,7 +46,6 @@ function App() {
              <Route path='/registration' element={<Register/>} />
              <Route path='/login' element={<Login/>} />
              <Route path='/' element={<StartPage />} />
-             <Route path='/home' element={<HomePage />} />
              <Route path='/main' element={<MainPage />} />
              {user.id && 
              <>
@@ -47,8 +53,7 @@ function App() {
              <Route path='/mydeck' element={<MyDeck/>} />
              </>
              }
-             <Route path='/card' element={<Card/>} />
-             <Route path='/mydeck' element={<MyDeck/>} />
+             <Route path='/home' element={<HomePage />} />
              <Route path='/buy' element={<Shop/>} />
              <Route path='/editdeck' element={<EditDeck/>} />
          </Routes>
