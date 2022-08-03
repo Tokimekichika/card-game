@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
+import './personalCab.css'
 // import { Button, Card, Image, Textarea, Spacer, Input, Text, Select, Divider } from '@geist-ui/core';
 // import styled from 'styled-components';
 import { useSelector } from 'react-redux';
@@ -65,14 +66,15 @@ export default function PersonaCab() {
 
     return (
         <>
-            <div className="register-container">
-                <div className="card">
-                    <div className="card-image">
+            <div className="background">
+                <div className="board">
+                    <div className="board-blur">
                     </div>
+                    <div className='text-container'>
                         <span>Мой профиль</span>
-
+                    </div>
                         <div className="input">
-                            <img src={user?.photo} style={{width:'200px',height:'200px',borderRadius:'50%',margin:'auto auto'}} alt='123'/>
+                            <img src={user?.photo} style={{width:'200px',height:'200px',borderRadius:'50%',margin:'auto auto'}} />
                             <input
                                 type="text"
                                 onChange={showSaveButton}
@@ -82,9 +84,10 @@ export default function PersonaCab() {
                                 autoComplete="off"
                                 required
                             />
-                            <label className="input-label">Name</label>
+                            <label className="input-label">Имя</label>
                         </div>
-                        <div className="input">
+                            <label className="photo-label">Photo</label>
+                        <div className="btn-board">
                             <input
                                 type="file"
                                 className="input-field"
@@ -93,18 +96,15 @@ export default function PersonaCab() {
                                 required
                                 onChange={(e) => setImg(e.target.files[0])}
                             />
-                            <button onClick={sendFile} className="action-button">
+                            <button onClick={sendFile} className="change-btn">
                                 Изменить
                             </button>
-                            <label className="input-label">Photo</label>
+                           <button className='save-btn'>Сохранить</button>
                         </div>
                         <div className="action">
                         </div>
                 </div>
             </div>
-            { saveButton &&
-                <button >Сохранить</button>
-            }
             </>
         // {/*<form onSubmit={sendFile}>*/}
         // {/*    <label htmlFor="inputPhoto">Photo:</label>*/}
