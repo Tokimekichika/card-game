@@ -2,7 +2,7 @@
 .cards-container {
     display: flex;
     height: 300px;
-    width: 16%;
+    width: 34%;
     /* border: solid; */
     flex-direction: column;
     justify-content: space-between;
@@ -20,7 +20,7 @@
 .cards-container:hover {
     display: flex;
     height: 300px;
-    width: 16%;
+    width: 34%;
     /* border: solid; */
     flex-direction: column;
     justify-content: space-between;

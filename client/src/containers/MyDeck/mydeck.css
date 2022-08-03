@@ -6,9 +6,9 @@ h4{
 	background-image: url(./img/myDeckPage.jpg) !important;
 	background: no-repeat;
     background-size: cover;
-    height: 1420px;
+    /* height: 1420px; */
     background-position: center;
-    height: 828px;
+    /* height: 828px; */
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -73,6 +73,7 @@ h4{
 }
 
 .cardss-container{
+    width: 755px;
     display: flex;
     margin-right: 40px;
     margin-left: 40px;
@@ -80,7 +81,7 @@ h4{
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: space-around;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .button--form {
