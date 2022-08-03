@@ -31,10 +31,10 @@ const NavBar = () => {
 
                 {user?.id ?
                   <>
-                  <li><NavLink to='/pc'>{`ПРИВЕТ,${user.name}!`}</NavLink></li>
-                  <li><NavLink to="/" onClick={logoutHandler}>Выйти</NavLink></li>
-                  <li><NavLink to="/editdeck">Мои карточки</NavLink></li>
                   <li><NavLink to="/home">Домой</NavLink></li>
+                  <li><NavLink to='/pc'>{`Привет, ${user.name}!`}</NavLink></li>
+                  <li><NavLink to="/" onClick={logoutHandler}>Выйти</NavLink></li>
+                  {/* <li><NavLink to="/editdeck">Мои карточки</NavLink></li> */}
                   </>
                 :
                 <li><NavLink to="/main">На главную</NavLink></li>
