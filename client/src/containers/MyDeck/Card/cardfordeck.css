@@ -1,7 +1,7 @@
 
 .cards-container {
     display: flex;
-    height: 300px;
+    height: 400px;
     width: 300px;
     /* border: solid; */
     flex-direction: column;
@@ -9,7 +9,7 @@
     align-items: center;
     margin-top: 20px;
     background-color: #c3c6c5;
-    border-radius: 10px;
+    border-radius: 90px 90px 10px 10px;
     -webkit-box-shadow: 3px 4px 60px 31px rgba(34, 60, 80, 0.29);
     -moz-box-shadow: 3px 4px 60px 31px rgba(34, 60, 80, 0.29);
     box-shadow: 3px 4px 60px 31px rgba(34, 60, 80, 0.85);
@@ -19,7 +19,7 @@
 
 .cards-container:hover {
     display: flex;
-    height: 300px;
+    height: 400px;
     width: 300px;
     /* border: solid; */
     flex-direction: column;
@@ -27,7 +27,7 @@
     align-items: center;
     margin-top: 20px;
     background-color: #c3c6c5;
-    border-radius: 10px;
+    border-radius: 90px 90px 10px 10px;
     -webkit-box-shadow: 3px 4px 60px 31px rgba(34, 60, 80, 0.29);
     -moz-box-shadow: 3px 4px 60px 31px rgba(34, 60, 80, 0.29);
     box-shadow: 3px 4px 60px 31px rgba(34, 60, 80, 0.85);
@@ -51,10 +51,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     /* border: solid; */
-    width: 254px;
-    height: 220px;
+    width: 300px;
+    height: 230px;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 90px;
     /* box-shadow: 3px 4px 60px 31px rgba(34, 60, 80, 0.85); */
 }
 
