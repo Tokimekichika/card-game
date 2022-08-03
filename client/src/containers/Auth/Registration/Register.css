@@ -6,9 +6,8 @@
     background-image: url(../Registration/img/registerPage.jpg) !important;
     background: no-repeat;
     background-size: cover;
-    height: 1420px;
     background-position: center;
-    height: 828px;
+    min-height: 100%;
     display: flex;
     align-items: center; 
     justify-content: center; 
