@@ -4,10 +4,12 @@ import { useDispatch } from 'react-redux'
 import { deckChangeActive } from '../../../store/deck/actionsCreator'
 import './cardfordeck.css'
 import img from './img/card.jpeg'
+import {useNavigate} from "react-router-dom";
 
 function CardforDeck({deck}) {
   const dispatch = useDispatch()
-  
+    const navigate = useNavigate()
+
   const handleUseDeck = async (event) => {
     event.preventDefault()
     console.log({ active: true })
@@ -30,7 +32,7 @@ function CardforDeck({deck}) {
         <div  className="text-card" h4 mb={0}>{deck.name}</div>
         <div className='footer-card'>
         <button onClick={handleUseDeck} className='btn-add-card' type="success">Добавить</button>
-        <button className='btn-add-card' type="warning">Изменить</button>
+        <button className='btn-add-card' type="warning" onClick={()=>navigate(`${deck.id}`)}>Изменить</button>
         </div>
         </div>
   // </div>

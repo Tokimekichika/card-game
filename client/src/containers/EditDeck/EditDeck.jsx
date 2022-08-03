@@ -8,16 +8,28 @@ import React from "react";
 import CardList from "./CardList";
 import {useDispatch, useSelector} from "react-redux";
 import {initDeck} from "../../store/deck/actionCreators";
+import {initCollection} from "../../store/collectDeck/actionCreators";
+import {useParams} from "react-router-dom";
 
 
 const EditDeck = () => {
-    const deck = useSelector((state) => state.deck.deck)
-    console.log(deck)
+    // const deck = useSelector((state) => state.deck.deck)
+    const {id} = useParams()
+    const collection = useSelector((state)=>state.collection.collection)
+    const dispatch = useDispatch()
+    const initCards= async ()=> {
+        const responce = await fetch('/getcards')
+        const res = await responce.json()
+        dispatch(initCollection(res))
+    }
+    useEffect(()=>{
+        initCards()
+    },[])
 
     return (
         <>
             <ul className={styles.list__container}>
-            {deck ? deck.map(el => <CardList key={el.id} id={el.id} name={el.name} photo_url={el.photo_url} description={el.description} damage={el.damage} health={el.health} manaCost={el.manaCost}/>)
+            {collection ? collection.map(el => <CardList deckId={id} key={el.id} id={el.id} name={el.name} photo_url={el.photo_url} description={el.description} damage={el.damage} health={el.health} manaCost={el.manaCost}/>)
                 :
                 <div/>
             }

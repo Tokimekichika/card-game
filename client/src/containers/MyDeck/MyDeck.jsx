@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './mydeck.css'
 import CardforDeck from './Card/CardforDeck'
@@ -31,6 +31,8 @@ function MyDeck() {
     dispatch(createDeck(responce))
   }
 
+
+
   return (
     <>
     <div className="myDeck-container">
@@ -47,13 +49,13 @@ function MyDeck() {
           </Modal>
         </form>
         <div className='cardss-container'>
-      {myDeck && (
+      {myDeck?.length ? (
         myDeck.map((deck) => (
           <CardforDeck key={deck.id} deck={deck} />
           ))
-          )}
+          ) : <div/>}
           </div>
-       
+
     {/* </div> */}
     </div>
     </>
