@@ -20,6 +20,9 @@ import WireFRame from '../../components/WireFrame/WireFRame';
 import PersonaCab from "../PersonalCab/PersonaCab";
 
 
+
+
+
 function App() {
     const dispatch = useDispatch()
     const user = useSelector(state => state.auth.user)
@@ -63,6 +66,7 @@ function App() {
              <Route path='/buy' element={<Shop/>} />
              <Route exact path='/mydeck' element={<MyDeck/>} />
              <Route path='/mydeck/:id' element={<EditDeck/>} />
+                 {/*<Route path='/game' element={<Game/>}/>*/}
              </>
              }
              <Route path='room' element={<WebSock/>}>

@@ -13,7 +13,7 @@ function HomePage() {
                 <div className='start-game-button-container'>
 
 
-                <button onClick={() => navigate('/room')} className = 'start-game-btn'>
+                <button onClick={() => window.location.href = 'http://localhost:63342/fp/client/FinalGame/index.html?_ijt=ucevhlp1sgep2a23gg6ttisek2&_ij_reload=RELOAD_ON_SAVE'} className = 'start-game-btn'>
 
 
                     Играть
