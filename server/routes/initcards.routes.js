@@ -4,7 +4,7 @@ const { Card } = require('../db/models');
 // Получение колод пользователя
 initcards.get('/', async (req, res) => {
     try {
-        const card = await Card.findAll()
+        const card = await Card.findAll({order:[['manaCost','asc']]})
         res.json(card);
     } catch (error) {
         res.json({
