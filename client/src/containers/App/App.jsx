@@ -18,6 +18,7 @@ import WebSock from "../Game/WebSock";
 import { deckLoad } from '../../store/deck/actionsCreator';
 import WireFRame from '../../components/WireFrame/WireFRame';
 import PersonaCab from "../PersonaCab";
+// import Game from '../../components/game/Game'
 
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
              <Route path='/buy' element={<Shop/>} />
              <Route exact path='/mydeck' element={<MyDeck/>} />
              <Route path='/mydeck/:id' element={<EditDeck/>} />
+                 {/*<Route path='/game' element={<Game/>}/>*/}
              </>
              }
              <Route path='room' element={<WebSock/>}>
