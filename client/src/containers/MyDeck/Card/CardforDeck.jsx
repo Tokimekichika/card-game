@@ -8,11 +8,10 @@ import {useNavigate} from "react-router-dom";
 
 function CardforDeck({deck}) {
   const dispatch = useDispatch()
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const handleUseDeck = async (event) => {
     event.preventDefault()
-    console.log({ active: true })
     const data = await fetch('/active', {
       method: 'PUT',
       body: JSON.stringify({id: deck.id, active: !deck.active }),
@@ -27,11 +26,15 @@ function CardforDeck({deck}) {
   return (
     // <div className="decks-list">
     // <div className="deck-list">
-      <div className='cards-container' key={deck.id} >
+      <div className="cards-container" key={deck.id} >
         <div className="img-card" url={img} />
         <div  className="text-card" h4 mb={0}>{deck.name}</div>
         <div className='footer-card'>
-        <button onClick={handleUseDeck} className='btn-add-card' type="success">Добавить</button>
+        {deck.active ? 
+        <button onClick={handleUseDeck} className='btn-drop-card' type="success">Отложить</button>
+        : 
+        <button onClick={handleUseDeck} className='btn-add-card' type="success">Взять</button>
+        }
         <button className='btn-add-card' type="warning" onClick={()=>navigate(`${deck.id}`)}>Изменить</button>
         </div>
         </div>

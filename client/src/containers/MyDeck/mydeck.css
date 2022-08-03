@@ -76,7 +76,7 @@ h4{
     /* margin-right: 40px; */
     /* margin-left: 40px; */
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     align-content: space-around;
     align-items: stretch;
