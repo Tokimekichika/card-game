@@ -1,3 +1,8 @@
+
+import './personalCab.css'
+
+
+
 import React, { useEffect, useState,useRef } from 'react';
 // import { Button, Card, Image, Textarea, Spacer, Input, Text, Select, Divider } from '@geist-ui/core';
 // import styled from 'styled-components';
@@ -40,14 +45,24 @@ const axios = require('axios').default;
 
 
 export default function PersonaCab() {
+
+
+
+
     const dispatch = useDispatch()
     const ref = useRef(null)
     const ref2 = useRef(null)
+
     const [profilePhoto, setProfilePhoto] = useState('')
     const [img, setImg] = useState(null)
     const user = useSelector(state => state.auth.user)
 
+
+    
+   
+
     const sendFile = async () => {
+
         try {
             const data = new FormData()
             data.append('profilePhoto', img)
@@ -60,8 +75,7 @@ export default function PersonaCab() {
             console.log(error);
         }
     }
-
-    const saveChanges = async () => {
+const saveChanges = async () => {
            const res = await fetch(`/${user.id}/edit`, {
                method: 'PUT',
                headers: {
@@ -77,30 +91,31 @@ export default function PersonaCab() {
     }
 
 
-    return (
+ return (
         <>
-            <div className="register-container">
-                <div className="card">
-                    <div className="card-image">
+            <div className="background">
+                <div className="board">
+                    <div className="board-blur">
                     </div>
+                    <div className='text-container'>
                         <span>Мой профиль</span>
-
+                    </div>
                         <div className="input">
-                            <img src={user?.photo} style={{width:'200px',height:'200px',borderRadius:'50%',margin:'auto auto'}} alt='123'/>
+                            <img src={user?.photo} style={{width:'200px',height:'200px',borderRadius:'50%',margin:'auto auto'}} />
                             <input
-                                ref={ref}
                                 type="text"
+                                onChange={showSaveButton}
                                 defaultValue={user?.name}
                                 className="input-field"
                                 name="name"
                                 autoComplete="off"
                                 required
                             />
-                            <label className="input-label">Name</label>
+                            <label className="input-label">Имя</label>
                         </div>
-                        <div className="input">
+                            <label className="photo-label">Photo</label>
+                        <div className="btn-board">
                             <input
-                                ref2={ref2}
                                 type="file"
                                 className="input-field"
                                 name="file"
@@ -108,14 +123,13 @@ export default function PersonaCab() {
                                 required
                                 onChange={(e) => setImg(e.target.files[0])}
                             />
-                            <button onClick={sendFile} className="action-button">
+                            <button onClick={sendFile} className="change-btn">
                                 Изменить
                             </button>
-                            <label className="input-label">Photo</label>
+                           <button className='save-btn'>Сохранить</button>
                         </div>
                         <div className="action">
                         </div>
-                    <button onClick={saveChanges}>Сохранить</button>
                 </div>
             </div>
             </>
@@ -159,6 +173,12 @@ export default function PersonaCab() {
         // </Center>
     );
 }
+
+
+
+
+
+    
 
 
 

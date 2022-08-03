@@ -15,7 +15,6 @@ body{
     width: -webkit-fill-available;
     backdrop-filter: blur(10px);
     position: fixed;
-    margin-left: 89px;
     z-index: 1;
 
 }
@@ -43,7 +42,7 @@ body{
     vertical-align: center;
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
+    margin-left: 70px;
     padding: 15px;
     list-style-type: none;
     right: 146px;
