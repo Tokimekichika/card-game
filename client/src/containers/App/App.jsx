@@ -54,12 +54,12 @@ function App() {
              <Route path='/registration' element={<Register/>} />
              <Route path='/login' element={<Login/>} />
              <Route path='/main' element={<MainPage />} />
-             {user.id &&
+             {user?.id &&
              <>
              <Route path='/card' element={<Card/>} />
              <Route path='/buy' element={<Shop/>} />
              <Route exact path='/mydeck' element={<MyDeck/>} />
-             <Route path='/editdeck' element={<EditDeck/>} />
+             <Route path='/mydeck/:id' element={<EditDeck/>} />
              </>
              }
              <Route path='room' element={<WebSock/>}>

@@ -10,7 +10,7 @@ const NavBar = () => {
   const dispatch = useDispatch()
   const user = useSelector((state) => state.auth.user)
   const navigate = useNavigate()
-   
+
 
     const logoutHandler = (event) => {
       event.preventDefault()
@@ -29,7 +29,7 @@ const NavBar = () => {
         <div className={styles.container}>
             <ul className={styles.list__container}>
 
-                {user.id ?
+                {user?.id ?
                   <>
                   <li><NavLink to='/pc'>{`ПРИВЕТ,${user.name}!`}</NavLink></li>
                   <li><NavLink to="/" onClick={logoutHandler}>Выйти</NavLink></li>
