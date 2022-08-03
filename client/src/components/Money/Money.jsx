@@ -2,7 +2,7 @@ import React,{ useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import icon from './img/icons8-доллар-сша-в-круге.gif'
+import icon from './img/854.gif'
 import styles from './Money.module.css';
 
 const Money = () => {
