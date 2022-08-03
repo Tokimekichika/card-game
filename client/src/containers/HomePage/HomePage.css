@@ -2,9 +2,8 @@
     background-image: url(../HomePage/img/homePage.jpg) !important;
     background: no-repeat;
     background-size: cover;
-    height: 1420px;
+    min-height: 100%;
     background-position: center;
-    height: 828px;
     display: flex;
     align-items: center;
     justify-content: center;
