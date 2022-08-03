@@ -1,11 +1,14 @@
 require('@babel/register');
+const express = require('express');
 require('dotenv').config();
+const app = express();
 
 const ws = require('ws');
-const express = require('express');
+
 const { sequelize } = require('./db/models');
 const configApp = require('./config/configApp');
 const path = require('path')
+
 
 // импортируем роутеры
 const regRouter = require('./routes/reg.routes');
@@ -20,7 +23,7 @@ const user = require('./routes/user.routes')
 
 const activeDeck = require('./routes/active.routes');
 
-const app = express();
+
 configApp(app);
 app.locals.count = 0;
 

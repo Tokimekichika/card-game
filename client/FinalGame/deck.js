@@ -172,16 +172,16 @@ class MinionCard {
 		return playerCardInHandDiv
 	}
 }
-const res = async()=> {
-	const qq = await fetch('http://localhost:4000/getcards')
-	const res = await qq.json()
+const answer = async function   ()  {
+	const qq = await fetch ('http://localhost:4000/cardInGame')
+	const res = await qq.json ()
 	console.log (res)
 }
 
+answer ().then (data => data)
 
 // function to create the full deck both the player and the opponent's deck
 function freshDeck() {
-	res()
 	// deck in use by the player and computer
 	let murloc_scout = new MinionCard(1, 10, 0, "", "src/cards/murloc_scout.jpg", "Murloc Scout", "Common")
 	let alexstrasza = new MinionCard(8, 80, 9, "Battlecry: Set a hero's remaining Health to 15.", "src/cards/alexstrasza.jpg", "Alexstrasza", "Legendary")

@@ -1,3 +1,4 @@
+
 var openmenuSnd = new Audio("src/sounds/openmenu.mp3");
 var menubtnsSnd = new Audio("src/sounds/menubtnpress.mp3");
 var purchaseSnd = new Audio("src/sounds/purchase.mp3");
@@ -10,6 +11,7 @@ var jainathreatSnd = new Audio("src/voiceovers/jaina_tutorialbattle.mp3");
 var hasPlayedBattleBeginSnd = new Boolean(false);
 var isInGame = new Boolean(false);
 var tutorialIntroRunning = new Boolean(false);
+// var endGame = new Boolean(false)
 // Initial volume of 0.20
 // Make sure it's a multiple of 0.05
 var vol = 0.5;
@@ -17,9 +19,9 @@ var interval = 175; // 200ms interval
 // soundtrack's to be randomly selected in game
 var lichkingOST = new Audio("src/ost/knights_of_the_frozen_throne.mp3");
 var items = [
-    "src/ost/mulligan.mp3", 
-    "src/ost/bad_reputation.mp3", 
-    "src/ost/better_hand.mp3", 
+    "src/ost/mulligan.mp3",
+    "src/ost/bad_reputation.mp3",
+    "src/ost/better_hand.mp3",
     "src/ost/dont_let_your_guard_down.mp3",
     "src/ost/duel.mp3",
     "src/ost/the_forge.mp3"
@@ -28,7 +30,7 @@ var items = [
 var item = items[Math.floor(Math.random()*items.length)];
 // converts the string into an audio element
 var song = new Audio(item);
-/* boolean to check if the audio is already playing to ensure multiple audio 
+/* boolean to check if the audio is already playing to ensure multiple audio
 files do not play at the same time when the end turn button is clicked */
 var audioIsPlayed = new Boolean(false)
 // plays a random song and sets the volume to 70% from the array defined above
@@ -152,12 +154,14 @@ optionsbtn.onclick = function () {
 };
 
 quitbtn.onclick = function () {
+    window.location.href = 'http://localhost:63343/home'
     openmenuSnd.play()
     document.getElementById('interactive');
     document.getElementById('contents').style.visibility="hidden";
     document.getElementById('contents').style.opacity="0";
     document.getElementById('contents').style.transition="visibility 0s 0.5s, opacity 0.5s linear";
     // may not work as can only close tabs with scripts that were opened with
+
     window.close();
 };
 
@@ -271,97 +275,97 @@ miscellaneousbtn.onclick = function () {
 playbtn.onclick = function () {
     isTutorial = false;
     isInGame = true;
-    let cinematicvideo = document.getElementById("cinematicVideo");
+    let cinematicvideo = document.getElementById ("cinematicVideo");
     cinematicvideo.style.display = "none";
-    document.getElementById("skipcinematicbtn").style.display = "none";
-    document.getElementById("block").style.visibility = "visible";
+    document.getElementById ("skipcinematicbtn").style.display = "none";
+    document.getElementById ("block").style.visibility = "visible";
     // fade out the volume of the mainmenuOST
-    var fadeout = setInterval(
-        function() {
-          // Reduce volume by 0.05 as long as it is above 0
-          // This works as long as you start with a multiple of 0.05!
-          if (vol > 0.05) {
-            vol -= 0.05;
-            mainmenuOST.volume = vol;
-          }
-          else {
-            // Stop the setInterval when 0 is reached
-            clearInterval(fadeout);
-          }
-        }, interval);
-    menubtnsSnd.play();
-    setTimeout(function() {
-        mainmenuOST.pause();
-    },1750);
-    crowdSnd.pause();
-    document.getElementById('transitionblock').style.visibility="visible";
-    document.getElementById('transitionblock').classList.add("fadeInAnim");
-    setTimeout(function() {
-        document.getElementById('transitionblock').classList.add("fadeOutAnim");
-        setTimeout(function() {
-            document.getElementById('transitionblock').style.visibility="hidden";
-        },1000);
-    },1000);
-    document.getElementById('mainmenu').style.visibility="hidden";
-    setTimeout(function() {
-    document.getElementById('contents').style.visibility="visible";
-    document.getElementById("playerlabel").style.visibility = "visible";
-    document.getElementById("playerclasslabel").style.visibility = "visible";
-    document.getElementById("opponentlabel").style.visibility = "visible";
-    document.getElementById("vs").style.visibility = "visible";
-    let onloadSnd = new Audio("src/sounds/ongameload.mp3");
-    onloadSnd.play();
-    document.querySelector('.playerhero').classList.add("onLoadPlayerAnim");
-    document.querySelector('.opponenthero').classList.add("onLoadComputerAnim");
-    setTimeout(function(){
-    document.querySelector('#playerlabel').style.visibility = "hidden";
-    document.querySelector('#playerlabel').style.opacity="0";
-    document.querySelector('#playerlabel').style.transition="visibility 0s 0.1s, opacity 0.1s linear";
-    document.querySelector('#playerclasslabel').style.visibility = "hidden";
-    document.querySelector('#playerclasslabel').style.opacity="0";
-    document.querySelector('#playerclasslabel').style.transition="visibility 0s 0.1s, opacity 0.1s linear";
-    document.querySelector('#opponentlabel').style.visibility = "hidden";
-    document.querySelector('#opponentlabel').style.opacity="0";
-    document.querySelector('#opponentlabel').style.transition="visibility 0s 0.1s, opacity 0.1s linear";
-     },5250);
-    setTimeout(function(){
-     document.querySelector('#vs').style.visibility = "hidden";
-     document.querySelector('#vs').style.opacity="0";
-     document.querySelector('#vs').style.transition="visibility 0s 0.2s, opacity 0.2s linear";
-         setTimeout(function(){
-             document.querySelector(".opponenthero").style.zIndex = "9";
-             setTimeout(function(){
-                 document.querySelector("#playerbubble").style.visibility = "visible";
-                 document.querySelector('#playerbubble').classList.add("openMenuAnim");
-             },250);
-             setTimeout(function(){
-                 document.querySelector('#playerbubble').classList.add("easeOutAnim");
-                 document.querySelector('#playerbubble').classList.remove("openMenuAnim");
-                 setTimeout(function(){
-                     document.querySelector("#playerbubble").style.visibility = "hidden";
-                 },250);
-                 setTimeout(function(){
-                     document.querySelector("#computerbubble").style.visibility = "visible";
-                     document.querySelector('#computerbubble').classList.add("openMenuAnim");
-                 },250);
-                 document.querySelector(".opponenthero").style.zIndex = "11";
-                 document.querySelector(".playerhero").style.zIndex = "9";
-                 setTimeout(function(){
-                     document.querySelector('#computerbubble').classList.add("easeOutAnim");
-                     document.querySelector('#computerbubble').classList.remove("openMenuAnim");
-                     setTimeout(function(){
-                         document.querySelector("#computerbubble").style.visibility = "hidden";
-                         document.querySelector('#computerbubble').classList.remove("easeOutAnim");
-                     },250);
-                     document.querySelector(".opponenthero").style.zIndex = "9";
-                     document.querySelector('#confirm').style.display = "block";
-                 },5500);
-             },1500);
-         },2000);
-     },6000);
-},1000);
+    var fadeout = setInterval (
+        function () {
+            // Reduce volume by 0.05 as long as it is above 0
+            // This works as long as you start with a multiple of 0.05!
+            if (vol > 0.05) {
+                vol -= 0.05;
+                mainmenuOST.volume = vol;
+            } else {
+                // Stop the setInterval when 0 is reached
+                clearInterval (fadeout);
+            }
+        } , interval);
+    menubtnsSnd.play ();
+    setTimeout (function () {
+        mainmenuOST.pause ();
+    } , 1750);
+    crowdSnd.pause ();
+    document.getElementById ('transitionblock').style.visibility = "visible";
+    document.getElementById ('transitionblock').classList.add ("fadeInAnim");
+    setTimeout (function () {
+        document.getElementById ('transitionblock').classList.add ("fadeOutAnim");
+        setTimeout (function () {
+            document.getElementById ('transitionblock').style.visibility = "hidden";
+        } , 1000);
+    } , 1000);
+    document.getElementById ('mainmenu').style.visibility = "hidden";
+    setTimeout (function () {
+        document.getElementById ('contents').style.visibility = "visible";
+        document.getElementById ("playerlabel").style.visibility = "visible";
+        document.getElementById ("playerclasslabel").style.visibility = "visible";
+        document.getElementById ("opponentlabel").style.visibility = "visible";
+        document.getElementById ("vs").style.visibility = "visible";
+        let onloadSnd = new Audio ("src/sounds/ongameload.mp3");
+        onloadSnd.play ();
+        document.querySelector ('.playerhero').classList.add ("onLoadPlayerAnim");
+        document.querySelector ('.opponenthero').classList.add ("onLoadComputerAnim");
+        setTimeout (function () {
+            document.querySelector ('#playerlabel').style.visibility = "hidden";
+            document.querySelector ('#playerlabel').style.opacity = "0";
+            document.querySelector ('#playerlabel').style.transition = "visibility 0s 0.1s, opacity 0.1s linear";
+            document.querySelector ('#playerclasslabel').style.visibility = "hidden";
+            document.querySelector ('#playerclasslabel').style.opacity = "0";
+            document.querySelector ('#playerclasslabel').style.transition = "visibility 0s 0.1s, opacity 0.1s linear";
+            document.querySelector ('#opponentlabel').style.visibility = "hidden";
+            document.querySelector ('#opponentlabel').style.opacity = "0";
+            document.querySelector ('#opponentlabel').style.transition = "visibility 0s 0.1s, opacity 0.1s linear";
+        } , 5250);
+        setTimeout (function () {
+            document.querySelector ('#vs').style.visibility = "hidden";
+            document.querySelector ('#vs').style.opacity = "0";
+            document.querySelector ('#vs').style.transition = "visibility 0s 0.2s, opacity 0.2s linear";
+            setTimeout (function () {
+                document.querySelector (".opponenthero").style.zIndex = "9";
+                setTimeout (function () {
+                    document.querySelector ("#playerbubble").style.visibility = "visible";
+                    document.querySelector ('#playerbubble').classList.add ("openMenuAnim");
+                } , 250);
+                setTimeout (function () {
+                    document.querySelector ('#playerbubble').classList.add ("easeOutAnim");
+                    document.querySelector ('#playerbubble').classList.remove ("openMenuAnim");
+                    setTimeout (function () {
+                        document.querySelector ("#playerbubble").style.visibility = "hidden";
+                    } , 250);
+                    setTimeout (function () {
+                        document.querySelector ("#computerbubble").style.visibility = "visible";
+                        document.querySelector ('#computerbubble').classList.add ("openMenuAnim");
+                    } , 250);
+                    document.querySelector (".opponenthero").style.zIndex = "11";
+                    document.querySelector (".playerhero").style.zIndex = "9";
+                    setTimeout (function () {
+                        document.querySelector ('#computerbubble').classList.add ("easeOutAnim");
+                        document.querySelector ('#computerbubble').classList.remove ("openMenuAnim");
+                        setTimeout (function () {
+                            document.querySelector ("#computerbubble").style.visibility = "hidden";
+                            document.querySelector ('#computerbubble').classList.remove ("easeOutAnim");
+                        } , 250);
+                        document.querySelector (".opponenthero").style.zIndex = "9";
+                        document.querySelector ('#confirm').style.display = "block";
+                    } , 5500);
+                } , 1500);
+            } , 2000);
+        } , 6000);
+    } , 1000);
 };
-/* function tutorial called on tutorial button on click 
+
+/* function tutorial called on tutorial button on click
 and on page load if local storage hasPlayedTutorial == null */
 function tutorial() {
     isTutorial = true;
@@ -537,7 +541,7 @@ starttutorialbtn.onclick = function () {
                 hasPlayedBattleBeginSnd = true;
             }
         })
-        
+
     if ((hasPlayedBattleBeginSnd == false) && (startTutorialSnd.paused)){
         battlebeginSnd.play();
     }
@@ -753,7 +757,7 @@ fpsbtn.onclick = function () {
         targetDiv.style.display = "block";
       }
 };
-/* on page load prompts the user to click in order to start/play the game and is 
+/* on page load prompts the user to click in order to start/play the game and is
 done in order to prevent chrome and other browsers policy conflicts such as CORS */
 const preventCORSbtn = document.getElementById('preventCORS');
 preventCORSbtn.onclick = function () {
@@ -764,31 +768,32 @@ preventCORSbtn.onclick = function () {
     if (hasPlayedTutorial_deserailized === null) {
         tutorial();
     } else {
-        mainmenuOST.play();
-        mainmenuOST.volume = 0.7;
-        setTimeout(function(){
-            voiceover.play();
-        },550);
-        if (typeof crowdSnd.loop == 'boolean')
-        {
-            crowdSnd.loop = true;
-        }
-        else
-        {
-            crowdSnd.addEventListener('ended', function() {
-                this.currentTime = 0;
-                this.play();
-            }, false);
-        }
-        crowdSnd.play();
-        crowdSnd.volume = 0.5;
-        document.querySelector('#blockmainmenu').style.display="block";
-        document.getElementById('mainmenu').style.visibility="visible";
-        document.getElementById('mainmenu').classList.add("zoomOutAnim");
-        setTimeout(function() {
-            document.querySelector('#blockmainmenu').style.display="none";
-            document.getElementById('mainmenu').classList.remove("zoomOutAnim");
-        },4000);
+        playbtn.onclick()
+        // mainmenuOST.play();
+        // mainmenuOST.volume = 0.7;
+        // setTimeout(function(){
+        //     voiceover.play();
+        // },550);
+        // if (typeof crowdSnd.loop == 'boolean')
+        // {
+        //     crowdSnd.loop = true;
+        // }
+        // else
+        // {
+        //     crowdSnd.addEventListener('ended', function() {
+        //         this.currentTime = 0;
+        //         this.play();
+        //     }, false);
+        // }
+        // crowdSnd.play();
+        // crowdSnd.volume = 0.5;
+        // document.querySelector('#blockmainmenu').style.display="block";
+        // document.getElementById('mainmenu').style.visibility="visible";
+        // document.getElementById('mainmenu').classList.add("zoomOutAnim");
+        // setTimeout(function() {
+        //     document.querySelector('#blockmainmenu').style.display="none";
+        //     document.getElementById('mainmenu').classList.remove("zoomOutAnim");
+        // },4000);
     }
 }
 // button to skip the cinematic for the tutorial
