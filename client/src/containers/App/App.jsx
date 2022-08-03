@@ -17,8 +17,9 @@ import HomePage from '../HomePage/HomePage';
 import WebSock from "../Game/WebSock";
 import { deckLoad } from '../../store/deck/actionsCreator';
 import WireFRame from '../../components/WireFrame/WireFRame';
-import PersonaCab from "../PersonaCab";
-// import Game from '../../components/game/Game'
+
+import PersonaCab from "../PersonalCab/PersonaCab";
+
 
 
 function App() {

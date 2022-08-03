@@ -65,7 +65,8 @@ const NavBar = () => {
             <ul className={styles.list__container}>
                 {user?.id ?
                   <>
-
+                      <li><NavLink to="/home">Домой</NavLink></li>
+                      {/*<li><NavLink to="/editdeck">Мои карточки</NavLink></li>*/}
                   <li><NavLink to='/pc'><Typography component="div" style={{fontFamily:'sans-serif', fontWeight:600,display:'block',margin:0}}>
                       <Box sx={{ textTransform: 'capitalize', m: 1 }} style={{fontFamily:'sans-serif', fontWeight:600,display:'block',margin:0}}>{`Hello, ${user.name}`}
                           <StyledBadge
@@ -81,11 +82,11 @@ const NavBar = () => {
                   </li>
                   {/*<li><NavLink to='/pc'>{`ПРИВЕТ,${user.name}!`}</NavLink></li>*/}
                   <li><NavLink to="/" onClick={logoutHandler}>Выйти</NavLink></li>
-                  <li><NavLink to="/editdeck">Мои карточки</NavLink></li>
 
-                  <li><NavLink to="/home">Домой</NavLink></li>
-                  <li><NavLink to='/pc'>{`Привет, ${user.name}!`}</NavLink></li>
-                  <li><NavLink to="/" onClick={logoutHandler}>Выйти</NavLink></li>
+
+
+                  {/*<li><NavLink to='/pc'>{`Привет, ${user.name}!`}</NavLink></li>*/}
+                  {/*<li><NavLink to="/" onClick={logoutHandler}>Выйти</NavLink></li>*/}
                   {/* <li><NavLink to="/editdeck">Мои карточки</NavLink></li> */}
                   </>
                 :

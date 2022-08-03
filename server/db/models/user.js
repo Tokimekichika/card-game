@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
     photo: {
       type: DataTypes.TEXT,
       allowNull: false,
-      defaultValue: 'photo',
+      defaultValue: 'https://st2.depositphotos.com/1898481/6448/i/600/depositphotos_64486573-stock-photo-people.jpg',
     },
     coins: {
       type: DataTypes.BIGINT,
