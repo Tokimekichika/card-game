@@ -87,7 +87,6 @@ export default function PersonaCab() {
                             <label className="input-label">Имя</label>
                         </div>
                             <label className="photo-label">Photo</label>
-                        <div className="btn-board">
                             <input
                                 type="file"
                                 className="input-field"
@@ -96,13 +95,15 @@ export default function PersonaCab() {
                                 required
                                 onChange={(e) => setImg(e.target.files[0])}
                             />
+                        <div className="btn-board">
                             <button onClick={sendFile} className="change-btn">
                                 Изменить
                             </button>
-                           <button className='save-btn'>Сохранить</button>
+                           <button className='save-btn'>
+                            Сохранить</button>
                         </div>
-                        <div className="action">
-                        </div>
+                        {/* <div className="action">
+                        </div> */}
                 </div>
             </div>
             </>
