@@ -5,7 +5,7 @@ const { card_deck } = require('../db/models');
 collections.get('/', async (req, res) => {
     try {
         const card = await card_deck.findAll({raw:true})
-        // console.log(card)
+        console.log(card)
         res.json(card);
     } catch (error) {
         res.json({

@@ -36,7 +36,7 @@ app.use('/main',mainRouter)
 app.use('/buycards',buyCards)
 app.use('/getcards',initCards)
 app.use('/',cardsRouter)
-app.use('/collections',collectionsRouter)
+app.use('/mydeck/:id',collectionsRouter)
 app.use('/active', activeDeck);
 
 app.listen(PORT, async () => {
