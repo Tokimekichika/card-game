@@ -3,6 +3,7 @@ import StartPage from "../StartPage";
 import {BrowserRouter, Routes,Route} from "react-router-dom";
 import MainPage from "../MainPage/MainPage";
 // import NavBar from "../../components/NavBar";
+import { GeistProvider, CssBaseline } from '@geist-ui/core'
 import Card from "../../components/Card/Card";
 import MyDeck from "../MyDeck/MyDeck";
 import Register from "../Auth/Registration/Register";
@@ -16,6 +17,7 @@ import HomePage from '../HomePage/HomePage';
 import WebSock from "../Game/WebSock";
 import { deckLoad } from '../../store/deck/actionsCreator';
 import WireFRame from '../../components/WireFrame/WireFRame';
+import PersonaCab from "../PersonaCab";
 
 
 function App() {
@@ -57,6 +59,7 @@ function App() {
              {user?.id &&
              <>
              <Route path='/card' element={<Card/>} />
+                 <Route path='/pc' element={<PersonaCab/>} />
              <Route path='/buy' element={<Shop/>} />
              <Route exact path='/mydeck' element={<MyDeck/>} />
              <Route path='/mydeck/:id' element={<EditDeck/>} />

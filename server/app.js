@@ -5,6 +5,7 @@ const ws = require('ws');
 const express = require('express');
 const { sequelize } = require('./db/models');
 const configApp = require('./config/configApp');
+const path = require('path')
 
 // импортируем роутеры
 const regRouter = require('./routes/reg.routes');
@@ -15,6 +16,7 @@ const buyCards = require('./routes/buycards.routes')
 const initCards = require('./routes/initcards.routes')
 const cardsRouter = require('./routes/cards.routes')
 const collectionsRouter = require('./routes/collections.routes')
+const user = require('./routes/user.routes')
 
 const activeDeck = require('./routes/active.routes');
 
@@ -29,6 +31,7 @@ const PORT = process.env.PORT ?? 4000;
 // })
 
 // подключаем роутеры
+app.use('/images',express.static(path.join(__dirname,'images')))
 app.use('/registration', regRouter);
 app.use('/auth', authRouter);
 app.use('/', deckRouter);
@@ -38,6 +41,8 @@ app.use('/getcards',initCards)
 app.use('/',cardsRouter)
 app.use('/mydeck/:id',collectionsRouter)
 app.use('/active', activeDeck);
+app.use('/',user)
+
 
 app.listen(PORT, async () => {
   console.log(`Сервер шуршит на порту ${PORT}`);

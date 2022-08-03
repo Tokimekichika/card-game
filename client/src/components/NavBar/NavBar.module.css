@@ -37,6 +37,8 @@ body{
 /*    object-position: center center;*/
 /*}*/
 .list__container {
+    align-items: center;
+    vertical-align: center;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
@@ -58,7 +60,7 @@ body{
     text-decoration: none;
     font-weight: 800;
     text-shadow:  0 0 10px rgb(18, 62, 175),
-    0 0 27px #000000; 
+    0 0 27px #000000;
     transition: .4s;
 }
 .list__container :global(a.active) {
@@ -69,4 +71,9 @@ body{
     -webkit-box-shadow: 3px 1px 76px 35px rgba(34, 60, 80, 0.33);
      -moz-box-shadow: 3px 1px 76px 35px rgba(34, 60, 80, 0.33);
      box-shadow: 3px 1px 76px 35px rgba(34, 60, 80, 0.33);
+}
+
+.css-1xmxa7j {
+    text-transform: capitalize;
+    margin: 0;
 }
