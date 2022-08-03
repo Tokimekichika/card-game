@@ -35,7 +35,7 @@ function Login() {
     <div className="login-container">
     <div className="card">
       <div className="card-image">
-        <h2 className="card-heading">Sign in</h2>
+        <h2 className="card-heading">Авторизация</h2>
       </div>
       <form className="card-form" onSubmit={logHandler}>
         <div className="input">
@@ -60,7 +60,7 @@ function Login() {
         </div>
         <div className="action">
           <button type="submit" className="action-button">
-            Login
+            Войти
           </button>
         </div>
       </form>

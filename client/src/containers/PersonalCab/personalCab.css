@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Neucha&family=Orelega+One&display=swap');
+
 .background{
     background-image: url(./img/pcPage.jpg) !important;
     background: no-repeat;
@@ -54,15 +56,16 @@
   }
 
   .text-container{
+    color: white;
+    font-size: 36px;
+    /* margin-bottom: 370px; */
+    width: 240px;
+    position: relative;
+    padding-top: 23px;
     text-shadow:  0 0 10px rgb(18, 62, 175),
     0 0 27px #000000; 
-    color: white;
-    font-size: 30px;
-    /* margin-bottom: 370px; */
-    width: 191px;
-    position: relative;
-    padding-top: 82px;
-    
+line-height: 1.222;
+font-family:'Gabriela', serif;
     }
 
     .label-photo{
@@ -80,7 +83,7 @@
     }
 
     .change-btn{
-        padding: 30px;
+  padding: 30px;
   margin-bottom: 30px;
   background-color: rgba(65, 61, 234, 1);
   border-radius: 20px;
@@ -95,6 +98,7 @@
   transition: transform 0.15s;
   transform-style: preserve-3d;
   margin-top: 20px;
+  font-family: 'Neucha', cursive;
     }
 
     .change-btn::before {
@@ -142,6 +146,8 @@
   transition: transform 0.15s;
   transform-style: preserve-3d;
   margin-top: 20px;
+  font-family: 'Neucha', cursive;
+
   /* z-index: 1; */
     }
 

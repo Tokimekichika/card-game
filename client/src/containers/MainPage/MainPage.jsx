@@ -30,7 +30,7 @@ const MainPage = () => {
             <form className='form-container' action='/login' >
                 <div className='buttons-container'>
               <button type='submit' className='auth-btn'>
-                Авиторизация
+                Авторизация
               </button>
               <form  action='/registration'>
               <button  type='submit' className='rega-btn'>

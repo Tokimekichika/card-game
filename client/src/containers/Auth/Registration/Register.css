@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Rubik+Bubbles&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oi&family=Orelega+One&family=Rubik+Bubbles&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Neucha&family=Orelega+One&display=swap');
 
 .register-container{
     background-image: url(../Registration/img/registerPage.jpg) !important;
@@ -14,7 +13,7 @@
     background-attachment: fixed;
 
 }
-
+/* 
 .login-btn {
   font-family: Hack, monospace;
   background: #c5f445;
@@ -29,9 +28,9 @@
   position: relative;
   min-width: 200px;
   font-family: 'Rubik Bubbles', cursive;
-}
+} */
 
-.login-btn::after {
+/* .login-btn::after {
   content: "\21F0";
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
@@ -57,10 +56,10 @@
   opacity: 1;
   transition: all 0.5s;
   color: #ffffff;
-}
+} */
 
 
-.logout-btn {
+/* .logout-btn {
   font-family: Hack, monospace;
   background: #d3d3d3;
   color: #2c2c2c;
@@ -98,7 +97,7 @@
   opacity: 1;
   transition: all 0.5s;
   color: #ffffff;
-}
+} */
 
 input {
 -webkit-appearance: none;
@@ -151,11 +150,13 @@ position: relative;
 position: relative;
 display: flex;
 justify-content: center;
-font-size: 45px;
+font-size: 48px;
 font-weight: 700;
-color: rgba(65, 61, 234, 1);
+color: white;
+text-shadow:  0 0 10px rgb(18, 62, 175),
+    0 0 27px #000000; 
 line-height: 1.222;
-font-family:'Orelega One', cursive;
+font-family:'Gabriela', serif;
 
 }
 .card-heading small {
@@ -187,7 +188,7 @@ position: absolute;
 top: 1.5rem;
 transition: 0.25s ease;
 font-family: 'Orelega One', cursive;
-font-size: 15px;
+font-size: 20px;
 }
 
 .input-field {
@@ -222,7 +223,7 @@ justify-content: center;
   background-color: rgba(65, 61, 234, 1);
   border-radius: 20px;
   box-shadow: 9px 13px 3px rgba(0, 0, 0, 0.25);
-  width: 220px;
+  width: 325px;
   height: 60px;
   color: white;
   display: flex;
@@ -231,6 +232,7 @@ justify-content: center;
   font-size: 28px;
   transition: transform 0.15s;
   transform-style: preserve-3d;
+  font-family: 'Gabriela', serif;
 }
 .action-button::before {
   position: absolute;

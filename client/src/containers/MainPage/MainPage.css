@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
 .container{
     background-image: url(../MainPage/img/mainPage.jpg) !important;
     background: no-repeat;
@@ -71,6 +73,7 @@ button{
     font-size: 28px;
     transition: transform 0.15s;
     transform-style: preserve-3d;
+    font-family: 'Neucha', cursive;
 
 }
 
@@ -116,6 +119,8 @@ button{
     font-size: 28px;
     transition: transform 0.15s;
     transform-style: preserve-3d;
+    font-family: 'Neucha', cursive;
+
 
 }
 

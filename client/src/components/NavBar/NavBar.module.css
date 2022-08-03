@@ -67,7 +67,7 @@ body{
 .list__container :global(a.active) {
     /* background-color: #443997; */
     border: 2px solid #6858e3;
-    color: #6858e3;
+    color: #ffffff;
     text-shadow: none;
     -webkit-box-shadow: 3px 1px 76px 35px rgba(34, 60, 80, 0.33);
      -moz-box-shadow: 3px 1px 76px 35px rgba(34, 60, 80, 0.33);
@@ -77,4 +77,8 @@ body{
 .css-1xmxa7j {
     text-transform: capitalize;
     margin: 0;
+}
+
+li{
+    font-size: 20px;
 }
