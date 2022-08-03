@@ -1,22 +1,28 @@
 h4{
     text-shadow:  0 0 10px rgb(18, 62, 175),
     0 0 27px #000000; 
+    color: white;
+    font-size: 30px;
+    /* margin-bottom: 370px; */
+    width: 188px;
+    position: relative;
+    padding-top: 82px;
 }
 .myDeck-container{
 	background-image: url(./img/myDeckPage.jpg) !important;
 	background: no-repeat;
     background-size: cover;
-    /* height: 1420px; */
-    background-position: center;
-    /* height: 828px; */
+    /* max-height: 1600px; */
+    background-position: center center;
+    min-height: 100%;
     display: flex;
     align-items: center; 
     justify-content: center; 
     background-attachment: fixed;
 	align-items: center;
     justify-content: space-around;
+    background-repeat: no-repeat;
     flex-direction: column;
-
 }
 
 .btn.jsx-489100405 {
@@ -64,24 +70,19 @@ h4{
     transform: translate(0em, 0.75em) !important;
 }
 
-h4{
-    margin-top: 90px;
-	color: white;
-	font-size: 30px;
-    /* margin-bottom: 190px; */
-    width: 188px;
-}
-
 .cardss-container{
-    width: 755px;
+    width: 100%;
     display: flex;
-    margin-right: 40px;
-    margin-left: 40px;
+    /* margin-right: 40px; */
+    /* margin-left: 40px; */
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: space-around;
     align-items: stretch;
+    margin: 40px auto;
+    
+
 }
 
 .button--form {
