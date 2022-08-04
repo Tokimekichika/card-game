@@ -1,6 +1,7 @@
 var id1 = 0;
 var id2 = 0;
 
+
 // creates a 'Deck' class where objects can be made from using the OOP
 class Deck {
 	constructor(cards = freshDeck()) {
@@ -175,14 +176,37 @@ class MinionCard {
 const answer = async function   ()  {
 	const qq = await fetch ('http://localhost:4000/cardInGame')
 	const res = await qq.json ()
-	console.log (res,'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq')
+	console.log(res[0].Cards[0])
+	localStorage.setItem('attack2',res[0].Cards[0].attack);
+	localStorage.setItem('health2',res[0].Cards[0].health);
+	localStorage.setItem('mana2',res[0].Cards[0].mana);
+	localStorage.setItem('info2',res[0].Cards[0].info);
+	localStorage.setItem('imageString2',res[0].Cards[0].imageString);
+	localStorage.setItem('health2',res[0].Cards[0].health);
+	localStorage.setItem('name2',res[0].Cards[0].name);
+	localStorage.setItem('rarity2',res[0].Cards[0].rarity);
 }
-
-answer ().then (data => data)
+console.log(answer())
+//
+// answer ().then (data => {
+// 	if(data) {
+// 		freshDeck(data);
+// 		setTimeout(()=>{
+// 			startGame();
+// 		},7000)
+// 	}
+// })
+// 	.then(data=>console.log(data))
 
 // function to create the full deck both the player and the opponent's deck
 function freshDeck() {
 	// deck in use by the player and computer
+	// setTimeout(()=>{
+	// 	answer()
+	// },10000)
+	const polyashaa = new MinionCard(+localStorage.getItem('attack'),+localStorage.getItem('health'), +localStorage.getItem('mana'), localStorage.getItem('info'), localStorage.getItem('imageString'), localStorage.getItem('name'), localStorage.getItem('rarity'))
+	console.log(polyashaa)
+	// console.log(p)
 	let murloc_scout = new MinionCard(1, 10, 0, "", "src/cards/murloc_scout.jpg", "Murloc Scout", "Common")
 	let alexstrasza = new MinionCard(8, 80, 9, "Battlecry: Set a hero's remaining Health to 15.", "src/cards/alexstrasza.jpg", "Alexstrasza", "Legendary")
 	let elite_tauren_chieftain = new MinionCard(50, 5, 5, "Battlecry: Give both players the power to ROCK! (Draw a card)", "src/cards/elite_tauren_chieftain.png", "Elite Tauren Chieftain", "Legendary")
@@ -224,15 +248,24 @@ function freshDeck() {
 
 	return [
 	// player's deck
-	elite_tauren_chieftain,
-	devout_adventurer,
-	devout_adventurer,
-	deathwing,
-	elven_archer,
-	elven_archer,
-	voodoo_doctor,
-	voodoo_doctor,
-	king_krush,
+	// elite_tauren_chieftain,
+	// devout_adventurer,
+	// devout_adventurer,
+	// deathwing,
+	// elven_archer,
+	// elven_archer,
+	// voodoo_doctor,
+	// voodoo_doctor,
+	// king_krush,
+		polyashaa,
+		polyashaa,
+		polyashaa,
+		polyashaa,
+		polyashaa,
+		polyashaa,
+		polyashaa,
+		polyashaa,
+		polyashaa,
 	ragnaros_the_firelord,
 	lich_king,
 	acidic_swamp_ooze,

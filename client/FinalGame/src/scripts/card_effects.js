@@ -141,7 +141,7 @@ function cardPlaceSnds() {
             }
         }
         attack();
-        computerCardSlot.style.transform = "translateY(17.5%)"; 
+        computerCardSlot.style.transform = "translateY(17.5%)";
     }
     // acidic swamp ooze card effects
     else if (getNameOfElement == "Acidic Swamp Ooze") {
@@ -149,6 +149,20 @@ function cardPlaceSnds() {
         acidicswampoozeSnd.play();
     }
     // sen'jin shieldmasta card effects
+
+    else if (getNameOfElement == "VadimZ") {
+        let senjinshieldmastaSnd = new Audio("src/sounds/cardPlaceSnds/senjin_shieldmasta_play.mp3")
+        senjinshieldmastaSnd.play();
+        senjinshieldmastaSnd.volume = 0.75;
+        tauntExists = true;
+        playerCardSlot2.lastChild.classList.add("hasTaunt");
+        setTimeout(function() {
+            playerCardSlot2.lastChild.children[3].style.visibility = "visible";
+            let tauntSnd = new Audio("src/sounds/effectSnds/taunt.mp3")
+            tauntSnd.play();
+        },800);
+    }
+
     else if (getNameOfElement == "Sen'jin Shieldmasta") {
         let senjinshieldmastaSnd = new Audio("src/sounds/cardPlaceSnds/senjin_shieldmasta_play.mp3")
         senjinshieldmastaSnd.play();
@@ -187,7 +201,7 @@ function cardPlaceSnds() {
         } else if (playerHeroHealth == 29) {
             document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 1;
         }
-        /* deals 3 damage to the enemy hero and heals the player hero for 3 and 
+        /* deals 3 damage to the enemy hero and heals the player hero for 3 and
         displays the damage label for both the player and the opponent */
         document.querySelector("#computerdamagevalue").innerText = "-3";
         document.querySelector("#computerdamagecontainer").style.visibility = "visible";
@@ -283,6 +297,9 @@ function cardPlaceSnds() {
             },1000);
         },2000);
     }
+
+
+
     // the lich king card effects
     else if (getNameOfElement == "The Lich King") {
         let lichkingSnd = new Audio("src/sounds/cardPlaceSnds/lich_king_play.mp3")
