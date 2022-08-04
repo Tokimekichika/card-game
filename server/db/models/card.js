@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate({
-      Deck, User, Pack, card_deck
+      Deck, User, card_deck
     }) {
       Card.belongsToMany(User, { through: 'user_card_join_table' });
       Card.belongsToMany(Deck,{through:card_deck, foreignKey:'card_id', otherKey:'deck_id'})
