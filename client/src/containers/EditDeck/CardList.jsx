@@ -5,9 +5,14 @@ import React, {useState} from "react";
 import {useDispatch} from "react-redux";
 import {addCardToCollect, removeCardToCollect} from "../../store/initMyDeck/actionCreators";
 
+
 const CardList = ({id,deckId,name,imageString,info,attack,health,mana,alreadyAdd}) => {
+
+
+
     const [state,setState] = useState(alreadyAdd)
     const dispatch = useDispatch()
+
     const addToDeck = async () => {
         setState(false)
         const responce = await fetch(`/mydeck/${deckId}/builddeck`, {

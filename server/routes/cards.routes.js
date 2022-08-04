@@ -56,4 +56,21 @@ cardsRouter.delete('/mydeck/:deckid/del/:id', async (req, res) => {
     }
 });
 
+cardsRouter.get('/mydeck/:deckid/filter/:id', async (req, res) => {
+    try {
+        // const user = await User.findOne({ where: { id: req.session.user.id } });
+        const {deckid,id} = req.params
+        // console.log(req.params)
+        const findCards = await Card.findAll({where:{manaCost:id},raw:true})
+        console.log(findCards)
+        res.status(200).json(findCards)
+    } catch (error) {
+        console.log(error)
+        res.json({
+            message: 'Произошла ошибка',
+            error,
+        });
+    }
+});
+
 module.exports = cardsRouter;
