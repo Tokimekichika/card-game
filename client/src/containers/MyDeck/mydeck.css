@@ -29,15 +29,17 @@ h4{
     flex-direction: column;
 }
 
-.btn.jsx-489100405 {
-    top: 90px;
-	padding: 30px !important;
+.modal-btn {
+    font-family: 'Neucha', cursive !important;
+    position: absolute;
+    top: 40px;
+	  padding: 40px !important;
     margin-bottom: 30px !important;
     background-color: rgba(65, 61, 234, 1) !important;
     border-radius: 20px !important;
     box-shadow: 9px 13px 3px rgba(0, 0, 0, 0.25) !important;
-    width: 220px !important;
-    height: 60px !important;
+    width: 320px !important;
+    height: 50px !important;
     color: white !important;
     display: flex !important;
     align-items: center !important;
@@ -48,7 +50,7 @@ h4{
     font-family: 'Neucha', cursive;
 
 }
-.btn.jsx-489100405 ::before {
+.modal-btn::before {
 	position: absolute !important;
     content: "" !important;
     width: 100% !important;
@@ -62,16 +64,16 @@ h4{
     transition: transform 0.15s, box-shadow 0.15s !important;
 }
 
- .btn.jsx-489100405:hover{
+ .modal-btn:hover{
 	background: rgb(41, 38, 185) !important;
-    transform: translate(0, 0.25em) !important;
+  transform: translate(0, 0.25em) !important;
 }
 
- .btn.jsx-489100405:hover::before{
+ .modal-btn:hover::before{
 	transform: translate3d(0, 0.5em, -1em) !important;
 }
 
-.btn.jsx-489100405:active{
+.modal-btn:active{
 	background: rgb(28, 26, 122) !important;
     transform: translate(0em, 0.75em) !important;
 }
@@ -103,10 +105,28 @@ left: 60px;
     0 0 27px #000000; 
 }
 
-.modal-btn {
+/* .modal-btn {
     color: #2e48a1 !important;
     text-shadow:  0 0 10px rgb(18, 62, 175),
     0 0 27px #000000; 
+} */
+.btn-modal-create{
+  font-size: 16px !important;
+  font-family: 'Neucha', cursive !important;
+  background-color: rgba(65, 61, 234, 1) !important;
+  border-radius: 20px !important;
+  box-shadow: 9px 13px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-modal-create:hover {
+  transform: translate(0em, 0.15em) !important;
+  background: rgb(28, 26, 122) !important;
+}
+
+.modal__title {
+  font-family: 'Neucha', cursive !important;
+  font-size: 30px !important;
+  text-align: center !important;
 }
 
 .modal-input{

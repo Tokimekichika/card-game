@@ -3,20 +3,20 @@ const {
 } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class Card extends Model {
+  class bonus_card extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate({
-      Deck, User, card_deck
-    }) {
-      Card.belongsToMany(User, { through: 'user_card_join_table' });
-      Card.belongsToMany(Deck,{through:card_deck, foreignKey:'card_id', otherKey:'deck_id'})
+                       Deck, User, bonus_card_deck
+                     }) {
+      bonus_card.belongsToMany(User, { through: 'user_card_join_table' });
+      bonus_card.belongsToMany(Deck,{through:bonus_card_deck, foreignKey:'bonus_card_id', otherKey:'deck_id'})
     }
   }
-  Card.init({
+  bonus_card.init({
     attack: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    modelName: 'Card',
+    modelName: 'bonus_card',
   });
-  return Card;
+  return bonus_card;
 };

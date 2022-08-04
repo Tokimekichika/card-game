@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Image, Card, Text, Button } from '@geist-ui/core'
 import { useDispatch } from 'react-redux'
-import { deckChangeActive } from '../../../store/deck/actionsCreator'
+import { deckChangeActive, deckLoad } from '../../../store/deck/actionsCreator'
 import './cardfordeck.css'
 import img from './img/card.jpeg'
 import {useNavigate} from "react-router-dom";
@@ -14,13 +14,16 @@ function CardforDeck({deck}) {
     event.preventDefault()
     const data = await fetch('/active', {
       method: 'PUT',
-      body: JSON.stringify({id: deck.id, active: !deck.active }),
+      body: JSON.stringify({id: deck.id, status: !deck.active }),
       headers: {
         "Content-Type": "application/json",
       },
     })
     const responce = await data.json()
     dispatch(deckChangeActive(responce))
+    fetch('/mydeck')
+    .then(data => data.json())
+    .then(responce => dispatch(deckLoad(responce)))
   }
 
   return (

@@ -3,7 +3,7 @@ import StartPage from "../StartPage";
 import {BrowserRouter, Routes,Route} from "react-router-dom";
 import MainPage from "../MainPage/MainPage";
 // import NavBar from "../../components/NavBar";
-import { GeistProvider, CssBaseline } from '@geist-ui/core'
+// import { GeistProvider, CssBaseline } from '@geist-ui/core'
 import Card from "../../components/Card/Card";
 import MyDeck from "../MyDeck/MyDeck";
 import Register from "../Auth/Registration/Register";
@@ -15,11 +15,12 @@ import EditDeck from "../EditDeck/EditDeck";
 import {initDeck} from "../../store/deck/actionCreators";
 import HomePage from '../HomePage/HomePage';
 import WebSock from "../Game/WebSock";
-import { deckLoad } from '../../store/deck/actionsCreator';
+// import { deckLoad } from '../../store/deck/actionsCreator';
 import WireFRame from '../../components/WireFrame/WireFRame';
 import {initMyDeck} from "../../store/initMyDeck/actionCreators";
 
 import PersonaCab from "../PersonalCab/PersonaCab";
+import {initCollection} from "../../store/collectDeck/actionCreators";
 
 
 
@@ -41,17 +42,18 @@ function App() {
         dispatch(initDeck(res))
     }
 
+    const getCollections = async () => {
+        const responce = await fetch('/getcards')
+        const res = await responce.json()
+        dispatch(initCollection(res))
+    }
 
-    // получение всех колод пользователя
-   useEffect(() => {
-    fetch('/mydeck')
-    .then(data => data.json())
-    .then(responce => dispatch(deckLoad(responce)))
-  }, [dispatch])
+  
 
     useEffect(()=>{
         checkUser()
         getCards()
+        getCollections()
     },[])
   return (
  <div>
