@@ -69,7 +69,7 @@ const NavBar = () => {
                       <li><NavLink to="/home">Домой</NavLink></li>
                       {/*<li><NavLink to="/editdeck">Мои карточки</NavLink></li>*/}
                   <li><NavLink to='/pc'><Typography component="div" style={{fontFamily:'sans-serif', fontWeight:600,display:'block',margin:0}}>
-                      <Box sx={{ textTransform: 'capitalize', m: 1 }} style={{fontFamily:'sans-serif', fontWeight:600,display:'block',margin:0}}>{`Приветствуем, ${user.name}`}
+                      <Box sx={{ textTransform: 'capitalize', m: 1 }}  style={{fontFamily:'sans-serif', fontSize:'20px', fontWeight:600,display:'block',margin:0}}>{`Приветствуем, ${user.name}`}
                           <StyledBadge
                               overlap="circular"
                               anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
