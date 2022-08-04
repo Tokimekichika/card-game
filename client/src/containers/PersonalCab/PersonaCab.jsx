@@ -51,15 +51,14 @@ export default function PersonaCab() {
 
     const dispatch = useDispatch()
     const ref = useRef(null)
-    const ref2 = useRef(null)
 
     const [profilePhoto, setProfilePhoto] = useState('')
     const [img, setImg] = useState(null)
     const user = useSelector(state => state.auth.user)
 
 
-    
-   
+
+
 
     const sendFile = async () => {
 
@@ -86,6 +85,7 @@ const saveChanges = async () => {
                })
            })
         const responce = await res.json()
+    console.log(responce)
         dispatch(changeName(responce.name))
         dispatch(changePhoto(responce.photo))
     }
@@ -104,7 +104,8 @@ const saveChanges = async () => {
                             <img src={user?.photo} style={{width:'200px',height:'200px',borderRadius:'50%',margin:'auto auto'}} />
                             <input
                                 type="text"
-                                onChange={showSaveButton}
+                                // onChange={showSaveButton}
+                                ref={ref}
                                 defaultValue={user?.name}
                                 className="input-field"
                                 name="name"
@@ -126,7 +127,7 @@ const saveChanges = async () => {
                             <button onClick={sendFile} className="change-btn">
                                 Изменить
                             </button>
-                           <button className='save-btn'>Сохранить</button>
+                           <button onClick={saveChanges} className='save-btn'>Сохранить</button>
                         </div>
                         <div className="action">
                         </div>
@@ -178,7 +179,7 @@ const saveChanges = async () => {
 
 
 
-    
+
 
 
 
