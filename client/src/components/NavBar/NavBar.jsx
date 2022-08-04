@@ -62,9 +62,10 @@ const NavBar = () => {
     return (
         // ДОБАВИТЬ УСЛОВНЫЙ РЕНДЕРИНГ
         <div className={styles.container}>
-            <ul className={styles.list__container}>
+
                 {user?.id ?
                   <>
+                  <ul className={styles.list__container}>
                       <li><NavLink to="/home">Домой</NavLink></li>
                       {/*<li><NavLink to="/editdeck">Мои карточки</NavLink></li>*/}
                   <li><NavLink to='/pc'><Typography component="div" style={{fontFamily:'sans-serif', fontWeight:600,display:'block',margin:0}}>
@@ -80,8 +81,11 @@ const NavBar = () => {
                   </Typography>
                   </NavLink>
                   </li>
+
                   {/*<li><NavLink to='/pc'>{`ПРИВЕТ,${user.name}!`}</NavLink></li>*/}
                   <li><NavLink to="/" onClick={logoutHandler}>Выйти</NavLink></li>
+                  </ul>
+                      <Money />
 
 
 
@@ -90,10 +94,12 @@ const NavBar = () => {
                   {/* <li><NavLink to="/editdeck">Мои карточки</NavLink></li> */}
                   </>
                 :
-                <li><NavLink to="/main">На главную</NavLink></li>
+                    <>
+                    <ul className={styles.list__container}>
+                        <li><NavLink to="/main">На главную</NavLink></li>
+                    </ul>
+                    </>
                 }
-            </ul>
-            <Money />
         </div>
     )
 }

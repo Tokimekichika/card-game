@@ -17,6 +17,7 @@ import HomePage from '../HomePage/HomePage';
 import WebSock from "../Game/WebSock";
 import { deckLoad } from '../../store/deck/actionsCreator';
 import WireFRame from '../../components/WireFrame/WireFRame';
+import {initMyDeck} from "../../store/initMyDeck/actionCreators";
 
 import PersonaCab from "../PersonalCab/PersonaCab";
 
@@ -25,6 +26,7 @@ import PersonaCab from "../PersonalCab/PersonaCab";
 function App() {
     const dispatch = useDispatch()
     const user = useSelector(state => state.auth.user)
+    // const myDeckCollection = useSelector((state)=>state.myCreateDeck.myCreateDeck)
 
     const checkUser = async () => {
         const responce = await fetch('/main')
@@ -36,6 +38,7 @@ function App() {
         const res = await responce.json()
         dispatch(initDeck(res))
     }
+
 
     // получение всех колод пользователя
    useEffect(() => {
