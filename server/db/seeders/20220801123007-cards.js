@@ -7,7 +7,6 @@ module.exports = {
         //info spell:description
         //imageString (foto)
         //name
-        //rarity
       {
         name: 'Polyasha',
         imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03HZ9YKYQM-f48939db467d-512',
