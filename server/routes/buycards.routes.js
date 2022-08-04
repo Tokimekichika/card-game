@@ -1,12 +1,12 @@
 const buyCards = require('express').Router();
-const { User, Card,Sequelize } = require('../db/models');
+const { User, bonus_card,Sequelize } = require('../db/models');
 
 // Получение колод пользователя
 buyCards.get('/new', async (req, res) => {
   try {
     const user = await User.findOne({ where: { id: req.session.user.id } });
     if (user.coins >= 100) {
-      const buycard = await Card.findAll({ order: [ [ Sequelize.fn('RANDOM') ] ], limit: 5,raw:true });
+      const buycard = await bonus_card.findAll({ order: [ [ Sequelize.fn('RANDOM') ] ], limit: 5,raw:true });
       console.log(buycard)
       res.json(buycard);
     } else {
@@ -30,7 +30,7 @@ buyCards.get('/', async (req, res) => {
           id: req.session.user.id,
         },
       });
-      const buycard = await Card.findAll({ order: [ [ Sequelize.fn('RANDOM') ] ], limit: 5,raw:true });
+      const buycard = await bonus_card.findAll({ order: [ [ Sequelize.fn('RANDOM') ] ], limit: 5,raw:true });
       console.log(buycard)
       res.json(buycard);
     } else {

@@ -20,6 +20,7 @@ import WireFRame from '../../components/WireFrame/WireFRame';
 import {initMyDeck} from "../../store/initMyDeck/actionCreators";
 
 import PersonaCab from "../PersonalCab/PersonaCab";
+import {initCollection} from "../../store/collectDeck/actionCreators";
 
 
 
@@ -41,6 +42,11 @@ function App() {
         dispatch(initDeck(res))
     }
 
+    const getCollections = async () => {
+        const responce = await fetch('/getcards')
+        const res = await responce.json()
+        dispatch(initCollection(res))
+    }
 
     // получение всех колод пользователя
    useEffect(() => {
@@ -52,6 +58,7 @@ function App() {
     useEffect(()=>{
         checkUser()
         getCards()
+        getCollections()
     },[])
   return (
  <div>
