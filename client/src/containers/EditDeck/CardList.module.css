@@ -3,8 +3,8 @@
     margin: 20px;
     border-radius: 5px;
     background-color: #fff;
-    cursor: pointer;
 }
+
 
 .list__item a {
     text-decoration: none;
@@ -20,7 +20,17 @@
     height: 55vh;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
     border-radius: 8px;
-    /*right: 3000px;*/
+}
+
+.Card__2 {
+    background: #776557;
+    transition: transform 0.15s;
+    position: relative;
+    width: 40vh;
+    height: 55vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    border: 3mm ridge lightgreen;
 }
 
 

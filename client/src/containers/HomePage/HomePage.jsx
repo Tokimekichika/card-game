@@ -13,7 +13,7 @@ function HomePage() {
                 <div className='start-game-button-container'>
 
 
-                <button onClick={() => window.location.href = 'http://localhost:63342/fp/client/FinalGame/index.html?_ijt=ucevhlp1sgep2a23gg6ttisek2&_ij_reload=RELOAD_ON_SAVE'} className = 'start-game-btn'>
+                <button onClick={() => window.location.href = 'http://localhost:63342/card-game/client/FinalGame/index.html?_ijt=8t5eccfceoreq52q6gv0r7ausl&_ij_reload=RELOAD_ON_SAVE'} className = 'start-game-btn'>
 
 
                     Играть

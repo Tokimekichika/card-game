@@ -10,27 +10,58 @@ import {useDispatch, useSelector} from "react-redux";
 import {initDeck} from "../../store/deck/actionCreators";
 import {initCollection} from "../../store/collectDeck/actionCreators";
 import {useParams} from "react-router-dom";
+import {initMyDeck} from "../../store/initMyDeck/actionCreators";
 
 
 const EditDeck = () => {
+    const [state,setState] = useState(null)
+
     const {id} = useParams()
     const collection = useSelector((state)=>state.collection.collection)
+    const myDeckCollection = useSelector((state)=>state.myCreateDeck.myCreateDeck)
+    console.log(myDeckCollection)
+    // const [length,setLength] = useState(myDeckCollection.length)
+    // console.log(myDeckCollection)
+    // const myDeck = useSelector(state => state.deck.myDeck)
     const dispatch = useDispatch()
     const initCards= async ()=> {
         const responce = await fetch('/getcards')
         const res = await responce.json()
         dispatch(initCollection(res))
     }
+
+    const findCardFromDeck = async ()=> {
+        const responce = await fetch(`/show/${id}`)
+        const res = await responce.json()
+        dispatch(initMyDeck(res.Cards))
+        setState(res.Cards.map(el=>el.id))
+    }
+
+    // const initCardFromDeck = async ()=> {
+    //     const responce = await fetch(`/show/${id}/all`)
+    //     const res = await responce.json()
+    //     dispatch(initMyDeck(res.Cards.length))
+    //     // setState(res.Cards.map(el=>el.id))
+    // }
+
     useEffect(()=>{
+        findCardFromDeck()
         initCards()
     },[])
 
+    // useEffect(()=>{
+    //     initCardFromDeck()
+    // },[])
+
     return (
         <>
-            <div style={{top:'30px',fontSize:'24px'}}>{collection.length}/30</div>
+            <div style={{top:'30px',fontSize:'24px',position:'fixed',zIndex:33,color:'red',right:'0%'}}>{myDeckCollection.length}/30</div>
             <ul className={styles.list__container}>
-            {collection ? collection.map(el => <CardList deckId={id} key={el.id} id={el.id} name={el.name} photo_url={el.photo_url} description={el.description} damage={el.damage} health={el.health} manaCost={el.manaCost}/>)
-                :
+            {(state && collection) ? collection.map(el =>{
+                const added = !state.includes(el.id) //true || false
+                return <CardList alreadyAdd={added} deckId={id} key={el.id} id={el.id} name={el.name} photo_url={el.photo_url} description={el.description} damage={el.damage} health={el.health} manaCost={el.manaCost}/>
+                })
+            :
                 <div/>
             }
             </ul>
