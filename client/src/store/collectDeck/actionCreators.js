@@ -1,4 +1,4 @@
-import {ADD_CARD_TO_COLLECT,REMOVE_CARD_TO_COLLECT,INIT_COLLECTION} from "./actionType";
+import {FILTER_COLLECTION,INIT_COLLECTION} from "./actionType";
 
 // export function addCardToCollect(payload) {
 //     return { type: ADD_CARD_TO_COLLECT,payload}
@@ -10,4 +10,8 @@ import {ADD_CARD_TO_COLLECT,REMOVE_CARD_TO_COLLECT,INIT_COLLECTION} from "./acti
 
 export function initCollection(payload) {
     return { type: INIT_COLLECTION,payload}
+}
+
+export function filterCollection(payload) {
+    return { type: FILTER_COLLECTION, payload };
 }

@@ -11,13 +11,16 @@ import {initDeck} from "../../store/deck/actionCreators";
 import {initCollection} from "../../store/collectDeck/actionCreators";
 import {useParams} from "react-router-dom";
 import {initMyDeck} from "../../store/initMyDeck/actionCreators";
+import ManaCost from "./ManaCost/ManaCost";
 
 
 const EditDeck = () => {
     const [state,setState] = useState(null)
+    const arr = [1,2,3,4,5,6,7,8,9,10]
 
     const {id} = useParams()
     const collection = useSelector((state)=>state.collection.collection)
+    console.log(collection)
     const myDeckCollection = useSelector((state)=>state.myCreateDeck.myCreateDeck)
     console.log(myDeckCollection)
     // const [length,setLength] = useState(myDeckCollection.length)
@@ -56,6 +59,9 @@ const EditDeck = () => {
     return (
         <>
             <div style={{top:'30px',fontSize:'24px',position:'fixed',zIndex:33,color:'red',right:'0%'}}>{myDeckCollection.length}/30</div>
+            <ul className={styles.list__container}>
+                {arr.map(el=><ManaCost key={el} deckId={id} number={el} />)}
+            </ul>
             <ul className={styles.list__container}>
             {(state && collection) ? collection.map(el =>{
                 const added = !state.includes(el.id) //true || false
