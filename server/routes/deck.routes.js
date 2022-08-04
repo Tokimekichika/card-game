@@ -1,5 +1,7 @@
 const deckRouter = require('express').Router();
-const { Deck } = require('../db/models');
+
+const { Deck,Card,card_deck } = require('../db/models');
+
 
 // Получение колод пользователя
 deckRouter.get('/mydeck', async (req, res) => {
@@ -36,5 +38,43 @@ deckRouter.post('/create', async (req, res) => {
     res.json({ message: 'Произошла ошибка создания деки' });
   }
 });
+
+
+
+deckRouter.get('/show/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const findCardFromDeck = await Deck.findOne({where:{id},include:{model:Card,through:'card_deck'}});
+    res.json(findCardFromDeck);
+  } catch (error) {
+    console.log(error);
+    res.json({ message: 'Произошла ошибка создания деки' });
+  }
+});
+
+
+deckRouter.get('/cardInGame', async (req, res) => {
+  try {
+    // нужен id  Deck получит
+    // const findCardFromDeck = await
+    // const findCardFromDeck = await Deck.findOne({
+    //   raw:true,
+    //   where:{active:true}
+    const findCardFromDeck = await Deck.findAll ({
+      where:{
+        active:true
+      } ,
+      include:{
+        model:Card , through:card_deck
+      }
+    });
+    console.log (findCardFromDeck)
+    res.json(findCardFromDeck)
+  } catch (error){
+    console.log (error)
+    res.json({ message: 'Произошла ошибка создания деки tgnf' })
+  }
+})
+
 
 module.exports = deckRouter;

@@ -35,7 +35,7 @@ const Shop = () => {
             <section className='shop-container'>
                 <div className='button-shop-container'>
                 <button className='button-shop' onClick={buy}>Купить пак</button></div>
-                {state ? shop.map(el=><ShopCard key={el.id} name={el.name} photo_url={el.photo_url} description={el.description} damage={el.damage} health={el.health} manaCost={el.manaCost}/>) : <div/>}
+                {state ? shop.map(el=><ShopCard key={el.id} name={el.name} imageString={el.imageString} info={el.info} attack={el.attack} health={el.health} mana={el.mana}/>) : <div/>}
                 {state ? <button onClick={addToDeck}>Добавить в колоду</button> : <div/> }
             </section>
         </>

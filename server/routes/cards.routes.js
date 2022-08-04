@@ -1,5 +1,5 @@
 const cardsRouter = require('express').Router();
-const { User, card_deck,Decks,Sequelize } = require('../db/models');
+const { User, Card, card_deck,Decks,Sequelize } = require('../db/models');
 
 // Получение колод пользователя
 cardsRouter.post('/mydeck/:deckid/builddeck', async (req, res) => {
@@ -20,8 +20,8 @@ cardsRouter.post('/mydeck/:deckid/builddeck', async (req, res) => {
                     card_id: id,
                     deck_id: deckid,
                 })
-                // console.log(userDeck)
-                res.status(201).json({userDeck})
+                const cardone = await Card.findOne({where:{id}})
+                res.status(201).json({cardone})
             }
         }
     } catch (error) {
@@ -38,11 +38,32 @@ cardsRouter.delete('/mydeck/:deckid/del/:id', async (req, res) => {
         // const user = await User.findOne({ where: { id: req.session.user.id } });
         const {deckid,id} = req.params
         // console.log(req.params)
+        const findZapis = await card_deck.findOne({where:{
+                card_id: +id,
+                deck_id: +deckid,
+            }})
         const userDeck = await card_deck.destroy({where:{
             card_id: +id,
             deck_id: +deckid,
         }})
-        res.status(200)
+        res.status(200).json(findZapis)
+    } catch (error) {
+        console.log(error)
+        res.json({
+            message: 'Произошла ошибка',
+            error,
+        });
+    }
+});
+
+cardsRouter.get('/mydeck/:deckid/filter/:id', async (req, res) => {
+    try {
+        // const user = await User.findOne({ where: { id: req.session.user.id } });
+        const {deckid,id} = req.params
+        // console.log(req.params)
+        const findCards = await Card.findAll({where:{manaCost:id},raw:true})
+        console.log(findCards)
+        res.status(200).json(findCards)
     } catch (error) {
         console.log(error)
         res.json({
