@@ -13,7 +13,6 @@ module.exports = (sequelize, DataTypes) => {
       Deck, User, Pack, card_deck
     }) {
       Card.belongsToMany(User, { through: 'user_card_join_table' });
-      Card.belongsTo(Pack, { foreignKey: 'pack_id' });
       Card.belongsToMany(Deck,{through:card_deck, foreignKey:'card_id', otherKey:'deck_id'})
     }
   }
@@ -43,14 +42,6 @@ module.exports = (sequelize, DataTypes) => {
     rarity: {
       type: DataTypes.TEXT,
     },
-    pack_id:{
-      type:DataTypes.INTEGER,
-      references:{
-        model:'Packs',
-        key:'id'
-      },
-      allowNull:true
-    }
   }, {
     sequelize,
     modelName: 'Card',
