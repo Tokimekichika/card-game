@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Neucha&family=Orelega+One&display=swap');
+
+
 .home-container {
     background-image: url(../HomePage/img/homePage.jpg) !important;
     background: no-repeat;
@@ -43,6 +46,7 @@
     display: flex;
     position: absolute;
     flex-direction: column;
+
 }
 
 .start-game-btn {
@@ -57,9 +61,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 36px;
     transition: transform 0.15s;
     transform-style: preserve-3d;
+    font-family: 'Neucha', cursive;
+
 }
 
 .start-game-btn::before {

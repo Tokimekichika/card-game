@@ -115,7 +115,6 @@ const saveChanges = async () => {
                             <label className="input-label">Имя</label>
                         </div>
                             <label className="photo-label">Photo</label>
-                        <div className="btn-board">
                             <input
                                 type="file"
                                 className="input-field"
@@ -124,6 +123,7 @@ const saveChanges = async () => {
                                 required
                                 onChange={(e) => setImg(e.target.files[0])}
                             />
+                        <div className="btn-board">
                             <button onClick={sendFile} className="change-btn">
                                 Изменить
                             </button>
@@ -131,6 +131,8 @@ const saveChanges = async () => {
                         </div>
                         <div className="action">
                         </div>
+                        {/* <div className="action">
+                        </div> */}
                 </div>
             </div>
             </>

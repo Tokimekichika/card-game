@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Neucha&family=Orelega+One&display=swap');
 
 .cards-container {
     display: flex;
@@ -91,6 +92,7 @@
     color: white !important;
     transition: transform 0.15s !important;
     transform-style: preserve-3d !important;
+    font-family: 'Neucha', cursive;
 
 }
 
@@ -142,6 +144,8 @@
   color: white !important;
   transition: transform 0.15s !important;
   transform-style: preserve-3d !important;
+  font-family: 'Neucha', cursive;
+
 
 }
 
@@ -172,3 +176,5 @@ transform: translate3d(0, 0.5em, -1em) !important;
 background: rgb(122, 26, 26) !important;
   transform: translate(0em, 0.75em) !important;
 }
+
+

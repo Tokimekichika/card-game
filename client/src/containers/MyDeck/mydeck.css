@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Neucha&family=Orelega+One&display=swap');
+
 h4{
     text-shadow:  0 0 10px rgb(18, 62, 175),
     0 0 27px #000000; 
     color: white;
-    font-size: 30px;
+    font-size: 50px;
     /* margin-bottom: 370px; */
-    width: 188px;
+    width: 236px;
     position: relative;
     padding-top: 82px;
+    font-family: 'Neucha', cursive;
 }
+
 .myDeck-container{
 	background-image: url(./img/myDeckPage.jpg) !important;
 	background: no-repeat;
@@ -40,6 +44,7 @@ h4{
     font-size: 28px !important;
     transition: transform 0.15s !important;
     transform-style: preserve-3d !important;
+    font-family: 'Neucha', cursive;
 
 }
 .btn.jsx-489100405 ::before {
@@ -115,4 +120,8 @@ padding: 0.25rem 0;
 
 .modal-container{
     box-shadow: 3px 4px 60px 90px rgba(34, 60, 80, 0.29) !important;
+}
+
+.btn.jsx-489100405 .text {
+    font-family: 'Neucha', cursive;
 }
