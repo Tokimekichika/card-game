@@ -32,14 +32,6 @@ module.exports = {
       rarity: {
         type: Sequelize.TEXT,
       },
-      pack_id: {
-        type: Sequelize.INTEGER,
-        allowNull:true,
-        references:{
-          model:'Packs',
-          key:'id'
-        },
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
