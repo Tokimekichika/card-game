@@ -58,7 +58,9 @@ const EditDeck = () => {
 
     return (
         <>
-            <div style={{top:'30px',fontSize:'24px',position:'fixed',zIndex:33,color:'red',right:'0%'}}>{myDeckCollection.length}/30</div>
+        <div className={styles.editDeck_Container} >
+            <div style={{top:'30px',fontSize:'24px',position:'fixed',zIndex:33,color:'red',right:'0%', marginRight:'30px'}}>{myDeckCollection.length}/30</div>
+            <div className={styles.cards_container}>
             <ul className={styles.list__container}>
                 {arr.map(el=><ManaCost key={el} deckId={id} number={el} />)}
             </ul>
@@ -71,6 +73,8 @@ const EditDeck = () => {
                 <div/>
             }
             </ul>
+            </div>
+            </div>
                 </>
     )
 }

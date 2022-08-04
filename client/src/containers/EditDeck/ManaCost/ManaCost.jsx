@@ -30,7 +30,7 @@ const ManaCost = ({number,deckId}) => {
 
     return (
         <>
-                <li style={{width:'100px',height:'100px',top:'50px',marginTop:'100px'}} >
+                <li className={styles.numbers} >
                     {!state ?
                         <div onClick={findCards}>
                             <div style={{top: '50%'}}>{number}</div>

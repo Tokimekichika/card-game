@@ -248,7 +248,7 @@ justify-content: center;
   transition: transform 0.15s, box-shadow 0.15s;
 }
 .action-button:hover {
-  background: rgb(41, 38, 185);
+  background: rgb(41, 38, 185) !important;
   transform: translate(0, 0.25em);
 }
 .action-button:hover::before {
@@ -256,7 +256,7 @@ justify-content: center;
   transform: translate3d(0, 0.5em, -1em);
 }
 .action-button:active {
-  background: rgb(28, 26, 122);
+  background: rgb(28, 26, 122) !important;
   transform: translate(0em, 0.75em);
 }
 
