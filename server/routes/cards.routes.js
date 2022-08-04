@@ -61,7 +61,7 @@ cardsRouter.get('/mydeck/:deckid/filter/:id', async (req, res) => {
         // const user = await User.findOne({ where: { id: req.session.user.id } });
         const {deckid,id} = req.params
         // console.log(req.params)
-        const findCards = await Card.findAll({where:{manaCost:id},raw:true})
+        const findCards = await Card.findAll({where:{mana:id},raw:true})
         console.log(findCards)
         res.status(200).json(findCards)
     } catch (error) {
