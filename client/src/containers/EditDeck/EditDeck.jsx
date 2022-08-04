@@ -27,11 +27,11 @@ const EditDeck = () => {
     // console.log(myDeckCollection)
     // const myDeck = useSelector(state => state.deck.myDeck)
     const dispatch = useDispatch()
-    // const initCards= async ()=> {
-    //     const responce = await fetch('/getcards')
-    //     const res = await responce.json()
-    //     dispatch(initCollection(res))
-    // }
+    const initCards= async ()=> {
+        const responce = await fetch('/getcards')
+        const res = await responce.json()
+        dispatch(initCollection(res))
+    }
 
     const findCardFromDeck = async ()=> {
         const responce = await fetch(`/show/${id}`)
@@ -47,10 +47,10 @@ const EditDeck = () => {
     //     // setState(res.Cards.map(el=>el.id))
     // }
 
-    // useEffect(()=>{
-    //     // findCardFromDeck()
-    //     // initCards()
-    // },[])
+    useEffect(()=>{
+        findCardFromDeck()
+        initCards()
+    },[])
 
     // useEffect(()=>{
     //     initCardFromDeck()
