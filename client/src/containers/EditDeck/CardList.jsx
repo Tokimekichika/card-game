@@ -1,12 +1,15 @@
 import styles from './CardList.module.css';
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 
 import React, {useState} from "react";
 import {useDispatch} from "react-redux";
 import {addCardToCollect, removeCardToCollect} from "../../store/initMyDeck/actionCreators";
 
 
-const CardList = ({id,deckId,name,photo_url,description,damage,health,manaCost,alreadyAdd}) => {
+const CardList = ({id,deckId,name,imageString,info,attack,health,mana,alreadyAdd}) => {
+
+
+
     const [state,setState] = useState(alreadyAdd)
     const dispatch = useDispatch()
 
@@ -51,12 +54,12 @@ const CardList = ({id,deckId,name,photo_url,description,damage,health,manaCost,a
                             <button onClick={addToDeck} className={styles.button}>add</button>
                         <div
                             className={styles.CardPortrait}
-                            style={{ backgroundImage: `url(${photo_url})` }}
+                            style={{ backgroundImage: `url(${imageString})` }}
                         />
-                        <div className={styles.CardMana}>{ manaCost || 0 }</div>
+                        <div className={styles.CardMana}>{ mana || 0 }</div>
                         <h1 className={styles.CardName}>{name} </h1>
-                        <h2 className={styles.CardDescription}>{description}</h2>
-                        {damage ? <div className={styles.CardAttack}>{damage}</div> : <div/> }
+                        <h2 className={styles.CardDescription}>{info}</h2>
+                        {attack ? <div className={styles.CardAttack}>{attack}</div> : <div/> }
 
                         {health ? <div className={styles.CardDefense}>{ health }</div> : <div />}
                     </div>
@@ -67,12 +70,12 @@ const CardList = ({id,deckId,name,photo_url,description,damage,health,manaCost,a
                         <button onClick={removeFromDeck} className={styles.button}>remove</button>
                         <div
                             className={styles.CardPortrait}
-                            style={{ backgroundImage: `url(${photo_url})` }}
+                            style={{ backgroundImage: `url(${imageString})` }}
                         />
-                        <div className={styles.CardMana}>{ manaCost || 0 }</div>
+                        <div className={styles.CardMana}>{ mana || 0 }</div>
                         <h1 className={styles.CardName}>{name} </h1>
-                        <h2 className={styles.CardDescription}>{description}</h2>
-                        {damage ? <div className={styles.CardAttack}>{damage}</div> : <div/> }
+                        <h2 className={styles.CardDescription}>{info}</h2>
+                        {attack ? <div className={styles.CardAttack}>{attack}</div> : <div/> }
 
                         {health ? <div className={styles.CardDefense}>{ health }</div> : <div />}
                     </div>

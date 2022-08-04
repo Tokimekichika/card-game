@@ -18,18 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Card.init({
-    name: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    photo_url: {
-      type: DataTypes.TEXT,
-    },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    damage: {
+    attack: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
@@ -37,15 +26,22 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    manaCost: {
+    mana: {
       type: DataTypes.INTEGER,
+      allowNull: false,
     },
-    ability_id: {
+    info: {
       type: DataTypes.TEXT,
-      // references: {
-      //   model: 'Abilities',
-      //   key: 'id',
-      // },
+    },
+    imageString: {
+      type: DataTypes.TEXT,
+    },
+    name: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    rarity: {
+      type: DataTypes.TEXT,
     },
     pack_id:{
       type:DataTypes.INTEGER,

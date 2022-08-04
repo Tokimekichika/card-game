@@ -65,7 +65,7 @@ const EditDeck = () => {
             <ul className={styles.list__container}>
             {(state && collection) ? collection.map(el =>{
                 const added = !state.includes(el.id) //true || false
-                return <CardList alreadyAdd={added} deckId={id} key={el.id} id={el.id} name={el.name} photo_url={el.photo_url} description={el.description} damage={el.damage} health={el.health} manaCost={el.manaCost}/>
+                return <CardList alreadyAdd={added} deckId={id} key={el.id} id={el.id} name={el.name} imageString={el.imageString} info={el.info} attack={el.attack} health={el.health} mana={el.mana}/>
                 })
             :
                 <div/>
