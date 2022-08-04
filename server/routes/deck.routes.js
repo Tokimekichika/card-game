@@ -55,21 +55,23 @@ deckRouter.get('/show/:id', async (req, res) => {
 
 deckRouter.get('/cardInGame', async (req, res) => {
   try {
-    const findCardFromDeck = await Card.findOne({
+    // нужен id  Deck получит
+    // const findCardFromDeck = await
+    // const findCardFromDeck = await Deck.findOne({
+    //   raw:true,
+    //   where:{active:true}
+    const findCardFromDeck = await Deck.findAll ({
       where:{
-        id: 1
+        active:true
+      } ,
+      include:{
+        model:Card , through:card_deck
       }
     });
-    // const findCardFromDeck = await card_deck.findAll ({
-    //   where:{
-    //     id
-    //   } ,
-    //   include:{
-    //     model:Card , through:'card_deck'
-    //   }
-    // });
+    console.log (findCardFromDeck)
     res.json(findCardFromDeck)
   } catch (error){
+    console.log (error)
     res.json({ message: 'Произошла ошибка создания деки tgnf' })
   }
 })

@@ -7,18 +7,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      name: {
-        type: Sequelize.TEXT,
-        allowNull: false,
-      },
-      photo_url: {
-        type: Sequelize.TEXT,
-      },
-      description: {
-        type: Sequelize.TEXT,
-        allowNull: false,
-      },
-      damage: {
+      attack: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
@@ -26,15 +15,22 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      manaCost: {
+      mana: {
         type: Sequelize.INTEGER,
+        allowNull: false,
       },
-      ability_id: {
+      info: {
         type: Sequelize.TEXT,
-        // references: {
-        //   model: 'Abilities',
-        //   key: 'id',
-        // },
+      },
+      imageString: {
+        type: Sequelize.TEXT,
+      },
+      name: {
+        type: Sequelize.TEXT,
+        allowNull: false,
+      },
+      rarity: {
+        type: Sequelize.TEXT,
       },
       pack_id: {
         type: Sequelize.INTEGER,

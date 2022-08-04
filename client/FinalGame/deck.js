@@ -175,7 +175,7 @@ class MinionCard {
 const answer = async function   ()  {
 	const qq = await fetch ('http://localhost:4000/cardInGame')
 	const res = await qq.json ()
-	console.log (res)
+	console.log (res,'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq')
 }
 
 answer ().then (data => data)
