@@ -192,6 +192,7 @@ font-size: 20px;
 }
 
 .input-field {
+  color: white;
 border: 0;
 z-index: 1;
 background-color: transparent;
