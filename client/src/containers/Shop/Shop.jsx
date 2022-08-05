@@ -7,6 +7,7 @@ import {buyDeck} from "../../store/shop/actionCreator";
 import ShopCard from '../../components/ShopCard/ShopCard'
 import {addToDeckFromShop} from "../../store/deck/actionCreators";
 import {addCardToCollects} from "../../store/collectDeck/actionCreators";
+
 const Shop = () => {
     const [state,setState] = useState(false)
     const dispatch = useDispatch()
