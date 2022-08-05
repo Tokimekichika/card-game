@@ -5,7 +5,7 @@ var purchaseSnd = new Audio("src/sounds/purchase.mp3");
 var menuhoverSnd = new Audio("src/sounds/menuselect.mp3");
 var shophoverSnd = new Audio("src/sounds/shophover.mp3");
 var shoponclickSnd = new Audio("src/sounds/shoponclick.mp3")
-var startTutorialSnd = new Audio("src/voiceovers/innkeeper_starttutorial.mp3");
+var startTutorialSnd = new Audio("src/voiceovers/introforleha.ogg");
 var battlebeginSnd = new Audio("src/voiceovers/innkeeper_tutorialbattle.mp3");
 var jainathreatSnd = new Audio("src/voiceovers/jaina_tutorialbattle.mp3");
 var hasPlayedBattleBeginSnd = new Boolean(false);
@@ -211,7 +211,7 @@ confirmbtn.onclick = function () {
                         document.querySelector(".opponenthero").classList.add("tutorialHoggerAnim");
                         setTimeout(function() {
                             setTimeout(function(){
-                                document.querySelector("#computerbubble").innerHTML = "...";
+                                document.querySelector("#computerbubble").innerHTML = "...Мы снова опоздали...";
                                 document.querySelector("#computerbubble").style.visibility = "visible";
                                 document.querySelector('#computerbubble').classList.add("openMenuAnim");
                             },1000);
@@ -411,7 +411,7 @@ function tutorial() {
             introcinematic.style.display = "none";
             document.querySelector(".playerhero").style.visibility = "hidden";
             document.querySelector(".opponenthero").style.visibility = "hidden";
-            document.querySelector(".opponenthero").style.backgroundImage = "url(src/images/hogger.png)";
+            document.querySelector(".opponenthero").style.backgroundImage = "url(src/images/nawa.jpg)";
             document.querySelector('#endturn').style.zIndex = "10";
             document.querySelector(".playerhero").style.zIndex = "20";
             document.querySelector(".opponenthero").style.zIndex = "5";
@@ -551,7 +551,7 @@ starttutorialbtn.onclick = function () {
     setTimeout(function() {
         battlebeginSnd.onended = function() {
                 jainathreatSnd.play();
-                document.querySelector("#playerbubble").innerHTML = "...";
+                document.querySelector("#playerbubble").innerHTML = "НИКАКИХ ОПОЗДАНИЙ";
                 document.querySelector("#playerbubble").style.visibility = "visible";
                 document.querySelector('#playerbubble').classList.add("openMenuAnim");
                 setTimeout(function(){
@@ -805,7 +805,7 @@ skipcinematicbtn.onclick = function () {
     cinematicvideo.style.display = "none";
     document.querySelector(".playerhero").style.visibility = "hidden";
     document.querySelector(".opponenthero").style.visibility = "hidden";
-    document.querySelector(".opponenthero").style.backgroundImage = "url(src/images/hogger.png)";
+    document.querySelector(".opponenthero").style.backgroundImage = "url(src/images/nawa.jpg)";
     document.querySelector('#endturn').style.zIndex = "10";
     document.querySelector(".playerhero").style.zIndex = "20";
     document.querySelector(".opponenthero").style.zIndex = "5";
