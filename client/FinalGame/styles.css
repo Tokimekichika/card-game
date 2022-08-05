@@ -225,8 +225,8 @@ head {
 	z-index: 100;
 }
 #arrowcursor {
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	position:absolute;
 	transform:translate(-50%,-50%);
 	transform-origin: 0% 0%;
@@ -614,7 +614,7 @@ head {
 		left: -13.5%;
 	}
 	#enablescreenshake {
-		left: 15%; 
+		left: 15%;
 		top: 79%;
 		font-size: 25px;
 	}
@@ -775,7 +775,7 @@ head {
 		left: -13.5%;
 	}
 	#enablescreenshake {
-		left: 15%; 
+		left: 15%;
 		top: 79%;
 		font-size: 30px;
 	}
@@ -835,7 +835,7 @@ head {
 	left: 46.75%;
 	top: 67.75%;
 	z-index: 20;
-	background-image: url(src/images/jaina_proudmoore.gif);
+	background-image: url(src/images/leha.jpeg);
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: contain;
  }
@@ -904,7 +904,7 @@ head {
 	 1px 1px 0 #000;
 	 user-select: none;
 	 z-index: 10;
-	 
+
  }
  .healthValue {
  	position: absolute;
@@ -1090,9 +1090,9 @@ head {
 	font-size: 17px;
 	background-color: #4ce322;
 	border-top-left-radius: 120%35px;
-	border-bottom-left-radius: 120%35px; 
+	border-bottom-left-radius: 120%35px;
 	border-top-right-radius: 120%35px;
-	border-bottom-right-radius: 120%35px; 
+	border-bottom-right-radius: 120%35px;
 	font-family: BelweBdBTBold;
 	outline: none;
 	z-index: 2;
@@ -1109,9 +1109,9 @@ head {
 	background-repeat: no-repeat;
 	background-position: center;
 	border-top-left-radius: 120%35px;
-	border-bottom-left-radius: 120%35px; 
+	border-bottom-left-radius: 120%35px;
 	border-top-right-radius: 120%35px;
-	border-bottom-right-radius: 120%35px; 
+	border-bottom-right-radius: 120%35px;
 	font-family: BelweBdBTBold;
 	color: white;
 	text-shadow:
@@ -1203,7 +1203,7 @@ head {
 	outline: none;
 	z-index: 10000;
   }
-  
+
   .openbtn:hover {
 	background-color: #444;
   }
@@ -1228,7 +1228,7 @@ head {
 }
 .manabox {
 	position: relative;
-	width: 30px; 
+	width: 30px;
 	height: 17.32px;
 	float: left;
 	background-color: #3669c9;
@@ -1237,7 +1237,7 @@ head {
 	border-left: solid 1.5px #333333;
 	border-right: solid 1.5px #333333;
   }
-  
+
   .manabox:before,
   .manabox:after {
 	content: "";
@@ -1252,19 +1252,19 @@ head {
 	left: 2.8934px;
 	box-shadow: 0 0 40px rgba(0,0,0,0.9);
   }
-  
+
   .manabox:before {
 	top: -10.6066px;
 	border-top: solid 2.1213px #333333;
 	border-right: solid 2.1213px #333333;
   }
-  
+
   .manabox:after {
 	bottom: -10.6066px;
 	border-bottom: solid 2.1213px #333333;
 	border-left: solid 2.1213px #333333;
   }
-  
+
   /*cover up extra shadows*/
   .manabox span {
 	display: block;
@@ -1318,14 +1318,14 @@ head {
 	right: -20px;
 	bottom: -20px;
 	border:solid 9px #7e6f74;
-	-webkit-mask: 
-	radial-gradient( circle at left top,    transparent 30px, black 1px), 
-	radial-gradient( circle at right top,    transparent 30px, black 1px), 
+	-webkit-mask:
+	radial-gradient( circle at left top,    transparent 30px, black 1px),
+	radial-gradient( circle at right top,    transparent 30px, black 1px),
 	radial-gradient( circle at left bottom, transparent 30px, black 1px),
 	radial-gradient( circle at right bottom, transparent 30px, black 1px),
 	linear-gradient(black,black); /* this layer is mandatory */
   -webkit-mask-composite: destination-in;
-  mask-composite: exclude; /* for non-webkit browser */ 
+  mask-composite: exclude; /* for non-webkit browser */
   }
   #gamemenuTitle {
 	width: 45%;
@@ -1350,12 +1350,12 @@ head {
     border-right: 25px solid transparent;
 	position: absolute;
 	transform: rotate(180deg);
-	-webkit-mask: 
+	-webkit-mask:
 	radial-gradient( circle at left bottom, transparent 15px, black 1px),
 	radial-gradient( circle at right bottom, transparent 15px, black 1px),
 	linear-gradient(black,black); /* this layer is mandatory */
   -webkit-mask-composite: destination-in;
-  mask-composite: exclude; /* for non-webkit browser */ 
+  mask-composite: exclude; /* for non-webkit browser */
   }
 #border1 {
 	border-bottom: 50px solid #56514b;
@@ -1380,9 +1380,9 @@ head {
 	top: 8%;
 	left: 6.75%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #1b1613, #2c2723);
 }
 #circle1 {
@@ -1414,9 +1414,9 @@ head {
 	top: 8%;
 	left: 14.75%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #403836, #2b2620);
 }
 #goldborder1 {
@@ -1426,9 +1426,9 @@ head {
 	top: 9.5%;
 	left: 17.5%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top, #7b5a24, #ffd56f);
 }
 #concedebutton {
@@ -1440,9 +1440,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 50;
@@ -1458,9 +1458,9 @@ head {
 	top: 32%;
 	left: 6.75%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #1b1613, #2c2723);
 }
 #circle3 {
@@ -1492,9 +1492,9 @@ head {
 	top: 32%;
 	left: 14.75%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #403836, #2b2620);
 }
 #goldborder2 {
@@ -1504,9 +1504,9 @@ head {
 	top: 33.5%;
 	left: 17.5%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top, #7b5a24, #ffd56f);
 }
 #optionsbutton {
@@ -1518,9 +1518,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 50;
@@ -1536,9 +1536,9 @@ head {
 	top: 54%;
 	left: 6.75%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #1b1613, #2c2723);
 }
 #circle5 {
@@ -1570,9 +1570,9 @@ head {
 	top: 54%;
 	left: 14.75%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #403836, #2b2620);
 }
 #goldborder3 {
@@ -1582,9 +1582,9 @@ head {
 	top: 55.5%;
 	left: 17.5%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top, #7b5a24, #ffd56f);
 }
 #quitbutton {
@@ -1596,9 +1596,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 50;
@@ -1614,9 +1614,9 @@ head {
 	top: 78%;
 	left: 6.75%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #1b1613, #2c2723);
 }
 #circle7 {
@@ -1648,9 +1648,9 @@ head {
 	top: 78%;
 	left: 14.75%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #403836, #2b2620);
 }
 #goldborder4 {
@@ -1660,9 +1660,9 @@ head {
 	top: 79.5%;
 	left: 17.5%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top, #7b5a24, #ffd56f);
 }
 #resumebutton {
@@ -1674,9 +1674,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 50;
@@ -1754,14 +1754,14 @@ head {
 	right: -20px;
 	bottom: -20px;
 	border:solid 9px #7e6f74;
-	-webkit-mask: 
-	radial-gradient( circle at left top,    transparent 30px, black 1px), 
-	radial-gradient( circle at right top,    transparent 30px, black 1px), 
+	-webkit-mask:
+	radial-gradient( circle at left top,    transparent 30px, black 1px),
+	radial-gradient( circle at right top,    transparent 30px, black 1px),
 	radial-gradient( circle at left bottom, transparent 30px, black 1px),
 	radial-gradient( circle at right bottom, transparent 30px, black 1px),
 	linear-gradient(black,black); /* this layer is mandatory */
   -webkit-mask-composite: destination-in;
-  mask-composite: exclude; /* for non-webkit browser */ 
+  mask-composite: exclude; /* for non-webkit browser */
   }
   #optionsmenuTitle {
 	width: 40%;
@@ -1789,12 +1789,12 @@ head {
     border-right: 25px solid transparent;
 	position: absolute;
 	transform: rotate(180deg);
-	-webkit-mask: 
+	-webkit-mask:
 	radial-gradient( circle at left bottom, transparent 15px, black 1px),
 	radial-gradient( circle at right bottom, transparent 15px, black 1px),
 	linear-gradient(black,black); /* this layer is mandatory */
   -webkit-mask-composite: destination-in;
-  mask-composite: exclude; /* for non-webkit browser */ 
+  mask-composite: exclude; /* for non-webkit browser */
   }
 #border3 {
 	border-bottom: 50px solid #56514b;
@@ -1819,9 +1819,9 @@ head {
 	top: 84%;
 	left: 58%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #1b1613, #2c2723);
 }
 #circle9 {
@@ -1853,9 +1853,9 @@ head {
 	top: 84%;
 	left: 62%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #403836, #2b2620);
 }
 #goldborder5 {
@@ -1865,9 +1865,9 @@ head {
 	top: 85.5%;
 	left: 62.75%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top, #7b5a24, #ffd56f);
 }
 #miscellaneousbutton {
@@ -1879,9 +1879,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 50;
@@ -1913,8 +1913,8 @@ head {
 	z-index: 50;
 }
 #enablescreenshake {
-	color: white; 
-	position: absolute; 
+	color: white;
+	position: absolute;
 }
 /* Main Menu */
 #mainmenu {
@@ -1940,9 +1940,9 @@ head {
 	top: 28.5%;
 	left: 42.75%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top right, #653517, #e6c279);
 }
 #playbutton {
@@ -1954,9 +1954,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 20;
@@ -1973,9 +1973,9 @@ head {
 	top: 35.5%;
 	left: 41.25%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top right, #653517, #e6c279);
 }
 #tutorialbutton {
@@ -1987,9 +1987,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 20;
@@ -2006,9 +2006,9 @@ head {
 	top: 42.5%;
 	left: 41.25%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top right, #653517, #e6c279);
 }
 #howtoplaybutton {
@@ -2020,9 +2020,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 20;
@@ -2039,9 +2039,9 @@ head {
 	top: 49.5%;
 	left: 42.75%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top right, #653517, #e6c279);
 }
 #maintenancebutton2 {
@@ -2053,9 +2053,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 20;
@@ -2091,7 +2091,7 @@ head {
 	outline: none;
 }
 #shopbutton:hover {
-	-webkit-box-shadow: 0px 3px 13px 8px #FFFFFF; 
+	-webkit-box-shadow: 0px 3px 13px 8px #FFFFFF;
 	box-shadow: 0px 3px 13px 8px #FFFFFF;
 }
 #myGold {
@@ -2198,7 +2198,7 @@ head {
 	height: 20%;
 	position: absolute;
 	top: 40%;
-	left: 45%; 
+	left: 45%;
 	background-image: url("src/images/vs.png");
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -2395,14 +2395,14 @@ head {
 	right: -20px;
 	bottom: -20px;
 	border:solid 9px #7e6f74;
-	-webkit-mask: 
-	radial-gradient( circle at left top,    transparent 30px, black 1px), 
-	radial-gradient( circle at right top,    transparent 30px, black 1px), 
+	-webkit-mask:
+	radial-gradient( circle at left top,    transparent 30px, black 1px),
+	radial-gradient( circle at right top,    transparent 30px, black 1px),
 	radial-gradient( circle at left bottom, transparent 30px, black 1px),
 	radial-gradient( circle at right bottom, transparent 30px, black 1px),
 	linear-gradient(black,black); /* this layer is mandatory */
   -webkit-mask-composite: destination-in;
-  mask-composite: exclude; /* for non-webkit browser */ 
+  mask-composite: exclude; /* for non-webkit browser */
   }
   #victoryhint {
 	width:43%;
@@ -2437,7 +2437,7 @@ head {
 	height: 17.5%;
 	position: absolute;
   -webkit-mask-composite: destination-in;
-  mask-composite: exclude; /* for non-webkit browser */ 
+  mask-composite: exclude; /* for non-webkit browser */
   z-index: 10;
   font-size: 30px;
   color: white;
@@ -2468,7 +2468,7 @@ head {
 	height: 17.5%;
 	position: absolute;
   -webkit-mask-composite: destination-in;
-  mask-composite: exclude; /* for non-webkit browser */ 
+  mask-composite: exclude; /* for non-webkit browser */
   z-index: 10;
   font-size: 30px;
   color: white;
@@ -2527,8 +2527,8 @@ head {
 
 /* Tutorial */
   #triangle {
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	position:absolute;
 	left: 57.25%;
 	top: 42.75%;
@@ -2547,9 +2547,9 @@ head {
 	left: 60.25%;
 	background-color: #95928b;
 	border-top-left-radius: 100%30px;
-	border-bottom-left-radius: 100%30px; 
+	border-bottom-left-radius: 100%30px;
 	border-top-right-radius: 100%30px;
-	border-bottom-right-radius: 100%30px; 
+	border-bottom-right-radius: 100%30px;
 	z-index: 11;
 	visibility: hidden;
   }
@@ -2561,9 +2561,9 @@ head {
 	left: 60.4%;
 	background: linear-gradient(-135deg, rgba(149,146,139,255),rgba(81,69,52,255));;
 	border-top-left-radius: 100%30px;
-	border-bottom-left-radius: 100%30px; 
+	border-bottom-left-radius: 100%30px;
 	border-top-right-radius: 100%30px;
-	border-bottom-right-radius: 100%30px; 
+	border-bottom-right-radius: 100%30px;
 	z-index: 11;
 	visibility: hidden;
   }
@@ -2575,9 +2575,9 @@ head {
 	  left: 61%;
 	background-color: #ede2cd;
 	border-top-left-radius: 100%30px;
-	border-bottom-left-radius: 100%30px; 
+	border-bottom-left-radius: 100%30px;
 	border-top-right-radius: 100%30px;
-	border-bottom-right-radius: 100%30px; 
+	border-bottom-right-radius: 100%30px;
 	z-index: 11;
 	visibility: hidden;
   }
@@ -2621,14 +2621,14 @@ head {
 	right: -20px;
 	bottom: -20px;
 	border:solid 9px #7e6f74;
-	-webkit-mask: 
-	radial-gradient( circle at left top,    transparent 30px, black 1px), 
-	radial-gradient( circle at right top,    transparent 30px, black 1px), 
+	-webkit-mask:
+	radial-gradient( circle at left top,    transparent 30px, black 1px),
+	radial-gradient( circle at right top,    transparent 30px, black 1px),
 	radial-gradient( circle at left bottom, transparent 30px, black 1px),
 	radial-gradient( circle at right bottom, transparent 30px, black 1px),
 	linear-gradient(black,black); /* this layer is mandatory */
   -webkit-mask-composite: destination-in;
-  mask-composite: exclude; /* for non-webkit browser */ 
+  mask-composite: exclude; /* for non-webkit browser */
   }
   #tutorialmenuTitle {
 	width: 26%;
@@ -2653,12 +2653,12 @@ head {
     border-right: 25px solid transparent;
 	position: absolute;
 	transform: rotate(180deg);
-	-webkit-mask: 
+	-webkit-mask:
 	radial-gradient( circle at left bottom, transparent 15px, black 1px),
 	radial-gradient( circle at right bottom, transparent 15px, black 1px),
 	linear-gradient(black,black); /* this layer is mandatory */
   -webkit-mask-composite: destination-in;
-  mask-composite: exclude; /* for non-webkit browser */ 
+  mask-composite: exclude; /* for non-webkit browser */
   }
 #border5 {
 	border-bottom: 50px solid #56514b;
@@ -2682,7 +2682,7 @@ head {
 	position: absolute;
 	top: 20%;
 	left: 10%;
-	background-image: url("src/images/hoggerposter.png");
+	background-image: url("src/images/опоздания.jpeg");
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -2726,9 +2726,9 @@ head {
 	top: 95%;
 	left: 36%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #1b1613, #2c2723);
 	z-index: 50;
 }
@@ -2763,9 +2763,9 @@ head {
 	top: 95%;
 	left: 40.75%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #403836, #2b2620);
 	z-index: 50;
 }
@@ -2776,9 +2776,9 @@ head {
 	top: 95.9%;
 	left: 41.5%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top, #7b5a24, #ffd56f);
 	z-index: 50;
 }
@@ -2791,9 +2791,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 200;
@@ -2865,9 +2865,9 @@ head {
 	top: 92.25%;
 	left: 1.5%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #1b1613, #2c2723);
 }
 #circle13 {
@@ -2899,9 +2899,9 @@ head {
 	top: 92.25%;
 	left: 2.5%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #403836, #2b2620);
 }
 #goldborder11 {
@@ -2911,9 +2911,9 @@ head {
 	top: 92.5%;
 	left: 3.25%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top, #7b5a24, #ffd56f);
 }
 #backfrompackbtn {
@@ -2925,9 +2925,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 200;
@@ -3002,14 +3002,14 @@ head {
 	right: -20px;
 	bottom: -20px;
 	border:solid 9px #7e6f74;
-	-webkit-mask: 
-	radial-gradient( circle at left top,    transparent 30px, black 1px), 
-	radial-gradient( circle at right top,    transparent 30px, black 1px), 
+	-webkit-mask:
+	radial-gradient( circle at left top,    transparent 30px, black 1px),
+	radial-gradient( circle at right top,    transparent 30px, black 1px),
 	radial-gradient( circle at left bottom, transparent 30px, black 1px),
 	radial-gradient( circle at right bottom, transparent 30px, black 1px),
 	linear-gradient(black,black); /* this layer is mandatory */
   -webkit-mask-composite: destination-in;
-  mask-composite: exclude; /* for non-webkit browser */ 
+  mask-composite: exclude; /* for non-webkit browser */
   }
 
 #darkborder7 {
@@ -3019,9 +3019,9 @@ head {
 	top: 84%;
 	left: 58%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #1b1613, #2c2723);
 }
 #circle15 {
@@ -3053,9 +3053,9 @@ head {
 	top: 84%;
 	left: 62%;
 	border-top-left-radius: 30px 150%;
-	border-bottom-left-radius: 30px 150%; 
+	border-bottom-left-radius: 30px 150%;
 	border-top-right-radius: 30px 150%;
-	border-bottom-right-radius: 30px 150%; 
+	border-bottom-right-radius: 30px 150%;
 	background: linear-gradient(to top, #403836, #2b2620);
 }
 #goldborder12 {
@@ -3065,9 +3065,9 @@ head {
 	top: 85.5%;
 	left: 62.75%;
 	border-top-left-radius: 30px 175%;
-	border-bottom-left-radius: 30px 175%; 
+	border-bottom-left-radius: 30px 175%;
 	border-top-right-radius: 30px 175%;
-	border-bottom-right-radius: 30px 175%; 
+	border-bottom-right-radius: 30px 175%;
 	background: linear-gradient(to top, #7b5a24, #ffd56f);
 }
 #buybutton {
@@ -3079,9 +3079,9 @@ head {
 	background-color: #e6c4a9;
 	color: #4f3a1b;
 	border-top-left-radius: 30px 200%;
-	border-bottom-left-radius: 30px 200%; 
+	border-bottom-left-radius: 30px 200%;
 	border-top-right-radius: 30px 200%;
-	border-bottom-right-radius: 30px 200%; 
+	border-bottom-right-radius: 30px 200%;
 	font-family: BelweBdBTBold;
 	user-select: none;
 	z-index: 50;
@@ -3113,7 +3113,7 @@ head {
 	z-index: 202;
 	transition: all .2s ease-in-out;
   }
-  
+
 .flip-card:nth-child(1):hover {
 	transform: translate(-50px, -50px) scale(1.25);
 }
@@ -3154,23 +3154,23 @@ head {
 	transform-style: preserve-3d;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
-  
+
   .rotate-card .flip-card-inner {
 	transform: rotateY(180deg);
   }
-  
+
   .flip-card-rare:hover {
-	-webkit-box-shadow: 0px 2px 50px 22px rgba(4, 234, 255, 0.466); 
+	-webkit-box-shadow: 0px 2px 50px 22px rgba(4, 234, 255, 0.466);
 	box-shadow: 0px 2px 50px 22px rgba(4, 234, 255, 0.466);
 	transition: box-shadow 0.5s ease-in-out;
   }
   .flip-card-epic:hover {
-	-webkit-box-shadow: 0px 2px 50px 22px rgba(76,2,191,0.79); 
+	-webkit-box-shadow: 0px 2px 50px 22px rgba(76,2,191,0.79);
 	box-shadow: 0px 2px 50px 22px rgba(76,2,191,0.79);
 	transition: box-shadow 0.5s ease-in-out;
   }
   .flip-card-legendary:hover {
-	-webkit-box-shadow: 0px 2px 50px 22px #f29500; 
+	-webkit-box-shadow: 0px 2px 50px 22px #f29500;
 	box-shadow: 0px 2px 50px 22px #f29500;
 	transition: box-shadow 0.5s ease-in-out;
   }
@@ -3183,12 +3183,12 @@ head {
 	backface-visibility: hidden;
 	border-radius: 12px;
   }
-  
+
   .flip-card-front {
 	background-color: #bbb;
 	color: black;
   }
-  
+
   .flip-card-back {
 	background-color: #2980b9;
 	transform: rotateY(180deg);
@@ -3204,9 +3204,9 @@ head {
 	font-size: 17px;
 	background-color: #22cce3;
 	border-top-left-radius: 120%35px;
-	border-bottom-left-radius: 120%35px; 
+	border-bottom-left-radius: 120%35px;
 	border-top-right-radius: 120%35px;
-	border-bottom-right-radius: 120%35px; 
+	border-bottom-right-radius: 120%35px;
 	font-family: BelweBdBTBold;
 	display: none;
 	z-index: 26;
