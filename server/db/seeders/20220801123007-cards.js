@@ -60,7 +60,7 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'Anya',
       imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03MFMM56FJ-5cfebfdbfd43-512',
-      info: 'Rush',
+      info: 'Charge',
       attack: 9,
       health: 9,
       mana: 9,
@@ -78,7 +78,7 @@ module.exports = {
       updatedAt: new Date(),
     }], {});
     await queryInterface.bulkInsert('Cards', [{
-      name: 'Lena',
+      name: 'Lena K',
       imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03J37X5HHB-0361cf6ea93f-512',
       info: 'Battlecry: Забирает карту из колоды',
       attack: 2,
@@ -110,7 +110,7 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'Kadj',
       imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03J3CX6XHU-f14b29716e74-512',
-      info: 'Rush',
+      info: 'Charge',
       attack: 2,
       health: 1,
       mana: 1,
@@ -130,9 +130,9 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'Bublitos',
       imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03HVP5Q207-57b4ec11c38b-512',
-      info: '',
-      attack: 5,
-      health: 1,
+      info: 'Taunt\nBattlecry: вызывает копию существа',
+      attack: 3,
+      health: 3,
       mana: 3,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -210,7 +210,7 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'Vladimir',
       imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03P34HBE07-fb6e305194af-512',
-      info: 'Poisonous',
+      info: '',
       attack: 3,
       health: 9,
       mana: 7,
@@ -290,7 +290,7 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'ILya P',
       imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03MK4SUS6M-a439a57a95d4-512',
-      info: 'Poisonous',
+      info: '',
       attack: 2,
       health: 7,
       mana: 6,
@@ -300,7 +300,7 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'Kiruha',
       imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03PT0WR3H7-2b43c9386e57-512',
-      info: 'Rush',
+      info: 'Charge',
       attack: 8,
       health: 9,
       mana: 8,
@@ -380,8 +380,8 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'Nikitos',
       imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03HV4XL32A-36d7d5744884-512',
-      info: 'Poisonous',
-      attack: 2,
+      info: '',
+      attack: 4,
       health: 5,
       mana: 5,
       createdAt: new Date(),
@@ -400,7 +400,7 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'Pasha S',
       imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03JUHU5BQQ-1e288bef279a-512',
-      info: '',
+      info: 'Battelcry: призывает кабана 1/1',
       attack: 2,
       health: 4,
       mana: 3,
@@ -440,9 +440,9 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'Lena',
       imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03JBK7R170-374842e32469-512',
-      info: '',
+      info: 'Battlecry: Устанавливает герою противника здоровье в 22.',
       attack: 7,
-      health: 14,
+      health: 9,
       mana: 10,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -450,8 +450,8 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'Lexus',
       imageString: 'https://ca.slack-edge.com/T03JMRMKG9W-U03JDR6GG3C-448dd2fd84bf-512',
-      info: 'Rush\nPoisonous',
-      attack: 4,
+      info: 'Charge',
+      attack: 8,
       health: 9,
       mana: 10,
       createdAt: new Date(),
@@ -520,9 +520,9 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'Abdula',
       imageString: 'https://imageup.ru/img277/3990052/img_4284-1.jpg',
-      info: 'Battlecry:Вызывает 2 существа 4/4 на случайную сторону',
+      info: 'Battlecry:Вызывает существо 4/4 на свою сторону',
       attack: 7,
-      health: 10,
+      health: 7,
       mana: 9,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -590,8 +590,8 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       name: 'Ionna',
       imageString: 'https://imageup.ru/img293/3990055/28b7a7f1-5954-43fa-bb52-3ca6e143bb53.jpeg',
-      info: 'Poisonous',
-      attack: 3,
+      info: '',
+      attack: 5,
       health: 12,
       mana: 9,
       createdAt: new Date(),

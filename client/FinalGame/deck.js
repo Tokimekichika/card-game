@@ -176,15 +176,16 @@ class MinionCard {
 const answer = async function   ()  {
 	const qq = await fetch ('http://localhost:4000/cardInGame')
 	const res = await qq.json ()
-	console.log(res[0].Cards[0])
-	localStorage.setItem('attack2',res[0].Cards[0].attack);
-	localStorage.setItem('health2',res[0].Cards[0].health);
-	localStorage.setItem('mana2',res[0].Cards[0].mana);
-	localStorage.setItem('info2',res[0].Cards[0].info);
-	localStorage.setItem('imageString2',res[0].Cards[0].imageString);
-	localStorage.setItem('health2',res[0].Cards[0].health);
-	localStorage.setItem('name2',res[0].Cards[0].name);
-	localStorage.setItem('rarity2',res[0].Cards[0].rarity);
+	console.log(res[0].Cards)
+	localStorage.setItem('id',JSON.stringify(res[0].Cards))
+	// localStorage.setItem('attack2',res[0].Cards[0].attack);
+	// localStorage.setItem('health2',res[0].Cards[0].health);
+	// localStorage.setItem('mana2',res[0].Cards[0].mana);
+	// localStorage.setItem('info2',res[0].Cards[0].info);
+	// localStorage.setItem('imageString2',res[0].Cards[0].imageString);
+	// localStorage.setItem('health2',res[0].Cards[0].health);
+	// localStorage.setItem('name2',res[0].Cards[0].name);
+	// localStorage.setItem('rarity2',res[0].Cards[0].rarity);
 }
 console.log(answer())
 //
@@ -204,10 +205,16 @@ function freshDeck() {
 	// setTimeout(()=>{
 	// 	answer()
 	// },10000)
-	const polyashaa = new MinionCard(+localStorage.getItem('attack'),+localStorage.getItem('health'), +localStorage.getItem('mana'), localStorage.getItem('info'), localStorage.getItem('imageString'), localStorage.getItem('name'), localStorage.getItem('rarity'))
-	console.log(polyashaa)
+	const arr = JSON.parse(localStorage.getItem('id'))
+	console.log(arr)
+	const res = arr.map(el=>{
+		return new MinionCard(+el.attack,+el.health,+el.mana,el.info,el.imageString,el.name,'Common')
+	})
+	console.log(res)
+	// const polyashaa = new MinionCard('attack'),+localStorage.getItem('health'), +localStorage.getItem('mana'), localStorage.getItem('info'), localStorage.getItem('imageString'), localStorage.getItem('name'), localStorage.getItem('rarity'))
+	// console.log(polyashaa)
 	// console.log(p)
-	let murloc_scout = new MinionCard(1, 10, 0, "", "src/cards/murloc_scout.jpg", "Murloc Scout", "Common")
+	let murloc_scout = new MinionCard(4, 4, 0, "", "src/cards/murloc_scout.jpg", "Murloc Scout", "Common")
 	let alexstrasza = new MinionCard(8, 80, 9, "Battlecry: Set a hero's remaining Health to 15.", "src/cards/alexstrasza.jpg", "Alexstrasza", "Legendary")
 	let elite_tauren_chieftain = new MinionCard(50, 5, 5, "Battlecry: Give both players the power to ROCK! (Draw a card)", "src/cards/elite_tauren_chieftain.png", "Elite Tauren Chieftain", "Legendary")
 	let deathwing = new MinionCard(12, 120, 10, "Battlecry: Destroy all other minions and discard your hand.", "src/cards/deathwing.png", "Deathwing", "Legendary")
@@ -219,7 +226,7 @@ function freshDeck() {
 	let acidic_swamp_ooze = new MinionCard(30, 2, 2, "", "src/cards/acidic_swamp_ooze.jpg", "Acidic Swamp Ooze", "Common")
 	let bloodfen_raptor = new MinionCard(30, 2, 2, "", "src/cards/bloodfen_raptor.jpg", "Bloodfen Raptor", "Common")
 	let lifedrinker = new MinionCard(30, 3, 4, "Battlecry: Deal 3 damage to the enemy hero. Restore 3 Health to your hero.", "src/cards/lifedrinker.jpg", "Lifedrinker", "Rare")
-	let boar = new MinionCard(1, 10, 1, "", "src/cards/boar.jpg", "Boar", "Common")
+	let boar = new MinionCard(1, 1, 1, "", "src/cards/boar.jpg", "Boar", "Common")
 	let razorfen_hunter = new MinionCard(20, 3, 3, "Battlecry: Summon a 1/1 Boar.", "src/cards/razorfen_hunter.jpg", "Razorfen Hunter", "Common")
 	let murloc_tidehunter = new MinionCard(20, 1, 2, "Battlecry: Summon a 1/1 Murloc Scout.", "src/cards/murloc_tidehunter.jpg", "Murloc Tidehunter", "Common")
 	let leeroy_jenkins = new MinionCard(60, 2, 4, "Charge. Battlecry: Summon two 1/1 Whelps for your opponent.", "src/cards/leeroy_jenkins.jpg", "Leeroy Jenkins", "Legendary")
@@ -245,84 +252,75 @@ function freshDeck() {
 	let the_black_knight = new MinionCard(40, 5, 6, "Battlecry: Destroy an enemy minion with Taunt.", "src/cards/the_black_knight.jpg", "The Black Knight", "Legendary")
 	let bonemare = new MinionCard(50, 5, 7, "Battlecry: Give a friendly minion +4/+4 and Taunt.", "src/cards/bonemare.jpg", "Bonemare", "Common")
 	// spell cards
-
-	return [
-	// player's deck
-	// elite_tauren_chieftain,
-	// devout_adventurer,
-	// devout_adventurer,
-	// deathwing,
-	// elven_archer,
-	// elven_archer,
-	// voodoo_doctor,
-	// voodoo_doctor,
-	// king_krush,
-		polyashaa,
-		polyashaa,
-		polyashaa,
-		polyashaa,
-		polyashaa,
-		polyashaa,
-		polyashaa,
-		polyashaa,
-		polyashaa,
-	ragnaros_the_firelord,
-	lich_king,
-	acidic_swamp_ooze,
-	acidic_swamp_ooze,
-	lifedrinker,
-	lifedrinker,
-	alexstrasza,
-	razorfen_hunter,
-	razorfen_hunter,
-	murloc_tidehunter,
-	murloc_tidehunter,
-	leeroy_jenkins,
-	gnomish_inventor,
-	gnomish_inventor,
-	senjin_shieldmasta,
-	senjin_shieldmasta,
-	saronite_chain_gang,
-	saronite_chain_gang,
-	archmage,
-	boulderfist_ogre,
-	boulderfist_ogre,
-	stormwind_champion,
-
-	// lich king's deck
-	coldwraith,
-	coldwraith,
-	water_elemental,
-	water_elemental,
-	ghoul,
-	ghoul,
-	skeletal_knight,
-	skeletal_knight,
-	skeletal_knight,
-	glacial_shard,
-	glacial_shard,
-	saronite_chain_gang,
-	saronite_chain_gang,
-	maexxna,
-	maexxna,
-	trapped_soul,
-	trapped_soul,
-	sludge_belcher,
-	sludge_belcher,
-	grim_necromancer,
-	grim_necromancer,
-	skeleton,
-	skeleton,
-	slime,
-	slime,
-	the_black_knight,
-	the_black_knight,
-	bonemare,
-	bonemare,
-
-	// other (summoned from battlecries etc.)
-	whelp,
-	boar,
-	murloc_scout
-	]
+return [...res,alexstrasza,elite_tauren_chieftain,elven_archer,voodoo_doctor,king_krush,lich_king,ragnaros_the_firelord,bloodfen_raptor,lifedrinker,murloc_tidehunter,razorfen_hunter,razorfen_hunter,murloc_tidehunter,murloc_tidehunter,leeroy_jenkins,gnomish_inventor,senjin_shieldmasta,saronite_chain_gang,boulderfist_ogre,stormwind_champion,ghoul,maexxna,maexxna,lifedrinker,lich_king,lich_king,gnomish_inventor,gnomish_inventor,murloc_tidehunter,senjin_shieldmasta,whelp,murloc_scout,boar]
+	// return [
+	// // player's deck
+	// // elite_tauren_chieftain,
+	// // devout_adventurer,
+	// // devout_adventurer,
+	// // deathwing,
+	// // elven_archer,
+	// // elven_archer,
+	// // voodoo_doctor,
+	// // voodoo_doctor,
+	// // king_krush,
+	// ragnaros_the_firelord,
+	// lich_king,
+	// acidic_swamp_ooze,
+	// acidic_swamp_ooze,
+	// lifedrinker,
+	// lifedrinker,
+	// alexstrasza,
+	// razorfen_hunter,
+	// razorfen_hunter,
+	// murloc_tidehunter,
+	// murloc_tidehunter,
+	// leeroy_jenkins,
+	// gnomish_inventor,
+	// gnomish_inventor,
+	// senjin_shieldmasta,
+	// senjin_shieldmasta,
+	// saronite_chain_gang,
+	// saronite_chain_gang,
+	// archmage,
+	// boulderfist_ogre,
+	// boulderfist_ogre,
+	// stormwind_champion,
+	//
+	// // lich king's deck
+	// coldwraith,
+	// coldwraith,
+	// water_elemental,
+	// water_elemental,
+	// ghoul,
+	// ghoul,
+	// skeletal_knight,
+	// skeletal_knight,
+	// skeletal_knight,
+	// glacial_shard,
+	// glacial_shard,
+	// saronite_chain_gang,
+	// saronite_chain_gang,
+	// maexxna,
+	// maexxna,
+	// trapped_soul,
+	// trapped_soul,
+	// sludge_belcher,
+	// sludge_belcher,
+	// grim_necromancer,
+	// grim_necromancer,
+	// skeleton,
+	// skeleton,
+	// slime,
+	// slime,
+	// the_black_knight,
+	// the_black_knight,
+	// bonemare,
+	// bonemare,
+	//
+	// // other (summoned from battlecries etc.)
+	// whelp,
+	// boar,
+	// murloc_scout
+	// ]
 }
