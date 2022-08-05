@@ -17,11 +17,11 @@
 }
 
 .Card {
-    background-image: url(./img/card\ fon\ .png);
+    background-image: url('./img/card fon .png');
         /* transition: transform 0.15s; */
         position: relative;
-        width: 200px;
-        height: 350px;
+        width: 270px;
+        height: 400px;
         box-shadow: 0 0 66px rgb(0 0 0);
         border-radius: 50px 50px 5px 5px;
 }
@@ -30,8 +30,8 @@
     /* background: #776557; */
     /* transition: transform 0.10s; */
     position: relative;
-    width: 250px;
-    height: 350px;
+    width: 270px;
+    height: 400px;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
     border-radius: 20px;
     border: 3mm ridge lightgreen;
@@ -160,9 +160,9 @@
     transform: translate(0, 0.25em);
   }
   .button:hover::before {
-    transform: translate3d(0, 0.5em, -1em); 
+    transform: translate3d(0, 0.5em, -1em);
 
-   } 
+   }
 
   .button:active {
     background: rgb(28, 26, 122) !important;
