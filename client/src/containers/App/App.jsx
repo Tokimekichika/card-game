@@ -10,7 +10,7 @@ import Register from "../Auth/Registration/Register";
 import Login from "../Auth/Login/Login";
 import Shop from "../Shop/Shop";
 import {useDispatch, useSelector} from "react-redux";
-import {initUser} from "../../store/auth/actionCreator";
+import {addMoney, initUser} from "../../store/auth/actionCreator";
 import EditDeck from "../EditDeck/EditDeck";
 import {initDeck} from "../../store/deck/actionCreators";
 import HomePage from '../HomePage/HomePage';
@@ -31,6 +31,10 @@ function App() {
     const user = useSelector(state => state.auth.user)
     // const myDeckCollection = useSelector((state)=>state.myCreateDeck.myCreateDeck)
 
+    const addMoneys = async () => {
+        const responce = await fetch('/main/add/money')
+    }
+
     const checkUser = async () => {
         const responce = await fetch('/main')
         const res = await responce.json()
@@ -48,12 +52,15 @@ function App() {
         dispatch(initCollection(res))
     }
 
-  
+
 
     useEffect(()=>{
         checkUser()
         getCards()
         getCollections()
+        setTimeout(()=>{
+           addMoneys()
+        },600000)
     },[])
   return (
  <div>
