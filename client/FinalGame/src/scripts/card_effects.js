@@ -975,6 +975,23 @@ function cardPlaceSnds() {
         let murlocscoutSnd = new Audio("src/sounds/cardPlaceSnds/murloc_scout_play.mp3")
         murlocscoutSnd.play();
     }
+    else if (getNameOfElement == "Adam") {
+        let murlocscoutSnd = new Audio("src/sounds/cardPlaceSnds/murloc_scout_play.mp3")
+        murlocscoutSnd.play();
+    }
+    else if (getNameOfElement == "Nikitos") {
+        let murlocscoutSnd = new Audio("src/sounds/cardPlaceSnds/murloc_scout_play.mp3")
+        murlocscoutSnd.play();
+    }
+    else if (getNameOfElement == "Yurec") {
+        let murlocscoutSnd = new Audio("src/sounds/cardPlaceSnds/murloc_scout_play.mp3")
+        murlocscoutSnd.play();
+    }
+    else if (getNameOfElement == "Aleksandr") {
+        let murlocscoutSnd = new Audio("src/sounds/cardPlaceSnds/murloc_scout_play.mp3")
+        murlocscoutSnd.play();
+    }
+
     // alexstrasza card effects
     else if (getNameOfElement == "Alexstrasza") {
         let alexstraszaSnd = new Audio("src/sounds/cardPlaceSnds/alexstrasza_play.mp3")
