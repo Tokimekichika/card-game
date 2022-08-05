@@ -14,8 +14,9 @@ const ShopCard = ({name,imageString,info,attack,health,mana}) => {
                 />
                 <div className={styles.CardMana}>{ mana || 0 }</div>
                 <h1 className={styles.CardName}>{name} </h1>
-                <h2 className={styles.Cardinfo}>{info}</h2>
+                <h2 className={styles.CardDescription}>{info}</h2>
                 {attack ? <div className={styles.CardAttack}>{attack}</div> : <div/> }
+
                 {health ? <div className={styles.CardDefense}>{ health }</div> : <div />}
             </div>
             </>
