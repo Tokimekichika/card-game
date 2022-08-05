@@ -175,13 +175,13 @@ function cardPlaceSnds() {
         playerCardSlot2.lastChild.classList.add("hasDivineShield");
         playerCardSlot2.lastChild.children[2].style.visibility = "visible";
     } else if (getNameOfElement == "Alya") {
-            let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
+            let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/Alya.ogg")
             devoutadventurerSnd.play();
             playerCardSlot2.lastChild.classList.add("hasDivineShield");
             playerCardSlot2.lastChild.children[2].style.visibility = "visible";
 
     } else if (getNameOfElement == "Pahan") {
-        let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
+        let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/PashaP.ogg")
         devoutadventurerSnd.play();
         playerCardSlot2.lastChild.classList.add("hasDivineShield");
         playerCardSlot2.lastChild.children[2].style.visibility = "visible";
@@ -194,12 +194,12 @@ function cardPlaceSnds() {
         }, 800);
 
     } else if (getNameOfElement == "Anatolii") {
-            let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
+            let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/AnatoliK.ogg")
             devoutadventurerSnd.play();
             playerCardSlot2.lastChild.classList.add("hasDivineShield");
             playerCardSlot2.lastChild.children[2].style.visibility = "visible";
     } else if (getNameOfElement == "Aleksandr S") {
-        let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
+        let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/AlexS.mp3")
         devoutadventurerSnd.play();
         playerCardSlot2.lastChild.classList.add("hasDivineShield");
         playerCardSlot2.lastChild.children[2].style.visibility = "visible";
@@ -214,7 +214,7 @@ function cardPlaceSnds() {
         playerCardSlot2.lastChild.classList.add("hasDivineShield");
         playerCardSlot2.lastChild.children[2].style.visibility = "visible";
     } else if (getNameOfElement == "Katya E") {
-        let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
+        let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/KatyaE.ogg")
         devoutadventurerSnd.play();
         playerCardSlot2.lastChild.classList.add("hasDivineShield");
         playerCardSlot2.lastChild.children[2].style.visibility = "visible";
@@ -280,7 +280,7 @@ function cardPlaceSnds() {
         attack();
         computerCardSlot.style.transform = "translateY(17.5%)";
     } else if (getNameOfElement == "Ulyana") {
-        let leeyroyjenkinsSnd = new Audio("src/sounds/cardPlaceSnds/leeroy_jenkins_play.mp3")
+        let leeyroyjenkinsSnd = new Audio("src/sounds/cardPlaceSnds/Ulya.ogg")
         let leeyroyjenkinsmusicSnd = new Audio("src/sounds/cardPlaceSnds/leeroy_jenkins_music_play.mp3")
         leeyroyjenkinsSnd.play();
         leeyroyjenkinsSnd.volume = 0.7;
@@ -445,17 +445,17 @@ function cardPlaceSnds() {
             attack();
             playerCardSlot2.lastChild.children[4].style.visibility = "visible";
     } else if (getNameOfElement == "Jora") {
-            let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
+            let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/Jora.ogg")
             kingkrushSnd.play();
             attack();
             playerCardSlot2.lastChild.children[4].style.visibility = "visible";
     } else if (getNameOfElement == "Lexus") {
-            let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
+            let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/Вижу цель, не вижу кода.mp3")
             kingkrushSnd.play();
             attack();
             playerCardSlot2.lastChild.children[4].style.visibility = "visible";
     } else if (getNameOfElement == "Kiruha") {
-        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
+        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/KirilSh.ogg")
         kingkrushSnd.play();
         attack();
         playerCardSlot2.lastChild.children[4].style.visibility = "visible";
@@ -465,7 +465,7 @@ function cardPlaceSnds() {
         attack();
         playerCardSlot2.lastChild.children[4].style.visibility = "visible";
     } else if (getNameOfElement == "Igoryan") {
-        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
+        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/Igor.ogg")
         kingkrushSnd.play();
         attack();
         playerCardSlot2.lastChild.children[4].style.visibility = "visible";
@@ -478,17 +478,17 @@ function cardPlaceSnds() {
         attack();
         playerCardSlot2.lastChild.children[4].style.visibility = "visible";
     } else if (getNameOfElement == "Polina") {
-        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
+        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/polinaM.ogg")
         kingkrushSnd.play();
         attack();
         playerCardSlot2.lastChild.children[4].style.visibility = "visible";
     } else if (getNameOfElement == "Kadj") {
-        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
+        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/Kadj.ogg")
         kingkrushSnd.play();
         attack();
         playerCardSlot2.lastChild.children[4].style.visibility = "visible";
     } else if (getNameOfElement == "Maksimilian") {
-        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
+        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/Max.ogg")
         kingkrushSnd.play();
         attack();
         playerCardSlot2.lastChild.children[4].style.visibility = "visible";
@@ -607,7 +607,7 @@ function cardPlaceSnds() {
                 gameWon();
             }
         } else if (getNameOfElement == "Zhentos") {
-            let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
+            let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/Jentos.ogg")
             lifedrinkerSnd.play();
             let opponentHeroHealth = parseInt(document.querySelector(".opposingHeroHealth").innerText);
             document.querySelector(".opposingHeroHealth").innerText = opponentHeroHealth - 8;
@@ -707,7 +707,7 @@ function cardPlaceSnds() {
                 }
 
     } else if (getNameOfElement == "Alisa") {
-        let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
+        let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/Alisa.ogg")
         lifedrinkerSnd.play();
         let opponentHeroHealth = parseInt(document.querySelector(".opposingHeroHealth").innerText);
         let playerHeroHealth = parseInt(document.querySelector(".playerHeroHealth").innerText);
@@ -958,7 +958,7 @@ function cardPlaceSnds() {
         }, 1000);
     }
     else if (getNameOfElement == "Abdula") {
-        let murloctidehunterSnd = new Audio("src/sounds/cardPlaceSnds/murloc_tidehunter_play.mp3")
+        let murloctidehunterSnd = new Audio("src/sounds/cardPlaceSnds/Abdula.ogg")
         murloctidehunterSnd.play();
         setTimeout(function () {
             for (var i = 0; i < originalDeck.cards.length; i++) {
@@ -1019,7 +1019,7 @@ function cardPlaceSnds() {
             }, 1000);
         }, 2000);
     } else if (getNameOfElement == "Bublitos") {
-        let saronitechaingangSnd = new Audio("src/sounds/cardPlaceSnds/saronite_chain_gang_play.mp3")
+        let saronitechaingangSnd = new Audio("src/sounds/cardPlaceSnds/NikZ.ogg")
         saronitechaingangSnd.play();
         tauntExists = true;
         playerCardSlot2.lastChild.classList.add("hasTaunt");
@@ -1065,7 +1065,7 @@ function cardPlaceSnds() {
             }, 1000);
         }, 3000);
     } else if (getNameOfElement == "Leila") {
-        let lichkingSnd = new Audio("src/sounds/cardPlaceSnds/lich_king_play.mp3")
+        let lichkingSnd = new Audio("src/sounds/cardPlaceSnds/Leila.ogg")
         lichkingSnd.play();
         fadeOutInMusic();
         document.getElementById('snowCanvas').style.display = "block";

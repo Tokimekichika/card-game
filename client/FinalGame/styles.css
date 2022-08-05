@@ -830,16 +830,18 @@ head {
 }
 .playerhero {
 	position: absolute;
-	width: 11%;
-	height: 17%;
-	left: 46.75%;
-	top: 67.75%;
+	width: 105px;
+	height: 136px;
+	left: 873px;
+	top: 68.75%;
 	z-index: 20;
-	background-image: url(src/images/leha.jpeg);
-	background-repeat: no-repeat; /* Do not repeat the image */
+	background-image: url(src/images/lehaFinal.jpg);
+	background-repeat: no-repeat;
 	background-size: contain;
+	border-radius: 98px 110px 3px 3px;
  }
  .playerheropower {
+
  	position: absolute;
 	width: 6%;
 	height: 13%;
@@ -859,15 +861,17 @@ head {
  	user-select: none;
  }
 .opponenthero {
+	border-radius: 98px 98px 3px 3px;
 	position: absolute;
-	width: 11%;
-	height: 17%;
-	left: 46.75%;
-	top: 9.75%;
+	width: 127px;
+	height: 137px;
+	left: 863px;
+	top: 110px;
 	z-index: 11;
 	background-image: url(src/images/lich_king.png);
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: contain;
+	background-size: cover;
  }
  #opposinghero {
  		border: none !important;
@@ -882,7 +886,7 @@ head {
  }
   #playerheropower {
  		border: none !important;
- 		width: 100% !important;
+ 		width: 113px !important;
  }
  .attackValue {
  	position: absolute;
