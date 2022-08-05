@@ -33,8 +33,7 @@ function cardPlaceSnds() {
                 }
             }
         }, 1000);
-    }
-    else if (getNameOfElement == "Pasha S") {
+    } else if (getNameOfElement == "Pasha S") {
         let razorfenhunterSnd = new Audio("src/sounds/cardPlaceSnds/razorfen_hunter_play.mp3")
         razorfenhunterSnd.play();
         razorfenhunterSnd.volume = 0.7;
@@ -90,17 +89,15 @@ function cardPlaceSnds() {
         playerDeck.cards.shift();
         updateDeckCount();
     } else if (getNameOfElement == "Yana S") {
-            let gnomishinventorSnd = new Audio("src/sounds/cardPlaceSnds/gnomish_inventor_play.mp3")
-            gnomishinventorSnd.play();
-            gnomishinventorSnd.volume = 0.7;
-            // the player draws a card if their hand is not full (max cards in hand 10 cards)
-            if (hand.childElementCount != 10) {
-                hand.appendChild(playerDeck.cards[0].getPlayerCardsInHandHTML())
-            }
-            checkForRequiredMana();
-            enableDrag();
-            placeCard();
-            playerDeck.cards.shift();
+        let gnomishinventorSnd = new Audio("src/sounds/cardPlaceSnds/gnomish_inventor_play.mp3")
+        gnomishinventorSnd.play();
+        gnomishinventorSnd.volume = 0.7;
+        // the player draws a card if their hand is not full (max cards in hand 10 cards)
+        if (hand.childElementCount != 10) {
+            hand.appendChild(playerDeck.cards[0].getPlayerCardsInHandHTML())
+        }
+        checkForRequiredMana();
+        enableDrag();
         placeCard();
         playerDeck.cards.shift();
         placeCard();
@@ -109,7 +106,9 @@ function cardPlaceSnds() {
         playerDeck.cards.shift();
         placeCard();
         playerDeck.cards.shift();
-            updateDeckCount();
+        placeCard();
+        playerDeck.cards.shift();
+        updateDeckCount();
     } else if (getNameOfElement == "Vadim") {
         let gnomishinventorSnd = new Audio("src/sounds/cardPlaceSnds/gnomish_inventor_play.mp3")
         gnomishinventorSnd.play();
@@ -175,10 +174,10 @@ function cardPlaceSnds() {
         playerCardSlot2.lastChild.classList.add("hasDivineShield");
         playerCardSlot2.lastChild.children[2].style.visibility = "visible";
     } else if (getNameOfElement == "Alya") {
-            let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
-            devoutadventurerSnd.play();
-            playerCardSlot2.lastChild.classList.add("hasDivineShield");
-            playerCardSlot2.lastChild.children[2].style.visibility = "visible";
+        let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
+        devoutadventurerSnd.play();
+        playerCardSlot2.lastChild.classList.add("hasDivineShield");
+        playerCardSlot2.lastChild.children[2].style.visibility = "visible";
 
     } else if (getNameOfElement == "Pahan") {
         let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
@@ -194,20 +193,20 @@ function cardPlaceSnds() {
         }, 800);
 
     } else if (getNameOfElement == "Anatolii") {
-            let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
-            devoutadventurerSnd.play();
-            playerCardSlot2.lastChild.classList.add("hasDivineShield");
-            playerCardSlot2.lastChild.children[2].style.visibility = "visible";
+        let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
+        devoutadventurerSnd.play();
+        playerCardSlot2.lastChild.classList.add("hasDivineShield");
+        playerCardSlot2.lastChild.children[2].style.visibility = "visible";
     } else if (getNameOfElement == "Aleksandr S") {
         let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
         devoutadventurerSnd.play();
         playerCardSlot2.lastChild.classList.add("hasDivineShield");
         playerCardSlot2.lastChild.children[2].style.visibility = "visible";
     } else if (getNameOfElement == "Nadya") {
-            let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
-            devoutadventurerSnd.play();
-            playerCardSlot2.lastChild.classList.add("hasDivineShield");
-            playerCardSlot2.lastChild.children[2].style.visibility = "visible";
+        let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
+        devoutadventurerSnd.play();
+        playerCardSlot2.lastChild.classList.add("hasDivineShield");
+        playerCardSlot2.lastChild.children[2].style.visibility = "visible";
     } else if (getNameOfElement == "Nikita K") {
         let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
         devoutadventurerSnd.play();
@@ -310,7 +309,7 @@ function cardPlaceSnds() {
     }
     // sen'jin shieldmasta card effects
 
-    else if (getNameOfElement == "VadimZ") {
+    else if (getNameOfElement == "Vadim Z") {
         let senjinshieldmastaSnd = new Audio("src/sounds/cardPlaceSnds/senjin_shieldmasta_play.mp3")
         senjinshieldmastaSnd.play();
         senjinshieldmastaSnd.volume = 0.75;
@@ -321,13 +320,12 @@ function cardPlaceSnds() {
             let tauntSnd = new Audio("src/sounds/effectSnds/taunt.mp3")
             tauntSnd.play();
         }, 800);
+
     } else if (getNameOfElement == "Lubov") {
+        let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
         devoutadventurerSnd.play();
         playerCardSlot2.lastChild.classList.add("hasDivineShield");
         playerCardSlot2.lastChild.children[2].style.visibility = "visible";
-        let senjinshieldmastaSnd = new Audio("src/sounds/cardPlaceSnds/senjin_shieldmasta_play.mp3")
-        senjinshieldmastaSnd.play();
-        senjinshieldmastaSnd.volume = 0.75;
         tauntExists = true;
         playerCardSlot2.lastChild.classList.add("hasTaunt");
         setTimeout(function () {
@@ -335,13 +333,12 @@ function cardPlaceSnds() {
             let tauntSnd = new Audio("src/sounds/effectSnds/taunt.mp3")
             tauntSnd.play();
         }, 800);
+
     } else if (getNameOfElement == "Mariya E") {
+        let devoutadventurerSnd = new Audio("src/sounds/cardPlaceSnds/devout_adventurer_play.mp3")
         devoutadventurerSnd.play();
         playerCardSlot2.lastChild.classList.add("hasDivineShield");
         playerCardSlot2.lastChild.children[2].style.visibility = "visible";
-        let senjinshieldmastaSnd = new Audio("src/sounds/cardPlaceSnds/senjin_shieldmasta_play.mp3")
-        senjinshieldmastaSnd.play();
-        senjinshieldmastaSnd.volume = 0.75;
         tauntExists = true;
         playerCardSlot2.lastChild.classList.add("hasTaunt");
         setTimeout(function () {
@@ -349,6 +346,8 @@ function cardPlaceSnds() {
             let tauntSnd = new Audio("src/sounds/effectSnds/taunt.mp3")
             tauntSnd.play();
         }, 800);
+
+
     } else if (getNameOfElement == "Denis O") {
         let senjinshieldmastaSnd = new Audio("src/sounds/cardPlaceSnds/senjin_shieldmasta_play.mp3")
         senjinshieldmastaSnd.play();
@@ -439,21 +438,28 @@ function cardPlaceSnds() {
         kingkrushSnd.play();
         attack();
         playerCardSlot2.lastChild.children[4].style.visibility = "visible";
+
+    } else if (getNameOfElement == "Maksimilian") {
+        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
+        kingkrushSnd.play();
+        attack();
+        playerCardSlot2.lastChild.children[4].style.visibility = "visible";
+
     } else if (getNameOfElement == "Makson") {
-            let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
-            kingkrushSnd.play();
-            attack();
-            playerCardSlot2.lastChild.children[4].style.visibility = "visible";
+        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
+        kingkrushSnd.play();
+        attack();
+        playerCardSlot2.lastChild.children[4].style.visibility = "visible";
     } else if (getNameOfElement == "Jora") {
-            let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
-            kingkrushSnd.play();
-            attack();
-            playerCardSlot2.lastChild.children[4].style.visibility = "visible";
+        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
+        kingkrushSnd.play();
+        attack();
+        playerCardSlot2.lastChild.children[4].style.visibility = "visible";
     } else if (getNameOfElement == "Lexus") {
-            let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
-            kingkrushSnd.play();
-            attack();
-            playerCardSlot2.lastChild.children[4].style.visibility = "visible";
+        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
+        kingkrushSnd.play();
+        attack();
+        playerCardSlot2.lastChild.children[4].style.visibility = "visible";
     } else if (getNameOfElement == "Kiruha") {
         let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
         kingkrushSnd.play();
@@ -487,18 +493,9 @@ function cardPlaceSnds() {
         kingkrushSnd.play();
         attack();
         playerCardSlot2.lastChild.children[4].style.visibility = "visible";
-    } else if (getNameOfElement == "Maksimilian") {
-        let kingkrushSnd = new Audio("src/sounds/cardPlaceSnds/king_krush_play.mp3")
-        kingkrushSnd.play();
-        attack();
-        playerCardSlot2.lastChild.children[4].style.visibility = "visible";
-        devoutadventurerSnd.play();
-        playerCardSlot2.lastChild.classList.add("hasDivineShield");
-        playerCardSlot2.lastChild.children[2].style.visibility = "visible";
-    }
 
-    // lifedrinker card effects
-    else if (getNameOfElement == "Lifedrinker") {
+        // lifedrinker card effects
+    } else if (getNameOfElement == "Lifedrinker") {
         let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
         lifedrinkerSnd.play();
         let opponentHeroHealth = parseInt(document.querySelector(".opposingHeroHealth").innerText);
@@ -553,158 +550,159 @@ function cardPlaceSnds() {
         if (document.querySelector('.playerHeroHealth').innerText <= 0) {
             gameWon();
         }
-        } else if (getNameOfElement == "Tamara") {
-            let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
-            lifedrinkerSnd.play();
-            let opponentHeroHealth = parseInt(document.querySelector(".opposingHeroHealth").innerText);
-            let playerHeroHealth = parseInt(document.querySelector(".playerHeroHealth").innerText);
-            document.querySelector(".opposingHeroHealth").innerText = opponentHeroHealth + 2;
-            if (playerHeroHealth == 28) {
-                document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 2;
-            } else if (playerHeroHealth == 29) {
-                document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 1;
-            }
-            /* deals 3 damage to the enemy hero and heals the player hero for 3 and
-            displays the damage label for both the player and the opponent */
-            document.querySelector("#computerdamagevalue").innerText = "+2";
-            document.querySelector("#computerdamagecontainer").style.visibility = "visible";
-            document.getElementById('computerdamagecontainer').style.opacity = "1";
-            document.getElementById('computerdamagecontainer').style.transition = "none";
-            document.querySelector("#computerdamagelabel").classList.add("openMenuAnim");
-            document.querySelector("#computerdamagevalue").classList.add("openMenuAnim");
-            document.querySelector("#computerdamagelabel").classList.remove("fadeOutAnim");
-            document.querySelector("#computerdamagevalue").classList.remove("fadeOutAnim");
+    } else if (getNameOfElement == "Tamara") {
+        let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
+        lifedrinkerSnd.play();
+        let opponentHeroHealth = parseInt(document.querySelector(".opposingHeroHealth").innerText);
+        let playerHeroHealth = parseInt(document.querySelector(".playerHeroHealth").innerText);
+        document.querySelector(".opposingHeroHealth").innerText = opponentHeroHealth + 2;
+        if (playerHeroHealth == 28) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 2;
+        } else if (playerHeroHealth == 29) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 1;
+        }
+        /* deals 3 damage to the enemy hero and heals the player hero for 3 and
+        displays the damage label for both the player and the opponent */
+        document.querySelector("#computerdamagevalue").innerText = "+2";
+        document.querySelector("#computerdamagecontainer").style.visibility = "visible";
+        document.getElementById('computerdamagecontainer').style.opacity = "1";
+        document.getElementById('computerdamagecontainer').style.transition = "none";
+        document.querySelector("#computerdamagelabel").classList.add("openMenuAnim");
+        document.querySelector("#computerdamagevalue").classList.add("openMenuAnim");
+        document.querySelector("#computerdamagelabel").classList.remove("fadeOutAnim");
+        document.querySelector("#computerdamagevalue").classList.remove("fadeOutAnim");
+        setTimeout(function () {
+            document.querySelector("#computerdamagelabel").classList.add("fadeOutAnim");
+            document.querySelector("#computerdamagevalue").classList.add("fadeOutAnim");
+            document.querySelector("#computerdamagelabel").classList.remove("openMenuAnim");
+            document.querySelector("#computerdamagevalue").classList.remove("openMenuAnim");
             setTimeout(function () {
-                document.querySelector("#computerdamagelabel").classList.add("fadeOutAnim");
-                document.querySelector("#computerdamagevalue").classList.add("fadeOutAnim");
-                document.querySelector("#computerdamagelabel").classList.remove("openMenuAnim");
-                document.querySelector("#computerdamagevalue").classList.remove("openMenuAnim");
-                setTimeout(function () {
-                    document.getElementById('computerdamagecontainer').style.visibility = "hidden";
-                    document.getElementById('computerdamagecontainer').style.opacity = "0";
-                }, 1000);
-            }, 2000);
+                document.getElementById('computerdamagecontainer').style.visibility = "hidden";
+                document.getElementById('computerdamagecontainer').style.opacity = "0";
+            }, 1000);
+        }, 2000);
 
-            document.querySelector("#playerdamagevalue").innerText = "+2";
-            document.querySelector("#playerdamagecontainer").style.visibility = "visible";
-            document.getElementById('playerdamagecontainer').style.opacity = "1";
-            document.getElementById('playerdamagecontainer').style.transition = "none";
-            document.querySelector("#playerdamagelabel").classList.add("openMenuAnim");
-            document.querySelector("#playerdamagevalue").classList.add("openMenuAnim");
-            document.querySelector("#playerdamagelabel").classList.remove("fadeOutAnim");
-            document.querySelector("#playerdamagevalue").classList.remove("fadeOutAnim");
+        document.querySelector("#playerdamagevalue").innerText = "+2";
+        document.querySelector("#playerdamagecontainer").style.visibility = "visible";
+        document.getElementById('playerdamagecontainer').style.opacity = "1";
+        document.getElementById('playerdamagecontainer').style.transition = "none";
+        document.querySelector("#playerdamagelabel").classList.add("openMenuAnim");
+        document.querySelector("#playerdamagevalue").classList.add("openMenuAnim");
+        document.querySelector("#playerdamagelabel").classList.remove("fadeOutAnim");
+        document.querySelector("#playerdamagevalue").classList.remove("fadeOutAnim");
+        setTimeout(function () {
+            document.querySelector("#playerdamagelabel").classList.add("fadeOutAnim");
+            document.querySelector("#playerdamagevalue").classList.add("fadeOutAnim");
+            document.querySelector("#playerdamagelabel").classList.remove("openMenuAnim");
+            document.querySelector("#playerdamagevalue").classList.remove("openMenuAnim");
             setTimeout(function () {
-                document.querySelector("#playerdamagelabel").classList.add("fadeOutAnim");
-                document.querySelector("#playerdamagevalue").classList.add("fadeOutAnim");
-                document.querySelector("#playerdamagelabel").classList.remove("openMenuAnim");
-                document.querySelector("#playerdamagevalue").classList.remove("openMenuAnim");
-                setTimeout(function () {
-                    document.getElementById('playerdamagecontainer').style.visibility = "hidden";
-                    document.getElementById('playerdamagecontainer').style.opacity = "0";
-                }, 1000);
-            }, 2000);
-            if (document.querySelector('.playerHeroHealth').innerText <= 0) {
-                gameWon();
-            }
-        } else if (getNameOfElement == "Zhentos") {
-            let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
-            lifedrinkerSnd.play();
-            let opponentHeroHealth = parseInt(document.querySelector(".opposingHeroHealth").innerText);
-            document.querySelector(".opposingHeroHealth").innerText = opponentHeroHealth - 8;
-            /* deals 3 damage to the enemy hero and heals the player hero for 3 and
-            displays the damage label for both the player and the opponent */
-            document.querySelector("#computerdamagevalue").innerText = "-3";
-            document.querySelector("#computerdamagecontainer").style.visibility = "visible";
-            document.getElementById('computerdamagecontainer').style.opacity = "1";
-            document.getElementById('computerdamagecontainer').style.transition = "none";
-            document.querySelector("#computerdamagelabel").classList.add("openMenuAnim");
-            document.querySelector("#computerdamagevalue").classList.add("openMenuAnim");
-            document.querySelector("#computerdamagelabel").classList.remove("fadeOutAnim");
-            document.querySelector("#computerdamagevalue").classList.remove("fadeOutAnim");
+                document.getElementById('playerdamagecontainer').style.visibility = "hidden";
+                document.getElementById('playerdamagecontainer').style.opacity = "0";
+            }, 1000);
+        }, 2000);
+        if (document.querySelector('.playerHeroHealth').innerText <= 0) {
+            gameWon();
+        }
+    } else if (getNameOfElement == "Zhentos") {
+        let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
+        lifedrinkerSnd.play();
+        let opponentHeroHealth = parseInt(document.querySelector(".opposingHeroHealth").innerText);
+        let playerHeroHealth = parseInt(document.querySelector(".playerHeroHealth").innerText);
+        document.querySelector(".opposingHeroHealth").innerText = opponentHeroHealth - 8;
+        /* deals 3 damage to the enemy hero and heals the player hero for 3 and
+        displays the damage label for both the player and the opponent */
+        document.querySelector("#computerdamagevalue").innerText = "-8";
+        document.querySelector("#computerdamagecontainer").style.visibility = "visible";
+        document.getElementById('computerdamagecontainer').style.opacity = "1";
+        document.getElementById('computerdamagecontainer').style.transition = "none";
+        document.querySelector("#computerdamagelabel").classList.add("openMenuAnim");
+        document.querySelector("#computerdamagevalue").classList.add("openMenuAnim");
+        document.querySelector("#computerdamagelabel").classList.remove("fadeOutAnim");
+        document.querySelector("#computerdamagevalue").classList.remove("fadeOutAnim");
+        setTimeout(function () {
+            document.querySelector("#computerdamagelabel").classList.add("fadeOutAnim");
+            document.querySelector("#computerdamagevalue").classList.add("fadeOutAnim");
+            document.querySelector("#computerdamagelabel").classList.remove("openMenuAnim");
+            document.querySelector("#computerdamagevalue").classList.remove("openMenuAnim");
             setTimeout(function () {
-                document.querySelector("#computerdamagelabel").classList.add("fadeOutAnim");
-                document.querySelector("#computerdamagevalue").classList.add("fadeOutAnim");
-                document.querySelector("#computerdamagelabel").classList.remove("openMenuAnim");
-                document.querySelector("#computerdamagevalue").classList.remove("openMenuAnim");
-                setTimeout(function () {
-                    document.getElementById('computerdamagecontainer').style.visibility = "hidden";
-                    document.getElementById('computerdamagecontainer').style.opacity = "0";
-                }, 1000);
-            }, 2000);
+                document.getElementById('computerdamagecontainer').style.visibility = "hidden";
+                document.getElementById('computerdamagecontainer').style.opacity = "0";
+            }, 1000);
+        }, 2000);
 
-            document.querySelector("#playerdamagecontainer").style.visibility = "visible";
-            document.getElementById('playerdamagecontainer').style.opacity = "1";
-            document.getElementById('playerdamagecontainer').style.transition = "none";
-            document.querySelector("#playerdamagelabel").classList.add("openMenuAnim");
-            document.querySelector("#playerdamagevalue").classList.add("openMenuAnim");
-            document.querySelector("#playerdamagelabel").classList.remove("fadeOutAnim");
-            document.querySelector("#playerdamagevalue").classList.remove("fadeOutAnim");
+        document.querySelector("#playerdamagecontainer").style.visibility = "visible";
+        document.getElementById('playerdamagecontainer').style.opacity = "1";
+        document.getElementById('playerdamagecontainer').style.transition = "none";
+        document.querySelector("#playerdamagelabel").classList.add("openMenuAnim");
+        document.querySelector("#playerdamagevalue").classList.add("openMenuAnim");
+        document.querySelector("#playerdamagelabel").classList.remove("fadeOutAnim");
+        document.querySelector("#playerdamagevalue").classList.remove("fadeOutAnim");
+        setTimeout(function () {
+            document.querySelector("#playerdamagelabel").classList.add("fadeOutAnim");
+            document.querySelector("#playerdamagevalue").classList.add("fadeOutAnim");
+            document.querySelector("#playerdamagelabel").classList.remove("openMenuAnim");
+            document.querySelector("#playerdamagevalue").classList.remove("openMenuAnim");
             setTimeout(function () {
-                document.querySelector("#playerdamagelabel").classList.add("fadeOutAnim");
-                document.querySelector("#playerdamagevalue").classList.add("fadeOutAnim");
-                document.querySelector("#playerdamagelabel").classList.remove("openMenuAnim");
-                document.querySelector("#playerdamagevalue").classList.remove("openMenuAnim");
-                setTimeout(function () {
-                    document.getElementById('playerdamagecontainer').style.visibility = "hidden";
-                    document.getElementById('playerdamagecontainer').style.opacity = "0";
-                }, 1000);
-            }, 2000);
-            if (document.querySelector('.playerHeroHealth').innerText <= 0) {
-                gameWon();
-            }
-            } else if (getNameOfElement == "Tamara") {
-                let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
-                lifedrinkerSnd.play();
-                let opponentHeroHealth = parseInt(document.querySelector(".opposingHeroHealth").innerText);
-                let playerHeroHealth = parseInt(document.querySelector(".playerHeroHealth").innerText);
-                document.querySelector(".opposingHeroHealth").innerText = opponentHeroHealth + 2;
-                if (playerHeroHealth == 28) {
-                    document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 2;
-                } else if (playerHeroHealth == 29) {
-                    document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 1;
-                }
-                /* deals 3 damage to the enemy hero and heals the player hero for 3 and
-                displays the damage label for both the player and the opponent */
-                document.querySelector("#computerdamagevalue").innerText = "+2";
-                document.querySelector("#computerdamagecontainer").style.visibility = "visible";
-                document.getElementById('computerdamagecontainer').style.opacity = "1";
-                document.getElementById('computerdamagecontainer').style.transition = "none";
-                document.querySelector("#computerdamagelabel").classList.add("openMenuAnim");
-                document.querySelector("#computerdamagevalue").classList.add("openMenuAnim");
-                document.querySelector("#computerdamagelabel").classList.remove("fadeOutAnim");
-                document.querySelector("#computerdamagevalue").classList.remove("fadeOutAnim");
-                setTimeout(function () {
-                    document.querySelector("#computerdamagelabel").classList.add("fadeOutAnim");
-                    document.querySelector("#computerdamagevalue").classList.add("fadeOutAnim");
-                    document.querySelector("#computerdamagelabel").classList.remove("openMenuAnim");
-                    document.querySelector("#computerdamagevalue").classList.remove("openMenuAnim");
-                    setTimeout(function () {
-                        document.getElementById('computerdamagecontainer').style.visibility = "hidden";
-                        document.getElementById('computerdamagecontainer').style.opacity = "0";
-                    }, 1000);
-                }, 2000);
+                document.getElementById('playerdamagecontainer').style.visibility = "hidden";
+                document.getElementById('playerdamagecontainer').style.opacity = "0";
+            }, 1000);
+        }, 2000);
+        if (document.querySelector('.playerHeroHealth').innerText <= 0) {
+            gameWon();
+        }
+    } else if (getNameOfElement == "Tamara") {
+        let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
+        lifedrinkerSnd.play();
+        let opponentHeroHealth = parseInt(document.querySelector(".opposingHeroHealth").innerText);
+        let playerHeroHealth = parseInt(document.querySelector(".playerHeroHealth").innerText);
+        document.querySelector(".opposingHeroHealth").innerText = opponentHeroHealth + 2;
+        if (playerHeroHealth == 28) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 2;
+        } else if (playerHeroHealth == 29) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 1;
+        }
+        /* deals 3 damage to the enemy hero and heals the player hero for 3 and
+        displays the damage label for both the player and the opponent */
+        document.querySelector("#computerdamagevalue").innerText = "+2";
+        document.querySelector("#computerdamagecontainer").style.visibility = "visible";
+        document.getElementById('computerdamagecontainer').style.opacity = "1";
+        document.getElementById('computerdamagecontainer').style.transition = "none";
+        document.querySelector("#computerdamagelabel").classList.add("openMenuAnim");
+        document.querySelector("#computerdamagevalue").classList.add("openMenuAnim");
+        document.querySelector("#computerdamagelabel").classList.remove("fadeOutAnim");
+        document.querySelector("#computerdamagevalue").classList.remove("fadeOutAnim");
+        setTimeout(function () {
+            document.querySelector("#computerdamagelabel").classList.add("fadeOutAnim");
+            document.querySelector("#computerdamagevalue").classList.add("fadeOutAnim");
+            document.querySelector("#computerdamagelabel").classList.remove("openMenuAnim");
+            document.querySelector("#computerdamagevalue").classList.remove("openMenuAnim");
+            setTimeout(function () {
+                document.getElementById('computerdamagecontainer').style.visibility = "hidden";
+                document.getElementById('computerdamagecontainer').style.opacity = "0";
+            }, 1000);
+        }, 2000);
 
-                document.querySelector("#playerdamagevalue").innerText = "+2";
-                document.querySelector("#playerdamagecontainer").style.visibility = "visible";
-                document.getElementById('playerdamagecontainer').style.opacity = "1";
-                document.getElementById('playerdamagecontainer').style.transition = "none";
-                document.querySelector("#playerdamagelabel").classList.add("openMenuAnim");
-                document.querySelector("#playerdamagevalue").classList.add("openMenuAnim");
-                document.querySelector("#playerdamagelabel").classList.remove("fadeOutAnim");
-                document.querySelector("#playerdamagevalue").classList.remove("fadeOutAnim");
-                setTimeout(function () {
-                    document.querySelector("#playerdamagelabel").classList.add("fadeOutAnim");
-                    document.querySelector("#playerdamagevalue").classList.add("fadeOutAnim");
-                    document.querySelector("#playerdamagelabel").classList.remove("openMenuAnim");
-                    document.querySelector("#playerdamagevalue").classList.remove("openMenuAnim");
-                    setTimeout(function () {
-                        document.getElementById('playerdamagecontainer').style.visibility = "hidden";
-                        document.getElementById('playerdamagecontainer').style.opacity = "0";
-                    }, 1000);
-                }, 2000);
-                if (document.querySelector('.playerHeroHealth').innerText <= 0) {
-                    gameWon();
-                }
+        document.querySelector("#playerdamagevalue").innerText = "+2";
+        document.querySelector("#playerdamagecontainer").style.visibility = "visible";
+        document.getElementById('playerdamagecontainer').style.opacity = "1";
+        document.getElementById('playerdamagecontainer').style.transition = "none";
+        document.querySelector("#playerdamagelabel").classList.add("openMenuAnim");
+        document.querySelector("#playerdamagevalue").classList.add("openMenuAnim");
+        document.querySelector("#playerdamagelabel").classList.remove("fadeOutAnim");
+        document.querySelector("#playerdamagevalue").classList.remove("fadeOutAnim");
+        setTimeout(function () {
+            document.querySelector("#playerdamagelabel").classList.add("fadeOutAnim");
+            document.querySelector("#playerdamagevalue").classList.add("fadeOutAnim");
+            document.querySelector("#playerdamagelabel").classList.remove("openMenuAnim");
+            document.querySelector("#playerdamagevalue").classList.remove("openMenuAnim");
+            setTimeout(function () {
+                document.getElementById('playerdamagecontainer').style.visibility = "hidden";
+                document.getElementById('playerdamagecontainer').style.opacity = "0";
+            }, 1000);
+        }, 2000);
+        if (document.querySelector('.playerHeroHealth').innerText <= 0) {
+            gameWon();
+        }
 
     } else if (getNameOfElement == "Alisa") {
         let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
@@ -763,130 +761,7 @@ function cardPlaceSnds() {
         if (document.querySelector('.playerHeroHealth').innerText <= 0) {
             gameWon();
         }
-    } else if (getNameOfElement == "Kristina S") {
-        let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
-        lifedrinkerSnd.play();
-        let playerHeroHealth = parseInt(document.querySelector(".playerHeroHealth").innerText);
-        if (playerHeroHealth === 22) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 8;
-        } else if (playerHeroHealth == 23) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 7;
-        } else if (playerHeroHealth == 24) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 6;
-        } else if (playerHeroHealth == 25) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 5;
-        } else if (playerHeroHealth == 26) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 4;
-        } else if (playerHeroHealth == 27) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 3;
-        } else if (playerHeroHealth == 28) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 2;
-        } else if (playerHeroHealth == 29) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 1;
-        }
-        /* deals 3 damage to the enemy hero and heals the player hero for 3 and
-        displays the damage label for both the player and the opponent */
-        document.querySelector("#computerdamagecontainer").style.visibility = "visible";
-        document.getElementById('computerdamagecontainer').style.opacity = "1";
-        document.getElementById('computerdamagecontainer').style.transition = "none";
-        document.querySelector("#computerdamagelabel").classList.add("openMenuAnim");
-        document.querySelector("#computerdamagevalue").classList.add("openMenuAnim");
-        document.querySelector("#computerdamagelabel").classList.remove("fadeOutAnim");
-        document.querySelector("#computerdamagevalue").classList.remove("fadeOutAnim");
-        setTimeout(function () {
-            document.querySelector("#computerdamagelabel").classList.add("fadeOutAnim");
-            document.querySelector("#computerdamagevalue").classList.add("fadeOutAnim");
-            document.querySelector("#computerdamagelabel").classList.remove("openMenuAnim");
-            document.querySelector("#computerdamagevalue").classList.remove("openMenuAnim");
-            setTimeout(function () {
-                document.getElementById('computerdamagecontainer').style.visibility = "hidden";
-                document.getElementById('computerdamagecontainer').style.opacity = "0";
-            }, 1000);
-        }, 2000);
 
-        document.querySelector("#playerdamagevalue").innerText = "+8";
-        document.querySelector("#playerdamagecontainer").style.visibility = "visible";
-        document.getElementById('playerdamagecontainer').style.opacity = "1";
-        document.getElementById('playerdamagecontainer').style.transition = "none";
-        document.querySelector("#playerdamagelabel").classList.add("openMenuAnim");
-        document.querySelector("#playerdamagevalue").classList.add("openMenuAnim");
-        document.querySelector("#playerdamagelabel").classList.remove("fadeOutAnim");
-        document.querySelector("#playerdamagevalue").classList.remove("fadeOutAnim");
-        setTimeout(function () {
-            document.querySelector("#playerdamagelabel").classList.add("fadeOutAnim");
-            document.querySelector("#playerdamagevalue").classList.add("fadeOutAnim");
-            document.querySelector("#playerdamagelabel").classList.remove("openMenuAnim");
-            document.querySelector("#playerdamagevalue").classList.remove("openMenuAnim");
-            setTimeout(function () {
-                document.getElementById('playerdamagecontainer').style.visibility = "hidden";
-                document.getElementById('playerdamagecontainer').style.opacity = "0";
-            }, 1000);
-        }, 2000);
-        if (document.querySelector('.playerHeroHealth').innerText <= 0) {
-            gameWon();
-        }
-    } else if (getNameOfElement == "Kristina S") {
-        let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
-        lifedrinkerSnd.play();
-        let playerHeroHealth = parseInt(document.querySelector(".playerHeroHealth").innerText);
-        if (playerHeroHealth === 22) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 8;
-        } else if (playerHeroHealth == 23) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 7;
-        } else if (playerHeroHealth == 24) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 6;
-        } else if (playerHeroHealth == 25) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 5;
-        } else if (playerHeroHealth == 26) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 4;
-        } else if (playerHeroHealth == 27) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 3;
-        } else if (playerHeroHealth == 28) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 2;
-        } else if (playerHeroHealth == 29) {
-            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 1;
-        }
-        /* deals 3 damage to the enemy hero and heals the player hero for 3 and
-        displays the damage label for both the player and the opponent */
-        document.querySelector("#computerdamagecontainer").style.visibility = "visible";
-        document.getElementById('computerdamagecontainer').style.opacity = "1";
-        document.getElementById('computerdamagecontainer').style.transition = "none";
-        document.querySelector("#computerdamagelabel").classList.add("openMenuAnim");
-        document.querySelector("#computerdamagevalue").classList.add("openMenuAnim");
-        document.querySelector("#computerdamagelabel").classList.remove("fadeOutAnim");
-        document.querySelector("#computerdamagevalue").classList.remove("fadeOutAnim");
-        setTimeout(function () {
-            document.querySelector("#computerdamagelabel").classList.add("fadeOutAnim");
-            document.querySelector("#computerdamagevalue").classList.add("fadeOutAnim");
-            document.querySelector("#computerdamagelabel").classList.remove("openMenuAnim");
-            document.querySelector("#computerdamagevalue").classList.remove("openMenuAnim");
-            setTimeout(function () {
-                document.getElementById('computerdamagecontainer').style.visibility = "hidden";
-                document.getElementById('computerdamagecontainer').style.opacity = "0";
-            }, 1000);
-        }, 2000);
-
-        document.querySelector("#playerdamagevalue").innerText = "+8";
-        document.querySelector("#playerdamagecontainer").style.visibility = "visible";
-        document.getElementById('playerdamagecontainer').style.opacity = "1";
-        document.getElementById('playerdamagecontainer').style.transition = "none";
-        document.querySelector("#playerdamagelabel").classList.add("openMenuAnim");
-        document.querySelector("#playerdamagevalue").classList.add("openMenuAnim");
-        document.querySelector("#playerdamagelabel").classList.remove("fadeOutAnim");
-        document.querySelector("#playerdamagevalue").classList.remove("fadeOutAnim");
-        setTimeout(function () {
-            document.querySelector("#playerdamagelabel").classList.add("fadeOutAnim");
-            document.querySelector("#playerdamagevalue").classList.add("fadeOutAnim");
-            document.querySelector("#playerdamagelabel").classList.remove("openMenuAnim");
-            document.querySelector("#playerdamagevalue").classList.remove("openMenuAnim");
-            setTimeout(function () {
-                document.getElementById('playerdamagecontainer').style.visibility = "hidden";
-                document.getElementById('playerdamagecontainer').style.opacity = "0";
-            }, 1000);
-        }, 2000);
-        if (document.querySelector('.playerHeroHealth').innerText <= 0) {
-            gameWon();
-        }
 
     } else if (getNameOfElement == "Kiril") {
         let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
@@ -941,6 +816,131 @@ function cardPlaceSnds() {
         if (document.querySelector('.playerHeroHealth').innerText <= 0) {
             gameWon();
         }
+
+    } else if (getNameOfElement == "Kristina S") {
+        let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
+        lifedrinkerSnd.play();
+        let playerHeroHealth = parseInt(document.querySelector(".playerHeroHealth").innerText);
+        if (playerHeroHealth === 22) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 8;
+        } else if (playerHeroHealth == 23) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 7;
+        } else if (playerHeroHealth == 24) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 6;
+        } else if (playerHeroHealth == 25) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 5;
+        } else if (playerHeroHealth == 26) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 4;
+        } else if (playerHeroHealth == 27) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 3;
+        } else if (playerHeroHealth == 28) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 2;
+        } else if (playerHeroHealth == 29) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 1;
+        }
+        /* deals 3 damage to the enemy hero and heals the player hero for 3 and
+        displays the damage label for both the player and the opponent */
+        document.querySelector("#computerdamagecontainer").style.visibility = "visible";
+        document.getElementById('computerdamagecontainer').style.opacity = "1";
+        document.getElementById('computerdamagecontainer').style.transition = "none";
+        document.querySelector("#computerdamagelabel").classList.add("openMenuAnim");
+        document.querySelector("#computerdamagevalue").classList.add("openMenuAnim");
+        document.querySelector("#computerdamagelabel").classList.remove("fadeOutAnim");
+        document.querySelector("#computerdamagevalue").classList.remove("fadeOutAnim");
+        setTimeout(function () {
+            document.querySelector("#computerdamagelabel").classList.add("fadeOutAnim");
+            document.querySelector("#computerdamagevalue").classList.add("fadeOutAnim");
+            document.querySelector("#computerdamagelabel").classList.remove("openMenuAnim");
+            document.querySelector("#computerdamagevalue").classList.remove("openMenuAnim");
+            setTimeout(function () {
+                document.getElementById('computerdamagecontainer').style.visibility = "hidden";
+                document.getElementById('computerdamagecontainer').style.opacity = "0";
+            }, 1000);
+        }, 2000);
+
+        document.querySelector("#playerdamagevalue").innerText = "+0";
+        document.querySelector("#playerdamagecontainer").style.visibility = "visible";
+        document.getElementById('playerdamagecontainer').style.opacity = "1";
+        document.getElementById('playerdamagecontainer').style.transition = "none";
+        document.querySelector("#playerdamagelabel").classList.add("openMenuAnim");
+        document.querySelector("#playerdamagevalue").classList.add("openMenuAnim");
+        document.querySelector("#playerdamagelabel").classList.remove("fadeOutAnim");
+        document.querySelector("#playerdamagevalue").classList.remove("fadeOutAnim");
+        setTimeout(function () {
+            document.querySelector("#playerdamagelabel").classList.add("fadeOutAnim");
+            document.querySelector("#playerdamagevalue").classList.add("fadeOutAnim");
+            document.querySelector("#playerdamagelabel").classList.remove("openMenuAnim");
+            document.querySelector("#playerdamagevalue").classList.remove("openMenuAnim");
+            setTimeout(function () {
+                document.getElementById('playerdamagecontainer').style.visibility = "hidden";
+                document.getElementById('playerdamagecontainer').style.opacity = "0";
+            }, 1000);
+        }, 2000);
+        if (document.querySelector('.playerHeroHealth').innerText <= 0) {
+            gameWon();
+        }
+    } else if (getNameOfElement == "Kristina S") {
+        let lifedrinkerSnd = new Audio("src/sounds/cardPlaceSnds/lifedrinker_play.mp3")
+        lifedrinkerSnd.play();
+        let playerHeroHealth = parseInt(document.querySelector(".playerHeroHealth").innerText);
+        if (playerHeroHealth === 22) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 8;
+        } else if (playerHeroHealth == 23) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 7;
+        } else if (playerHeroHealth == 24) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 6;
+        } else if (playerHeroHealth == 25) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 5;
+        } else if (playerHeroHealth == 26) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 4;
+        } else if (playerHeroHealth == 27) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 3;
+        } else if (playerHeroHealth == 28) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 2;
+        } else if (playerHeroHealth == 29) {
+            document.querySelector(".playerHeroHealth").innerText = playerHeroHealth + 1;
+        }
+        /* deals 3 damage to the enemy hero and heals the player hero for 3 and
+        displays the damage label for both the player and the opponent */
+        document.querySelector("#computerdamagecontainer").style.visibility = "visible";
+        document.getElementById('computerdamagecontainer').style.opacity = "1";
+        document.getElementById('computerdamagecontainer').style.transition = "none";
+        document.querySelector("#computerdamagelabel").classList.add("openMenuAnim");
+        document.querySelector("#computerdamagevalue").classList.add("openMenuAnim");
+        document.querySelector("#computerdamagelabel").classList.remove("fadeOutAnim");
+        document.querySelector("#computerdamagevalue").classList.remove("fadeOutAnim");
+        setTimeout(function () {
+            document.querySelector("#computerdamagelabel").classList.add("fadeOutAnim");
+            document.querySelector("#computerdamagevalue").classList.add("fadeOutAnim");
+            document.querySelector("#computerdamagelabel").classList.remove("openMenuAnim");
+            document.querySelector("#computerdamagevalue").classList.remove("openMenuAnim");
+            setTimeout(function () {
+                document.getElementById('computerdamagecontainer').style.visibility = "hidden";
+                document.getElementById('computerdamagecontainer').style.opacity = "0";
+            }, 1000);
+        }, 2000);
+
+        document.querySelector("#playerdamagevalue").innerText = "+8";
+        document.querySelector("#playerdamagecontainer").style.visibility = "visible";
+        document.getElementById('playerdamagecontainer').style.opacity = "1";
+        document.getElementById('playerdamagecontainer').style.transition = "none";
+        document.querySelector("#playerdamagelabel").classList.add("openMenuAnim");
+        document.querySelector("#playerdamagevalue").classList.add("openMenuAnim");
+        document.querySelector("#playerdamagelabel").classList.remove("fadeOutAnim");
+        document.querySelector("#playerdamagevalue").classList.remove("fadeOutAnim");
+        setTimeout(function () {
+            document.querySelector("#playerdamagelabel").classList.add("fadeOutAnim");
+            document.querySelector("#playerdamagevalue").classList.add("fadeOutAnim");
+            document.querySelector("#playerdamagelabel").classList.remove("openMenuAnim");
+            document.querySelector("#playerdamagevalue").classList.remove("openMenuAnim");
+            setTimeout(function () {
+                document.getElementById('playerdamagecontainer').style.visibility = "hidden";
+                document.getElementById('playerdamagecontainer').style.opacity = "0";
+            }, 1000);
+        }, 2000);
+        if (document.querySelector('.playerHeroHealth').innerText <= 0) {
+            gameWon();
+        }
     }
     // murloc tidehunter card effects
     else if (getNameOfElement == "Murloc Tidehunter") {
@@ -956,8 +956,7 @@ function cardPlaceSnds() {
                 }
             }
         }, 1000);
-    }
-    else if (getNameOfElement == "Abdula") {
+    } else if (getNameOfElement == "Abdula") {
         let murloctidehunterSnd = new Audio("src/sounds/cardPlaceSnds/murloc_tidehunter_play.mp3")
         murloctidehunterSnd.play();
         setTimeout(function () {
@@ -986,8 +985,7 @@ function cardPlaceSnds() {
             alexstraszamusicSnd.play();
         }, 375);
         document.querySelector(".opposingHeroHealth").innerText = "15";
-    }
-    else if (getNameOfElement == "Lena") {
+    } else if (getNameOfElement == "Lena") {
         let alexstraszaSnd = new Audio("src/sounds/cardPlaceSnds/alexstrasza_play.mp3")
         let alexstraszamusicSnd = new Audio("src/sounds/cardPlaceSnds/alexstrasza_music_play.mp3")
         alexstraszaSnd.play();
@@ -1028,7 +1026,7 @@ function cardPlaceSnds() {
         }, 1999);
         setTimeout(function () {
             for (var i = 0; i < originalDeck.cards.length; i++) {
-                if ((originalDeck.cards[i]['name'] == "Saronite Chain Gang") && (playerCardSlot2.childElementCount != 7)) {
+                if ((originalDeck.cards[i]['name'] == "Bublitos") && (playerCardSlot2.childElementCount != 7)) {
                     playerCardSlot2.appendChild(originalDeck.cards[i].getPlayerHTML())
                     break
                 }
@@ -1085,7 +1083,72 @@ function cardPlaceSnds() {
                 document.getElementById('snowCanvas').style.display = "none";
             }, 1000);
         }, 3000);
-    }
+    } else if (getNameOfElement == "Georgii") {
+    let lichkingSnd = new Audio("src/sounds/cardPlaceSnds/lich_king_play.mp3")
+    lichkingSnd.play();
+    fadeOutInMusic();
+    document.getElementById('snowCanvas').style.display = "block";
+    document.getElementById('snowCanvas').classList.add("fadeInAnim");
+    playerCardSlot2.lastChild.classList.add("hasTaunt");
+    setTimeout(function () {
+        playerCardSlot2.lastChild.children[4].style.visibility = "visible";
+    }, 1500);
+    setTimeout(function () {
+        playerCardSlot2.lastChild.children[3].style.visibility = "visible";
+    }, 3300);
+    setTimeout(function () {
+        document.getElementById('snowCanvas').classList.remove("fadeInAnim");
+        document.getElementById('snowCanvas').classList.add("fadeOutAnim");
+        setTimeout(function () {
+            document.getElementById('snowCanvas').classList.remove("fadeOutAnim");
+            document.getElementById('snowCanvas').style.display = "none";
+        }, 1000);
+    }, 3000);
+
+} else if (getNameOfElement == "Artem") {
+    let lichkingSnd = new Audio("src/sounds/cardPlaceSnds/lich_king_play.mp3")
+    lichkingSnd.play();
+    fadeOutInMusic();
+    document.getElementById('snowCanvas').style.display = "block";
+    document.getElementById('snowCanvas').classList.add("fadeInAnim");
+    playerCardSlot2.lastChild.classList.add("hasTaunt");
+    setTimeout(function () {
+        playerCardSlot2.lastChild.children[4].style.visibility = "visible";
+    }, 1500);
+    setTimeout(function () {
+        playerCardSlot2.lastChild.children[3].style.visibility = "visible";
+    }, 3300);
+    setTimeout(function () {
+        document.getElementById('snowCanvas').classList.remove("fadeInAnim");
+        document.getElementById('snowCanvas').classList.add("fadeOutAnim");
+        setTimeout(function () {
+            document.getElementById('snowCanvas').classList.remove("fadeOutAnim");
+            document.getElementById('snowCanvas').style.display = "none";
+        }, 1000);
+    }, 3000);
+} else if (getNameOfElement == "Ionna") {
+    let lichkingSnd = new Audio("src/sounds/cardPlaceSnds/lich_king_play.mp3")
+    lichkingSnd.play();
+    fadeOutInMusic();
+    document.getElementById('snowCanvas').style.display = "block";
+    document.getElementById('snowCanvas').classList.add("fadeInAnim");
+    playerCardSlot2.lastChild.classList.add("hasTaunt");
+    setTimeout(function () {
+        playerCardSlot2.lastChild.children[4].style.visibility = "visible";
+    }, 1500);
+    setTimeout(function () {
+        playerCardSlot2.lastChild.children[3].style.visibility = "visible";
+    }, 3300);
+    setTimeout(function () {
+        document.getElementById('snowCanvas').classList.remove("fadeInAnim");
+        document.getElementById('snowCanvas').classList.add("fadeOutAnim");
+        setTimeout(function () {
+            document.getElementById('snowCanvas').classList.remove("fadeOutAnim");
+            document.getElementById('snowCanvas').style.display = "none";
+        }, 1000);
+    }, 3000);
+}
+
 
 // function that fades the music out and back in over a period of 5.3 seconds
     function fadeOutInMusic() {

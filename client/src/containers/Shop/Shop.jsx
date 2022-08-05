@@ -12,7 +12,7 @@ const Shop = () => {
     const dispatch = useDispatch()
     const shop = useSelector((state) => state.shop.shop)
     const collection = useSelector((state)=>state.collection.collection)
-    console.log(collection)
+    // console.log(collection)
     const deck = useSelector((state) => state.deck.deck)
     const buy = async() => {
         const responce = await fetch('/buycards/new')
@@ -20,13 +20,8 @@ const Shop = () => {
         dispatch(buyDeck(res))
         setState(true)
         setTimeout(async ()=>{
-            const responce = await fetch('/buycards')
-            const res = await responce.json()
-            console.log(res)
-            res.forEach(el=>{
-                dispatch(addCardToCollects(el))})
             setState(false)
-        },5000)
+        },4000)
     }
 
     // const addToDeck = async () => {
