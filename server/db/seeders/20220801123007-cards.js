@@ -578,8 +578,8 @@ module.exports = {
       updatedAt: new Date(),
     }], {});
     await queryInterface.bulkInsert('Cards', [{
-      name: 'Pavel E',
-      imageString: 'https://imageup.ru/img57/3990038/d43580b4-762d-478a-8576-325d5218e505.jpeg',
+      name: 'Pavel M',
+      imageString: 'https://ca.slack-edge.com/T03EB61NVAA-U03F5DJ292P-1a1dd7a58d45-512',
       info: '',
       attack: 5,
       health: 6,
